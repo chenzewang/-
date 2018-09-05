@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>巡检路线设置</title>
+    <link rel="stylesheet" type="text/css" href="css/巡检路线设置.css" />
+
+</head>
+
+<body>
+
+        <div id="kuang1">
+            <input id="map_name">
+            <input id="map_num">
+            <ul>
+                <li data-type="固定路线"></li>
+                <li data-type="自由路线"></li>
+                <li data-type="用户自选"></li>
+            </ul>
+            <button onclick="creatMap()"></button>
+            <button></button>
+            <div id="map_desc"><span>路线描述</span><input></div>
+
+        </div>
+        <div id="kuang2"></div>
+         
+          <div class="bgPop"></div> <!-- 框3遮掩层 -->
+        <div id="kuang3">
+                <input id="spot_name" placeholder="巡检设备名称"> 
+                <input id="spot_desc" placeholder="巡检设备描述"> 
+                <div id="spot_guding">
+                    <span></span>
+                    <select>
+                        <option value ="1">是</option>
+                        <option value ="0">否</option>
+                    </select>
+                </div>
+                <div id="kuang3_items">
+                    <div class="new_item">
+                        <button onclick="addItem()">新建巡检条目</button>    
+                    </div>
+                    <div class="creat_new_item">
+                        <input placeholder="巡检条目内容">
+                        <input placeholder="单位">
+                        <div>
+                            <span>通过：</span>
+                            <select>
+                                <option value ="true">确认型</option>
+                                <option value ="false">数值型</option>
+                            </select>
+                        </div>
+                        <br>                        
+                        <input placeholder="最小标准值">
+                        <input placeholder="最大标准值"><br>
+                        <input placeholder="最小警戒值">
+                        <input placeholder="最大标准值"> 
+                        <button id="new_item_del" onclick="delItem(this)">删除</button>
+                    </div>
+                </div>
+
+
+
+
+
+                <button id="kuang3_add" onclick="saveItem()">完成</button>
+                
+                <button id="kuang3_del" onclick="del()">清空
+                </button>   
+                <span class="pop-close">Ｘ</span>
+                
+        </div>
+        <div id="luxianku">
+            
+            <div id="luxian">
+
+            </div>
+
+            <ul>
+                
+            </ul>
+
+        </div>
+        <button id="tijiao" onclick="submit()">
+            
+        </button>
+
+        <button id="fanhui" onclick="fanhui()">返回</button>
+        <div id="kuang4"></div>
+        
+        <div id="kuang5">
+            <span>修改时间</span><div></div>
+            <span>当日修改次数</span><div></div>
+            <span>制定人</span><div></div>
+            <button>保存入库</button>
+            <button>启用</button>
+        </div>
+        
+        
+        
+        
+        <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+        <script src="js/巡检路线设置.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/巡检路线设置_data.js"></script>
+</body>
+</html>

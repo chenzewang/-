@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style:none;
+    font-family: "宋体";
+}
+#main{
+    background-image: url(../img/Beijing.png);
+    width: 1200px;
+    height: 768px;
+    position: relative;
+    margin:  0 auto;
+}
+#menu{
+    position: relative;
+    left: 16px;
+    top:63px;
+    background-image: url(../img/Zuoce.png);
+    background-repeat:no-repeat;
+    width: 140px;
+    height: 700px;
+    display: inline-block;
+}
+#menu li:hover{
+    cursor:pointer; 
+    margin-left:-4px;
+    background-image: url(../img/ZuoCe_Dianji_kuang2.png);
+    opacity: 0.9; 
+}
+#menu li:active{
+    background-color: rgba(47, 89, 117, 0.10);
+    box-shadow: 0 5px rgba(47, 89, 117, 0.10);
+    transform: translateY(4px);
+  }
+
+.looking{
+    background-image: url(../img/ZuoCe_Dianji_kuang2.png);
+    background-repeat: no-repeat;
+    margin-left:-4px; 
+}
+#function{
+    position: absolute;
+    top:39px;
+}
+#function li{
+    width: 145px;
+    height: 37px;
+}
+
+#function a{
+    display: block;
+    width: 145px;
+    height: 37px;
+}
+
+#check{
+    position: absolute;
+    top:326px;
+}
+#check li{
+    width: 145px;
+    height: 37px;
+}
+#check a{
+    display: block;
+    width: 145px;
+    height: 37px;
+}
+
+
+
+#taskbar{
+    width: 1000px;
+    height: 40px;
+    position: relative;
+    left: 57px;
+    top: -592px;
+    display: inline-block;
+}
+#shouye{
+    display: inline-block;
+    width: 90px;
+    height: 37px;
+    background-image:url("../img/BiaoTi_shouye.png") ,url("../img/BiaoTi_shouye_kuang.png");
+    background-repeat: no-repeat, no-repeat;  
+    background-position: 24px 8px,0 0;
+}
+#page{
+    display: inline-block;
+    position: absolute;
+    top: 109px;
+    left: 179px;
+}

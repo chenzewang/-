@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>巡检报告生成</title>
+    <link rel="stylesheet" type="text/css" href="css/巡检报告生成.css" />    
+</head>
+<body>
+    <div id="search">
+        
+                        
+        <div id="time">
+            <span>按时间查询</span>
+            <input onkeyup="searchByOther()">
+        </div>
+        <div id="equ">
+            <span>按设备查询</span>
+            <input onkeyup="searchByEqu()">
+        </div>
+        <div id="map">
+            <span>按巡检路线查询</span>
+            <ul>
+                <li><a onclick="searchByOther()">锅炉路线</a></li>
+                <li><a onclick="searchByOther()">电气路线</a></li>
+                <li><a onclick="searchByOther()">汽机路线</a></li>                    
+            </ul>
+        </div>
+        <div id="man">
+            <span>按巡逻人查询</span>
+            <input onkeyup="searchByOther()">
+        </div>
+        <div id="count">
+            <span>按工号查询</span>
+            <input onkeyup="searchByOther()">
+        </div>
+    
+    </div>       
+        
+    <div id="record2"  class="record">
+        <div id="record2_title"> 
+            <div>巡检记录表</div>
+            <button>生成巡检报告</button>
+        </div>
+        <div id="record2_state">
+            <div>
+                <span>巡检时间</span><div></div>
+            </div>
+            <div>
+                <span>当前负荷</span><div></div>
+            </div>
+            <div>
+                <span>巡检人</span><div></div>
+            </div>
+            <div>
+                <span>巡检模式</span><div></div>
+            </div>
+            <div>
+                <span>完成数/总数</span><div></div>
+            </div>       
+        </div>
+        <div id='record2_map'>
+            <div>巡检路线</div>
+            <div>某某巡检</div>
+            <div></div>
+        </div>
+        <div id="graph2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>送检点</th>
+                        <th>状态</th>
+                        <th>巡检值</th>                    
+                        <th>标准值</th>                      
+                        <th>故障信息描述</th>
+                    </tr>        
+                </thead>
+                <tbody>
+                    <!-- (book,index) index:当前元素在数组位置 -->
+                    <tr v-for="(record2, index) in record2Lib">
+                        <td>{{record2.dian}}</td>
+                        <td>{{record2.statu}}</td>
+                        <td>{{record2.value}}</td>
+                        <td>{{record2.normalValue}}</td>                    
+                        <td>{{record2.describe}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            
+    </div>  
+
+
+
+
+    <script src="js/vue.min.js"></script>
+    <script src="js/历史巡检记录.js"></script>    
+</body>
+</html>
