@@ -21,7 +21,7 @@
             </ul>
             <button onclick="creatMap()"></button>
             <button></button>
-            <div id="map_desc"><span>路线描述</span><input></div>
+            <div id="map_desc"><span>路线描述</span><textarea></textarea></div>
 
         </div>
         <div id="kuang2"></div>
@@ -30,13 +30,7 @@
         <div id="kuang3">
                 <input id="spot_name" placeholder="巡检设备名称"> 
                 <input id="spot_desc" placeholder="巡检设备描述"> 
-                <div id="spot_guding">
-                    <span></span>
-                    <select>
-                        <option value ="1">是</option>
-                        <option value ="0">否</option>
-                    </select>
-                </div>
+                
                 <div id="kuang3_items">
                     <div class="new_item">
                         <button onclick="addItem()">新建巡检条目</button>    
@@ -45,7 +39,6 @@
                         <input placeholder="巡检条目内容">
                         <input placeholder="单位">
                         <div>
-                            <span>通过：</span>
                             <select>
                                 <option value ="true">确认型</option>
                                 <option value ="false">数值型</option>
@@ -97,7 +90,7 @@
             <button>启用</button>
         </div>
         
-        
+        <!-- test -->
         
         
         <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>

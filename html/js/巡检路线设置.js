@@ -64,7 +64,7 @@
             "id": 1,
             "name": "",
             "desc": "",
-            "tmp": 0,
+            "tmp": false,
             "created_at": "",
             "updated_at": "",
             "items": []
@@ -143,12 +143,10 @@
         kuangx=x;
         $("#spot_name").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].name)
         $("#spot_desc").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].desc)
-        $("#spot_guding select:eq(0)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].tmp);
         for(let i=0;i<$(".creat_new_item").length;i++){ 
             
             $(".creat_new_item:eq("+i+") input:eq(0)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].content)
             $(".creat_new_item:eq("+i+") input:eq(1)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].unit)
-            $(".creat_new_item:eq("+i+") select:eq(0)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].itemtype)
             $(".creat_new_item:eq("+i+") input:eq(2)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].st_min)
             $(".creat_new_item:eq("+i+") input:eq(3)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].st_max)
             $(".creat_new_item:eq("+i+") input:eq(4)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].al_min)
@@ -173,7 +171,7 @@
             let item={};
             item.content=$(".creat_new_item:eq("+i+") input:eq(0)").val()
             item.unit=$(".creat_new_item:eq("+i+") input:eq(1)").val()
-            item.itemtype=$(".creat_new_item:eq("+i+") select:eq(0)").val()
+            item.itemtype="false"
             item.st_min=$(".creat_new_item:eq("+i+") input:eq(2)").val()
             item.st_max=$(".creat_new_item:eq("+i+") input:eq(3)").val()
             item.al_min=$(".creat_new_item:eq("+i+") input:eq(4)").val()
@@ -184,7 +182,6 @@
         
         objMap.spots[kuangx.getAttribute("data-spot-seq")].name=$("#spot_name").val();
         objMap.spots[kuangx.getAttribute("data-spot-seq")].desc=$("#spot_desc").val();
-        objMap.spots[kuangx.getAttribute("data-spot-seq")].tmp=$("#spot_guding select:eq(0)").val();
         objMap.spots[kuangx.getAttribute("data-spot-seq")].id=parseInt(kuangx.getAttribute("data-spot-seq"))+1
     }
     function del(){  //清空某spot         
