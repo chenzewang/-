@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实时巡检查看</title>
+    <link rel="stylesheet" type="text/css" href="css/实时巡检查看.css" />
+    
+</head>
+<body>
+    <div id="kuang"></div>
+    <div id="anniu">
+        <button>锅炉巡检路线</button>
+        <button>汽机巡检路线</button>
+        <button>电气巡检路线</button>        
+    </div>
+    <div id="youce">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        
+    </div>
+
+    
+
+<script>
+    function liClick(x){
+            for(var i=0;i<3;i++){
+                document.getElementById('anniu').getElementsByTagName("button")[i].setAttribute("style","background-image:url(../img/5-1-dianqixunjianluxian-kuang.png)");
+                }
+                x.setAttribute("style","background-image:url(../img/5-1-guoluxunjianluxian_kuang.png)");   
+                console.log(x)
+        }
+    
+        function addEvent(){
+            for(var i=0;i<3;i++){
+                document.getElementById('anniu').getElementsByTagName("button")[i].setAttribute('onclick','liClick(this)')
+
+            }
+        }
+        addEvent();
+     
+</script>
+
+
+
+
+</body>
+
+</html>

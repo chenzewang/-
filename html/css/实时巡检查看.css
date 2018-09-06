@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0;
+    
+}
+body{
+    position: relative;
+    font-family:"宋体"
+}
+button:active{
+    transform: translateY(2px);
+}
+button:hover{
+    cursor: pointer;
+}
+
+
+
+
+#kuang{
+    position: absolute;
+    display: block;
+    top:70px;
+    left: 50px;
+    width: 806px;
+    height: 278px;
+    background-image: url(../../img/5-1-kuang.png)
+}
+#anniu{
+    position: absolute;
+    top:550px;
+    left: 50px;
+    width: 806px;
+    height: 50px;
+}
+#anniu button{
+    display: inline-block;
+    width:169px;
+    height: 41px;
+    margin-left: 75px;
+    border: 0px; 
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    color:white;
+    background-repeat: no-repeat;
+    font-family: "宋体"
+}
+button:active{
+    transform: translateY(2px);
+}
+#anniu button:nth-child(1){
+    background-image: url(../../img/5-1-dianqixunjianluxian-kuang.png);
+}  
+#anniu button:nth-child(2){
+    background-image: url(../../img/5-1-dianqixunjianluxian-kuang.png);
+}    
+#anniu button:nth-child(3){
+    background-image:url(../../img/5-1-dianqixunjianluxian-kuang.png);
+}      
+
+
+
+
+
+#youce{
+    position: absolute;
+    top: 8px;
+    right: -3px;
+    width: 68px;
+    height: 628px;
+    background-image: url(../../img/5-2-waikuang.png)
+    
+}
+#youce button{
+    display: block;
+    border: 0px;
+    background-color: transparent;
+    position: relative;
+    left: 12px;
+    top: 17px;
+}
+#youce button:nth-child(1){
+    background-image: url(../../img/5-2-guoluce.png);
+    width: 47px;
+    height: 114px;
+ 
+}    
+#youce button:nth-child(2){
+    background-image: url(../../img/5-2-dianqice.png);
+    width: 47px;
+    height: 115px;
+
+}    
+#youce button:nth-child(3){
+    background-image: url(../../img/5-2-qilunjice.png);
+    width:47px ;
+    height: 151px;
+   
+}
+#youce button:nth-child(4){
+    background-image: url(../../img/5-2-waiwei.png);
+    width: 48px;
+    height: 116px;
+
+}    

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>异常事件统计</title>
+    <link rel="stylesheet" type="text/css" href="css/异常事件统计.css" />
+    
+</head>
+<body>
+    <div id="search">
+        <div id="time">
+            <span>按时间</span>
+            <input>
+        </div>
+        
+        <div id="map">
+            <span>路线</span>
+            <div>
+                <select>
+                    <option value="锅炉路线">锅炉路线</option>
+                    <option value="电气路线">电气路线</option>
+                    <option value="汽机路线">汽机路线</option>
+                </select>
+            </div>
+        </div>
+       
+       
+        <div id="man">
+            <span>巡检人</span>
+            <input>
+        </div>
+        <div id="project">
+            <span>查询</span>
+            <div>
+                <select>
+                    <option value="巡检次数">巡检次数</option>
+                    <option value="异常次数">异常次数</option>
+                </select>
+            </div>
+        </div>       
+    </div>
+    
+    <div id="background">
+        <div id="graph1">
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>事件</th>
+                        <th>路线</th>                    
+                        <th>巡检人</th>                      
+                    </tr>        
+                </thead>
+                <tbody>
+                    <!-- (book,index) index:当前元素在数组位置 -->
+                    <tr v-for="(event, index) in storage">
+                        <td>{{event.num}}</td>
+                        <td>{{event.event}}</td>
+                        <td>{{event.map}}</td>
+                        <td>{{event.man}}</td>                    
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+    <script src="js/vue.min.js"></script>    
+    <script src="js/异常事件统计.js"></script>
+</body>
+</html>

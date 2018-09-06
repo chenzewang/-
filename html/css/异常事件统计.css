@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#search{
+    background-image: url(../../img/13-1-kuang.png);
+    width: 961px;
+    height: 195px;
+    position: absolute;
+    left: 20px;
+    color:white;
+    display: flex;
+    justify-content: center ;
+    align-items: center ;
+    top:10px;
+    
+}
+#search>div{
+    width: 20%;
+    margin-right: 10px;
+}
+
+select{
+    width: 160px;
+    height: 30px;
+    background-color: rgba(29, 47, 60, 0.8);
+    color: white;
+    border: 1px solid rgb(20,221,231);
+    border-radius: 10px;
+    text-align: center;    
+    outline: none;
+    
+}
+select::-webkit-scrollbar {/*滚动条整体样式*/
+    background-color: transparent;
+}
+select::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    background-color: transparent;
+}
+select::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    background-color: transparent;
+}
+input{
+    border: 1px solid rgb(20,221,231);
+    background-color: rgba(29, 47, 60, 0.8);
+    border-radius: 10px;
+    color: white;
+    text-align: center;   
+    height: 25px; 
+}
+#background{
+    background-image:url(../../img/13-1-kuang.png);
+    width:961px;
+    height: 195px;
+    position: absolute;
+    left: 20px;
+    top: 240px;
+
+}
+
+#graph1{
+    width: 948px;
+    color:white;
+    text-align: center;
+    margin-top:4px;
+    margin-left:9px; 
+}
+
+#graph1 table,th,td{
+    border: 1px solid rgb(11, 174, 231);
+}
+#graph1 th{
+    height:52px;
+}
+#graph1 td{
+    height:42px;
+}
+
+
+
+#graph1 table{
+    border-collapse:collapse;
+    width: 100%
+}
+
+#graph1 tbody::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 13px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+#graph1 tbody::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    background-color: rgba(193, 193, 193);
+    background-repeat: no-repeat;
+    }
+#graph1 tbody::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        background: #EDEDED;
+    }
+/*滚动条整体样式*/
+/*滚动条里面小方块*/
+/*滚动条里面轨道*/
+#graph1 tbody{
+    display:block;
+    height: 125px;
+    overflow-y: scroll;
+    text-align: center;
+}
+#graph1 thead tr{
+    display:block;
+}
+
+
+#graph1 th:nth-child(1){
+    width: 80px;
+    height: 40px;
+}
+#graph1 td:nth-child(1){
+    width: 80px;
+    height: 40px;
+}
+#graph1 th:nth-child(2){
+    width: 220px;
+}
+#graph1 td:nth-child(2){
+    width: 220px;
+}
+#graph1 th:nth-child(3){
+    width: 240px;
+}
+#graph1 td:nth-child(3){
+    width: 240px;
+}
+#graph1 th:nth-child(4){
+    width: 400px;
+}
+#graph1 td:nth-child(4){
+    width: 389px;
+}

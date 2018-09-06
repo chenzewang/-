@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    position: relative;
+    top:100px;
+    left:100px;
+}
+
+
+#main{
+    background-image: url(../../img/5-1-kuang.png);
+    width: 806px;
+    height: 278px;
+}
+input{
+    border-radius: 20px;
+    position: absolute;    
+    border: 2px solid rgb(20,221,231);
+    background-color: rgba(29, 47, 60, 0.8);
+    color: white;
+    text-align: center;
+    
+}
+input:nth-child(2){
+    width: 117px;
+    height: 30px;
+    top: 60px;
+    left: 100px;
+    background-position: 0px 0px;
+}
+
+input:nth-child(4){
+    width: 117px;
+    height: 30px;
+    top: 164px;
+    left: 100px;
+    background-position:  0 0;
+}input:nth-child(6){
+    width: 120px;
+    height: 100px;
+    top: 110px;
+    left: 355px;
+    background-position: -100px 0px,-100px 100px, 0 0;
+}input:nth-child(8){
+    width: 120px;
+    height: 100px;
+    top: 110px;
+    left: 555px;
+}
+
+span{
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: "宋体"
+}
+span:nth-child(1){
+    top: 30px;
+    left: 119px;
+}
+span:nth-child(3){
+    top: 134px;
+    left: 111px;
+}
+span:nth-child(5){
+    top: 80px;
+    left: 350px;
+}
+span:nth-child(7){
+    top: 80px;
+    left: 550px;
+}

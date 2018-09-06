@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>历史巡检记录</title>
+    <link rel="stylesheet" type="text/css" href="css/历史巡检记录.css" />
+</head>
+
+<body>
+    <!-- 检索栏 -->
+    <div id="search">
+
+                
+        <div id="time">
+            <span>按时间查询</span>
+            <input onkeyup="searchByOther()">
+        </div>
+        <div id="equ">
+            <span>按设备查询</span>
+            <input onkeyup="searchByEqu()">
+        </div>
+        <div id="map">
+            <span>按巡检路线查询</span>
+            <ul>
+                <li><a onclick="searchByOther()">锅炉路线</a></li>
+                <li><a onclick="searchByOther()">电气路线</a></li>
+                <li><a onclick="searchByOther()">汽机路线</a></li>                    
+            </ul>
+        </div>
+        <div id="man">
+            <span>按巡逻人查询</span>
+            <input onkeyup="searchByOther()">
+        </div>
+        <div id="count">
+            <span>按工号查询</span>
+            <input onkeyup="searchByOther()">
+        </div>
+    
+    </div>       
+
+
+
+    
+
+    <!-- 按序号排列 -->
+    <div id="record1" class="record">
+        
+        <div id="graph1">
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>时间</th>
+                        <th>巡检人</th>                    
+                        <th>异常摘要</th>                      
+                        <th>操作</th>
+
+                    </tr>        
+                </thead>
+                <tbody>
+                    <!-- (book,index) index:当前元素在数组位置 -->
+                    <tr v-for="(record, index) in recordLib">
+                        <td>{{record.num}}</td>
+                        <td>{{record.time}}</td>
+                        <td>{{record.man}}</td>
+                        <td>{{record.digest}}</td>                    
+                        <td><button v-on:click="lookDetial(index)" >查看详情</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- 查看详情-->
+    <div id="record2"  class="record">
+        <div id="record2_title"> 
+            <div>巡检记录表</div>
+            <button>生成巡检报告</button>
+        </div>
+        <div id="record2_state">
+            <div>
+                <span>巡检时间</span><div></div>
+            </div>
+            <div>
+                <span>当前负荷</span><div></div>
+            </div>
+            <div>
+                <span>巡检人</span><div></div>
+            </div>
+            <div>
+                <span>巡检模式</span><div></div>
+            </div>
+            <div>
+                <span>完成数/总数</span><div></div>
+            </div>       
+        </div>
+        <div id='record2_map'>
+            <div>巡检路线</div>
+            <div>某某巡检</div>
+            <div></div>
+        </div>
+        <div id="graph2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>送检点</th>
+                        <th>状态</th>
+                        <th>巡检值</th>                    
+                        <th>标准值</th>                      
+                        <th>故障信息描述</th>
+                    </tr>        
+                </thead>
+                <tbody>
+                    <!-- (book,index) index:当前元素在数组位置 -->
+                    <tr v-for="(record2, index) in record2Lib">
+                        <td>{{record2.dian}}</td>
+                        <td>{{record2.statu}}</td>
+                        <td>{{record2.value}}</td>
+                        <td>{{record2.normalValue}}</td>                    
+                        <td>{{record2.describe}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            
+    </div>
+    
+    <!-- 按时间 人 工号 路线等查询 -->
+    <div id="record3" class="record">
+        <div id="graph3">
+            <table>
+                <thead>
+                    <tr>
+                        <th>选定的巡检次数</th>
+                        <th>巡检人</th>
+                        <th>巡检路线</th>                    
+                        <th>巡检时间</th>                      
+                        <th>操作</th>
+                        
+                    </tr>        
+                </thead>
+                <tbody>
+                    <!-- (book,index) index:当前元素在数组位置 -->
+                    <tr v-for="(record, index) in record3Lib">
+                        <td>{{record.num}}</td>
+                        <td>{{record.man}}</td>
+                        <td>{{record.map}}</td>
+                        <td>{{record.time}}</td>                    
+                        <td><button v-on:click="lookDetial(index)" >查看详情</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+        
+    <!-- 按设备查询 -->
+    <div id="record4" class="record">
+        <div id="record4_title">设备名称</div>
+        <div id="graph4">
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>项目</th>
+                        <th>时间1</th>                    
+                        <th>时间2</th>                      
+                        <th>故障信息</th>
+                        <th>标准值</th>
+                        <th>状态</th>
+                        
+                    </tr>        
+                </thead>
+                <tbody>
+                    <!-- (book,index) index:当前元素在数组位置 -->
+                    <tr v-for="(record, index) in record4Lib">
+                        <td>{{record.num}}</td>
+                        <td>{{record.project}}</td>
+                        <td>{{record.time1}}</td>
+                        <td>{{record.time2}}</td>                    
+                        <td><span v-on:click="lookBreakMessage(index)">{{record.breakMessage}}</span></td>
+                        <td>{{record.normalValue}}</td>                    
+                        <td>{{record.statu}}</td>                    
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 故障信息 -->
+    <div id="record5" class="record">
+        <div id="record5_left">
+            <div>
+                    <span>巡检时间</span>
+                    <div></div>
+                </div>
+                <div>
+                    <span>是否漏油</span>
+                    <div></div>
+                </div>
+                <div>
+                    <span>轴温</span>
+                    <div></div>
+                </div>
+                <div>
+                    <span>标准值</span>
+                    <div></div>
+                </div>
+                <div>
+                    <span>故障信息</span>
+                    <div onclick="breakMessage()"></div>
+                </div>
+        
+        
+        </div>
+
+        <div id="breakMessage">
+            
+            <div></div>
+            
+            <div>  
+                <div>
+                    <span>当前NFCID:</span><span></span>  
+                </div>
+                <div>
+                    <span>名称:</span><span></span>  
+                </div>
+            </div>
+                
+            <div>
+                <div><input placeholder="请输入事故名称"></div>
+                <div>
+                    <select name = equ>
+                        <option value = "逐级报警" selected="selected">逐级报警</option>
+                        <option value = "一级报警">一级报警</option>
+                        <option value = "二级报警">二级报警</option>
+                    </select>
+                </div>
+                <div>
+                    <span>第</span>
+                    <input>
+                    <span>条</span>
+                </div>
+            </div>
+            <div id="describe_crame">
+                <button>启动<br>相机</button>
+                <div class="photo"></div>
+                <div class="photo"></div>
+                <div class="photo"></div>                
+            </div>
+            <div id="describe_word">
+                <div class="word"><span>文字<br>描述</span></div>  
+                <div class="word"></div>  
+                <div class="word"></div>  
+                <div class="word"></div>  
+                <br>
+                <div id="word_kuang"><input placeholder="输入文本"><button>提交</button></div>
+            </div>
+            <div id="describe_voice">
+                <div class="voice">语音<br>描述</div>  
+                <div class="voice"></div>  
+                <div class="voice"></div>  
+                <div class="voice"></div>  
+                <div id="voice_kuang"><input placeholder=""><button>按住输入语音</button></div>
+            </div>
+            <div id="describe_solution">
+                <div>处理<br>方式</div>
+                <div></div>
+            </div>
+            <button>故障录入</button>                
+        </div>
+
+
+
+    </div>
+        
+
+
+
+<script src="js/vue.min.js"></script>
+<script src="js/历史巡检记录.js"></script>
+<script>
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+var vm=new Vue({
+    el:"#graph1",
+    data:{
+        newNfc:{
+            num:"2",
+            event:"20180611",
+            map:"陈某",
+            man:"多处破损",
+        },
+        storage:[{
+            num:"2",
+            event:"20180611",
+            map:"陈某",
+            man:"多处破损",
+        },{
+            num:"2",
+            event:"20180611",
+            map:"陈某",
+            man:"多处破损",
+        },{
+            num:"2",
+            event:"20180611",
+            map:"陈某",
+            man:"多处破损",
+        },{
+            num:"2",
+            event:"20180611",
+            map:"陈某",
+            man:"多处破损",
+        },{
+            num:"2",
+            event:"20180611",
+            map:"陈某",
+            man:"多处破损",
+        },{
+            num:"2",
+            event:"20180611",
+            map:"陈某",
+            man:"多处破损",
+        },{
+            num:"2",
+            event:"20180611",
+            map:"陈某",
+            man:"多处破损",
+        },
+        ]
+    },//end data
+   
+    
+})
