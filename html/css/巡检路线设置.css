@@ -9,8 +9,6 @@ body{
     font-family:"宋体";
 }
 #kuang1{
-    
-    
     background-image: url(../../img/1-1-mingmingzu.png),
     url(../../img/1-1-xunjiandianshuliang.png),
     url(../../img/1-1-xunjianmoshi.png),
@@ -136,10 +134,13 @@ body{
     font-size: 20px;
     cursor: default;
     margin-right: 10px;
+    position: relative;
+    top:-20px;
 }
-#map_desc input{
+#map_desc textarea{
     margin: 0 0 !important;
     position: relative;
+    display: inline-block;
     /* left: 100px; */
     /* top:-25px; */
     width: 300px !important;
@@ -147,8 +148,12 @@ body{
     background-image: none !important;
     border: 1px solid rgb(20, 221, 231) !important;
     border-radius: 15px;
-    background-color: rgba(26,38,45,0.8) !important
-    
+    background-color: rgba(26,38,45,0.8) !important;
+    text-align: left !important;
+    align-items:flex-start !important;
+    overflow: auto;
+    color: white;
+    font-size: 19px;
 }
 #kuang2{
     background-image:url(../../img/1_Neirongkuang02.png);
@@ -195,7 +200,7 @@ body{
     border: 2px solid rgb(20, 221, 231);
     display: none;
     position: relative;
-    left: 120px;
+    left: 114px;
     top:-500px;
     width: 600px;
     height: 400px;
@@ -299,6 +304,7 @@ body{
     color: white;
     position: relative;
     top:20px;
+    left: 45px;
 }
 .creat_new_item input{
     border: 1px solid rgb(20, 221, 231);
