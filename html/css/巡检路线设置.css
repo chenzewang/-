@@ -138,37 +138,44 @@ body{
     top:-20px;
 }
 #map_desc textarea{
-    margin: 0 0 !important;
-    position: relative;
     display: inline-block;
-    /* left: 100px; */
-    /* top:-25px; */
-    width: 300px !important;
-    height: 50px !important;
-    background-image: none !important;
-    border: 1px solid rgb(20, 221, 231) !important;
+    width: 300px ;
+    height: 50px ;
+    border: 1px solid rgb(20, 221, 231) ;
     border-radius: 15px;
-    background-color: rgba(26,38,45,0.8) !important;
-    text-align: left !important;
-    align-items:flex-start !important;
+    background-color: rgba(26,38,45,0.8) ;
+    text-align: left;
+    align-items:flex-start;
     overflow: auto;
     color: white;
     font-size: 19px;
 }
 #kuang2{
-    background-image:url(../../img/1_Neirongkuang02.png);
-    background-repeat: no-repeat;
+    border: 2px solid rgb(20, 221, 231) ;
+    border-radius: 15px;
+    background-color: rgba(26,38,45,0.8) ;
     position: absolute;
     left: 10px;
     top: 250px;
     width: 795px;
-    height: 150px;
+    min-height:150px;
+    max-height: 325px;
     overflow: auto	;
     color: white;
     text-align: center;
     line-height: 29px;
 }
-
+#kuang2::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 13px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 2px;
+}
+#kuang2::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    background-color: rgba(193, 193, 193);
+    background-repeat: no-repeat;
+    }
+#kuang2::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        background: #EDEDED;
+    }
 #map{
     margin-left: 10px;
     margin-top: 10px;
