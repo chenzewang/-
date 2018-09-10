@@ -213,16 +213,18 @@
 
 
 
-    function addMapType(x){   //
-        var name=x.$("textarea").text()
-        var model=` 
-                    <div class="luxian_type">
-                        <div class="title">${name}</div>
-                        <ul></ul>
-                    </div>
-                `
-        $("#luxianku_box .luxian_type:last").after(medel)
-
+    function addMapType(){   //
+        if(event.keyCode == 13){ 
+            var name=$(".creat_new_type:eq(0) textarea:eq(0)").val();
+            var model=` 
+                        <div class="luxian_type">
+                            <div class="title">${name}</div>
+                            <ul></ul>
+                        </div>
+                    `
+            $("#luxianku_box .luxian_type:last").after(model)
+            $(".creat_new_type:eq(0) textarea:eq(0)").val("")          
+        } 
     }
   
     
