@@ -25,18 +25,6 @@ var objMap={
 }
 
 
-var objItem={
-    "id": 1,
-    "content": "",
-   "unit": "",
-    "itemtype": true,
-    "st_min": "0.0",
-    "st_max": "0.0",
-    "al_min": "0.0",
-    "al_max": "0.0",
-    "created_at": "",
-    "updated_at": ""
-}
 
 function submit(){  //提交入库
     objMap.name=$("#map_name").val()
@@ -57,8 +45,8 @@ function submit(){  //提交入库
     fresh()
 }//close submit()
 
+var pathLibrary=[]
 function fresh(){   //刷新路线库
-
     for(let i=0;i<$("#luxianku ul:eq(0) li").length;i++){
         $("#luxianku ul:eq(0) li").remove()
     }
@@ -71,14 +59,17 @@ function fresh(){   //刷新路线库
             alert('发送失败');
         },
         success : function(data) {
+            pathLibrary=data
             $("#luxianku li").empty();
             for(let i=0;i<data.length;i++){
-                let li=$("<li onclick=\" lxk_click(this)\"><span>"+data[i].name+"</span><button onclick=\"ku_del(this)\"></button><button onclick=\"chakan()\"></button></li>")
-                $("#luxianku ul:eq(0)").append(li)
-                 
+                let li=$("<li data-id=\""+data[i].id+"\" onclick=\" lxk_click(this)\"><span>"+data[i].name+"</span><button onclick=\"ku_del(this)\"></button><button onclick=\"chakan()\"></button></li>")
+                $("#luxianku ul:eq(0)").append(li)    
+            }
+            for(let i=0;i<data.length;i++){
+                let li=$("<li data-id=\""+data[i].id+"\" onclick=\" lxk_click(this)\"><span>"+data[i].name+"</span><button onclick=\"ku_del(this)\"></button><button onclick=\"chakan()\"></button></li>")
+                $("#luxianku ul:eq(0)").append(li)    
             }
             
-               
         }
     });
 }

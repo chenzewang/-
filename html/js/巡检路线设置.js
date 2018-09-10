@@ -25,15 +25,6 @@
         nowMapType=x;
     }
     //路线库的点选效果
-    function lxk_click(x){
-        var lxku=document.getElementById("luxianku").getElementsByTagName("li");
-        console.log(lxku)
-        for(var i=0;i<lxku.length;i++){
-            lxku[i].setAttribute('style',"background-color:transparent ;transform: translateY(0px);")
-        }
-        x.setAttribute('style',"background-color: rgba(47, 159, 200, 1);transform: translateY(1px);")
-        
-    }
     
      
 
@@ -44,13 +35,10 @@
 
     var num
     function creatMap(){  //生成路线框图
-        
         if(document.getElementById("map_num").value==0){
             alert("请输入框图数目")
             return
         }
-
-
         num=document.getElementById("map_num").value;
         objMap.num=num;
         var lie;    if(num>=5) lie=5;else lie=num;
@@ -134,17 +122,21 @@
 
     var kuangx;//当前选中的框
     function up(x){  //点击框图，弹出书写框
-        var input=document.getElementById("kuang3").getElementsByTagName("input");
+        //先清空书写框
+        var input=document.getElementById("kuang3").getElementsByTagName("input"); 
         for(let j=0;j<input.length;j++){
             input[j].value="";
         }
+        //书写框出现，遮掩层出现
         document.getElementById("kuang3").setAttribute("style","display:block");
         document.getElementsByClassName("bgPop")[0].setAttribute("style","display:block");
+        
         kuangx=x;
+        
+        //把objMap的数据输入到书写框里
         $("#spot_name").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].name)
         $("#spot_desc").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].desc)
-        for(let i=0;i<$(".creat_new_item").length;i++){ 
-            
+        for(let i=0;i<$(".creat_new_item").length;i++){    
             $(".creat_new_item:eq("+i+") input:eq(0)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].content)
             $(".creat_new_item:eq("+i+") input:eq(1)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].unit)
             $(".creat_new_item:eq("+i+") input:eq(2)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].st_min)
@@ -152,19 +144,14 @@
             $(".creat_new_item:eq("+i+") input:eq(4)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].al_min)
             $(".creat_new_item:eq("+i+") input:eq(5)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].al_max)
         }
-            
-
     }
     function saveItem(){  //保存数据到spot
+        
         var text="";
         text=text+document.getElementById("spot_name").value;
-        kuangx.getElementsByTagName('span')[0].innerHTML=text;
+        kuangx.getElementsByTagName('span')[0].innerHTML=text; //spot.name放到对应框图中
         
-        
-        for(let i=0;i<=objMap.spots[kuangx.getAttribute("data-spot-seq")].items.length+100;i++){
-            objMap.spots[kuangx.getAttribute("data-spot-seq")].items.pop();
-        }
-
+        objMap.spots[kuangx.getAttribute("data-spot-seq")].items=[]  //清空objMap.spots[kuangx.getAttribute("data-spot-seq")].items
 
         for(let i=0;i<$(".creat_new_item").length;i++){ 
             //各item的数据保存到spot
@@ -183,6 +170,7 @@
         objMap.spots[kuangx.getAttribute("data-spot-seq")].name=$("#spot_name").val();
         objMap.spots[kuangx.getAttribute("data-spot-seq")].desc=$("#spot_desc").val();
         objMap.spots[kuangx.getAttribute("data-spot-seq")].id=parseInt(kuangx.getAttribute("data-spot-seq"))+1
+        console.log($(".creat_new_item") )        
     }
     function del(){  //清空某spot         
         var input=document.getElementById("kuang3").getElementsByTagName("input");        
@@ -191,11 +179,9 @@
         }//清空kuang3所有输入框
         
         $("#spot_guding select:eq(0)").val("0");
-        for(let i=0;i=$(".creat_new_item").length;){
-            objMap.spots[kuangx.getAttribute("data-spot-seq")].items.pop()
-            $(".creat_new_item:eq(0)").remove()             
-        }
-
+        objMap.spots[kuangx.getAttribute("data-spot-seq")].items=[]  //清空objMap.spots[].items        
+        $(".creat_new_item").remove();//清除div-item
+        saveItem()
     }
     
     var model=document.getElementsByClassName("creat_new_item")[0];
@@ -210,16 +196,7 @@
         saveItem()
     }
 
-    function chakan(){ //查看路线库中的路线的效果
-        document.getElementById("kuang1").setAttribute("style","display:none");
-        document.getElementById("kuang2").setAttribute("style","display:none");
-        document.getElementById("kuang3").setAttribute("style","display:none");
-        document.getElementById("kuang4").setAttribute("style","display:block");
-        document.getElementById("kuang5").setAttribute("style","display:block");
-        document.getElementById("fanhui").setAttribute("style","display:block");    
-        document.getElementById("tijiao").setAttribute("style","display:none");            
-        
-    }
+
     function fanhui(){   //返回新建路线库页面
         document.getElementById("kuang1").setAttribute("style","display:block");
         document.getElementById("kuang2").setAttribute("style","display:block");
@@ -236,7 +213,16 @@
 
 
 
+    function addMapType(x){   //
+        var name=x.$("textarea").text()
+        var model=` 
+                    <div class="luxian_type">
+                        <div class="title">${name}</div>
+                        <ul></ul>
+                    </div>
+                `
+        $("#luxianku_box .luxian_type:last").after(medel)
 
-
-
+    }
+  
     

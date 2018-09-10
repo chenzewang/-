@@ -12,7 +12,12 @@
 <body>
 
         <div id="kuang1">
-            <input id="map_name">
+
+            <select id="map_name">
+                <option value="1">选择1</option>
+                <option value="2">选择2</option>
+                <option value="3">选择3</option>                
+            </select>
             <input id="map_num">
             <ul>
                 <li data-type="固定路线"></li>
@@ -65,16 +70,39 @@
                 
         </div>
         <div id="luxianku">
-            
-            <div id="luxian">
-
+            <div id="luxianku_box">
+                <div class="luxian_type">
+                    <div class="title">XX路线</div>
+                    <ul></ul>
+                </div>
+                <div class="luxian_type">
+                    <div class="title">XX路线</div>
+                    <ul></ul>
+                </div>
+                <div class="luxian_type">
+                    <div class="title">XX路线</div>
+                    <ul></ul>
+                </div>
+                <div class="luxian_type">
+                    <div class="title">XX路线</div>
+                    <ul></ul>
+                </div>
+                <div class="luxian_type">
+                    <div class="title">XX路线</div>
+                    <ul></ul>
+                </div>
+                <div class="luxian_type">
+                    <div class="title">XX路线</div>
+                    <ul></ul>
+                </div>
             </div>
-
-            <ul>
-                
-            </ul>
-
+            
+            <div class="creat_new_type luxian_type">
+                <div class="title" ><textarea></textarea></div> 
+            </div>
         </div>
+
+
         <button id="tijiao" onclick="submit()">
             
         </button>
@@ -92,7 +120,7 @@
         
         <!-- test -->
         
-        
+        <script src="js/巡检路线设置chakan.js"></script>
         <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
         <script src="js/巡检路线设置.js"></script>
         <script src="js/vue.min.js"></script>

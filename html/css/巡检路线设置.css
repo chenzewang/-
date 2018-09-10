@@ -27,19 +27,19 @@ body{
     height: 147px;
 }
 
-#kuang1 input:nth-child(1){
-    background-image: url(../../img/1_Neirongkuang_dianji.png);
+
+#map_name{
     width: 115px;
     height: 29px;
     margin-left: 79px;
     margin-top: 12px;
-    background-color: transparent;
-    border: 0px;
-    color:white;
+    background-color:rgba(26,38,45,0.6);
     text-align: center;
-    background-repeat: no-repeat;
+    color:white;
+    border-radius: 10px;
+    border: 2px solid rgb(20, 221, 231);
 }
-#kuang1 input:nth-child(2){
+#map_num{
     background-image: url(../../img/1_Neirongkuang_dianji.png);
     width: 115px;
     height: 29px;
@@ -392,22 +392,52 @@ body{
     width: 192px;
     height: 620px;
 }
+#luxianku_box{
+    width: 192px;
+    max-height: 450px;
+    margin-top: 42px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#luxianku_box::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 2px;
+}
+#luxianku_box::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    background-color: rgba(193, 193, 193);
+    background-repeat: no-repeat;
+}
+#luxianku_box::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    background: #EDEDED;
+}
 #luxianku ul{
     position: relative;
-    left: 33px;
-    top: 48px;
-    width: 180px;
+    display: inline-block;
+    width: 140px;
+    height: 105px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#luxianku ul::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 2px;
+}
+#luxianku ul::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    background-color: rgba(193, 193, 193);
+    background-repeat: no-repeat;
+}
+#luxianku ul::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    background: #E0D1D1;
 }
 #luxianku li{
-    width: 210px;
+    width: 150px;
     height: 30px;
     list-style: none;
-    
 }
 
 #luxianku ul li>span{
     display: inline-block;
-    width: 100px;
+    width: 70px;
     height: 30px;
     color: white;
     line-height: 30px;
@@ -423,7 +453,8 @@ body{
     background-repeat: no-repeat;
     border: 0px;
     background-color: transparent ;
-    margin-top: 5px;
+    position: relative;
+    top:4px;
 }
 #luxianku ul li>button:nth-child(3){
     width: 36px;
@@ -433,12 +464,51 @@ body{
     background-repeat: no-repeat;
     border: 0px;
     background-color: transparent ;
-    margin-top: 5px;
-    
+    position: relative;
+    top:5px;
 }
 #luxianku li:hover{
     background-color: rgba(47, 159, 200, 0.5)
 }
+.luxian_type{
+    width: 200px;
+    height: 105px;
+    margin-top: 10px;
+}
+.luxian_type .title{
+    width: 25px;
+    height: 100px;
+    border: 1px solid rgb(20, 221, 231);
+    border-left: 0px;
+    border-radius: 5px;
+    margin-left:4px; 
+    writing-mode: vertical-lr;
+    color:white;
+    font-size: 20px;  
+    text-align: center;  
+    display: inline-block;
+    cursor: default;
+}
+
+.creat_new_type .title{
+    cursor: pointer;
+}
+.creat_new_type textarea{
+    width: 25px;
+    height: 100px;
+    writing-mode: vertical-lr;
+    background-color: transparent;
+    border: 0px; 
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+textarea::-webkit-scrollbar {/*滚动条整体样式*/
+    display:none;
+    
+}
+
 
 
 #kuang4{
