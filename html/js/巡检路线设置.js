@@ -222,7 +222,7 @@
                             <ul></ul>
                         </div>
                     `
-            $("#luxianku_box .luxian_type:last").after(model)
+            $("#luxianku_box .luxian_type:last").before(model)
             $(".creat_new_type:eq(0) textarea:eq(0)").val("")          
         } 
     }

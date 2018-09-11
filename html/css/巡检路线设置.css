@@ -2,6 +2,17 @@
     margin: 0px;
     padding: 0px;
 }
+select{
+
+    -moz-appearance:none;
+    background-image: url("../../img/sanjiao.png");
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    padding-left: 5px;
+    padding-right: 20px;
+    background-size: 14px 14px;
+}
+
 body{
     width: 100px;
     height: 630px;
@@ -38,6 +49,7 @@ body{
     color:white;
     border-radius: 10px;
     border: 2px solid rgb(20, 221, 231);
+    background-position: 92px 6px;
 }
 #map_num{
     background-image: url(../../img/1_Neirongkuang_dianji.png);
@@ -123,12 +135,11 @@ body{
 #map_desc{
     position: relative;
     left: 10px;
-    top: -100px;
+    top: -125px;
     width: 400px;
     height: 60px;
     color: white;
     text-align: center;
-    border-radius: 15px;
 }
 #map_desc span{
     font-size: 20px;
@@ -150,6 +161,33 @@ body{
     color: white;
     font-size: 19px;
 }
+#map_name2{
+    position: relative;
+    left: 16px;
+    top: -130px;
+    width: 220px;
+    height: 35px;
+    color: white;    
+    text-align: center;
+    padding-left: 14px;
+}
+#map_name2 span{
+    font-size: 20px;
+    cursor: default;
+    margin-right: 10px;
+    position: relative;
+    top:-10px;
+}
+#map_name2 textarea{
+    border: 1px solid rgb(20, 221, 231);
+    background-color: rgba(26,38,45,0.8);
+    border-radius: 10px;
+}
+
+
+
+
+
 #kuang2{
     border: 2px solid rgb(20, 221, 231) ;
     border-radius: 15px;
@@ -339,6 +377,7 @@ body{
 #kuang3 select{
     background-color: rgb(60,93,108);    
     color: white;
+    background-position: 50px 3px;
 }
 #spot_guding select{
     width:40px;
@@ -394,7 +433,7 @@ body{
 }
 #luxianku_box{
     width: 192px;
-    max-height: 450px;
+    max-height: 540px;
     margin-top: 42px;
     overflow-y: scroll;
     overflow-x: hidden;
