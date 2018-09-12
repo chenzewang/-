@@ -135,7 +135,7 @@ body{
 #map_desc{
     position: relative;
     left: 10px;
-    top: -125px;
+    top: -90px;
     width: 400px;
     height: 60px;
     color: white;
@@ -163,18 +163,18 @@ body{
 }
 #map_name2{
     position: relative;
-    left: 16px;
-    top: -130px;
+    left: -4px;
+    top: -186px;
     width: 220px;
     height: 35px;
-    color: white;    
     text-align: center;
     padding-left: 14px;
+    color: white;
 }
 #map_name2 span{
     font-size: 20px;
     cursor: default;
-    margin-right: 10px;
+    margin-right: 4px;
     position: relative;
     top:-10px;
 }
@@ -182,6 +182,40 @@ body{
     border: 1px solid rgb(20, 221, 231);
     background-color: rgba(26,38,45,0.8);
     border-radius: 10px;
+    color: white;    
+    width: 143px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;    
+}
+
+#map_time{
+    position: relative;
+    left: 210px;
+    top: -220px;
+    width: 250px;
+    height: 35px;
+    text-align: center;
+    padding-left: 14px;
+    color: white;
+}
+#map_time span{
+    font-size: 20px;
+    cursor: default;
+    margin-right: 4px;
+    position: relative;
+    top:-10px;
+}
+#map_time div{
+    display: inline-block;
+    border: 1px solid rgb(20, 221, 231);
+    background-color: rgba(26,38,45,0.8);
+    border-radius: 10px;
+    color: white;    
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;    
 }
 
 
@@ -230,14 +264,36 @@ body{
     margin-bottom: 30px;
     background-color: rgba(30, 45, 55 ,1)
 }
+#map td{
+    width: 110px;
+    height: 29px;
+    
+    border:2px solid rgb(42, 181, 210);
+    border-radius: 10px ;
+    margin-left: 38px;
+    margin-bottom: 30px;
+    background-color: rgba(30, 45, 55 ,1)
+}
 
 
 #map td>div>span{
     position: relative;
     display: inline-block;
     width: 110px;
+    height: 30px;
+    overflow-x:scroll;
+}
+#map td>div>span::-webkit-scrollbar {
+    display: none;
 }
 
+
+.jiantou{
+    position: relative;
+    left: 76px;
+    top: -34px;
+    width: 40%;
+}
 
 
 #kuang3{
@@ -399,12 +455,6 @@ body{
     background: rgba(0,0,0,.3);  
     }
 
-
-.jiantou{
-    position: relative;
-    left: 76px;
-    top: -25px;
-}
 
 #tijiao{
     display: inline-block;

@@ -104,11 +104,11 @@
             }
             else if(Math.ceil((i+1)/5)%2==0 && i%10!=4 && i%10!=9 ){//偶数行
                 document.getElementsByClassName("jiantou")[i].setAttribute("src","../img/2-2-jiantou2.png")
-                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:-77px;top:-25px")
+                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:-76px;top:-35px")
             }  
             else if(i%10==4 || i%10==9){//指向下一行的交接箭头
                 document.getElementsByClassName("jiantou")[i].setAttribute("src","../img/2-2-jiantou5.png")
-                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:0px;top:0px")
+                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:0px;top:-9px;width:14%")
             }   
         }
         document.getElementsByClassName("jiantou")[num-1].setAttribute("src","");
