@@ -45,9 +45,8 @@
         var hang;   hang=Math.ceil(num/5);
         var tab="<table id=\"map\"> "
         
-        
-        
-        for(let i=0;i<objMap.num;i++){
+    
+        for(let i=0;i<objMap.num;i++){   //为objMap添加spot
             let objSpot={
             "id": 1,
             "name": "",
@@ -61,10 +60,7 @@
         }
 
 
-
-
-
-        for(var i=1;i<=hang;i++)
+        for(var i=1;i<=hang;i++)   //生成框
         {
             tab+="<tr>";
 
@@ -80,8 +76,8 @@
         tab+="</table>"
         document.getElementById("kuang2").innerHTML=tab;
     
-        for(var h=0;h<num;h++){
-            if(Math.ceil((h+1)/5) %2 !=0 ){//奇数行左浮动，偶数行右浮动
+        for(var h=0;h<num;h++){//奇数行左浮动，偶数行右浮动
+            if(Math.ceil((h+1)/5) %2 !=0 ){
                 document.getElementById("map").getElementsByTagName("td")[h].setAttribute('style','float:left');
             }
             else{
@@ -91,8 +87,6 @@
         for(let h=0;h<document.getElementById("map").getElementsByTagName("div").length;h++){
             document.getElementById("map").getElementsByTagName("div")[h].setAttribute("data-spot-seq",h)//为框图添加序号
         }
-
-
 
         jiantou(num);
     }
@@ -115,10 +109,6 @@
 
     }
     
-
-
-
-
 
     var kuangx;//当前选中的框
     function up(x){  //点击框图，弹出书写框
@@ -222,7 +212,7 @@
                             <ul></ul>
                         </div>
                     `
-            $("#luxianku_box .luxian_type:last").before(model)
+            $(".luxian_type:last").before(model)
             $(".creat_new_type:eq(0) textarea:eq(0)").val("")          
         } 
     }

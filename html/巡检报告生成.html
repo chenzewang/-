@@ -66,27 +66,7 @@
             <div></div>
         </div>
         <div id="graph2">
-            <table>
-                <thead>
-                    <tr>
-                        <th>送检点</th>
-                        <th>状态</th>
-                        <th>巡检值</th>                    
-                        <th>标准值</th>                      
-                        <th>故障信息描述</th>
-                    </tr>        
-                </thead>
-                <tbody>
-                    <!-- (book,index) index:当前元素在数组位置 -->
-                    <tr v-for="(record2, index) in record2Lib">
-                        <td>{{record2.dian}}</td>
-                        <td>{{record2.statu}}</td>
-                        <td>{{record2.value}}</td>
-                        <td>{{record2.normalValue}}</td>                    
-                        <td>{{record2.describe}}</td>
-                    </tr>
-                </tbody>
-            </table>
+            
         </div>
             
     </div>  
@@ -94,7 +74,6 @@
 
 
 
-    <script src="js/vue.min.js"></script>
-    <script src="js/历史巡检记录.js"></script>    
+    <script src="js/巡检报告生成.js"></script>    
 </body>
 </html>

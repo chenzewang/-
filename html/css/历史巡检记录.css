@@ -464,21 +464,6 @@ background-image: url(../../img/6-2-huadongkuai.png)
 #graph3 td{
     height:42px;
 }
-#graph3 th:nth-child(1){
-    width: 180px;
-}
-#graph3 th:nth-child(2){
-    width: 140px;
-}
-#graph3 th:nth-child(3){
-    width: 140px;
-}
-#graph3 th:nth-child(4){
-    width: 165px;
-}
-#graph3 th:nth-child(5){
-    width: 310px;
-}
 #graph3 button{
     border: 1px solid rgb(20,221,231);
     border-radius: 10px;
@@ -519,24 +504,39 @@ background-image: url(../../img/6-2-huadongkuai.png)
 }
 
 
+#graph3 th:nth-child(1){
+    width: 180px;
+}
+#graph3 th:nth-child(2){
+    width: 140px;
+}
+#graph3 th:nth-child(3){
+    width: 140px;
+}
+#graph3 th:nth-child(4){
+    width: 165px;
+}
+#graph3 th:nth-child(5){
+    width: 310px;
+}
 
 #graph3 td:nth-child(1){
-    width: 186px;
+    width: 180px;
 }
 #graph3 td:nth-child(2){
-    width: 143px;
+    width: 140px;
 }
 
 #graph3 td:nth-child(3){
-    width: 143px;
+    width: 140px;
 }
 
 #graph3 td:nth-child(4){
-    width: 170px;
+    width: 165px;
 }
 
 #graph3 td:nth-child(5){
-    width: 305px;
+    width: 297px;
 }
 
 
@@ -576,27 +576,6 @@ background-image: url(../../img/6-2-huadongkuai.png)
 }
 #graph4 td{
     height:42px;
-}
-#graph4 th:nth-child(1){
-    width: 85px;
-}
-#graph4 th:nth-child(2){
-    width: 145px;
-}
-#graph4 th:nth-child(3){
-    width: 150px;
-}
-#graph4 th:nth-child(4){
-    width: 150px;
-}
-#graph4 th:nth-child(5){
-    width: 145px;
-}
-#graph4 th:nth-child(6){
-    width: 120px;
-}
-#graph4 th:nth-child(7){
-    width: 140px;
 }
 #graph4 button{
     border: 1px solid rgb(20,221,231);
@@ -640,24 +619,45 @@ background-image: url(../../img/6-2-huadongkuai.png)
 }
 
 
+#graph4 th:nth-child(1){
+    width: 85px;
+}
+#graph4 th:nth-child(2){
+    width: 145px;
+}
+#graph4 th:nth-child(3){
+    width: 150px;
+}
+#graph4 th:nth-child(4){
+    width: 150px;
+}
+#graph4 th:nth-child(5){
+    width: 145px;
+}
+#graph4 th:nth-child(6){
+    width: 120px;
+}
+#graph4 th:nth-child(7){
+    width: 140px;
+}
 
 #graph4 td:nth-child(1){
-    width: 84px;
+    width: 86px;
 }
 #graph4 td:nth-child(2){
-    width: 144px;
+    width: 147px;
 }
 
 #graph4 td:nth-child(3){
-    width: 148px;
+    width: 152px;
 }
 
 #graph4 td:nth-child(4){
-    width: 150px;
+    width: 152px;
 }
 
 #graph4 td:nth-child(5){
-    width: 143px;
+    width: 147px;
   
 }
 #graph4 td:nth-child(5) span{ 
@@ -665,10 +665,10 @@ background-image: url(../../img/6-2-huadongkuai.png)
     cursor: pointer;
 }
 #graph4 td:nth-child(6){
-    width: 118px;
+    width: 122px;
 }
 #graph4 td:nth-child(7){
-    width: 128px;
+    width: 129px;
 }
 
 

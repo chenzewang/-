@@ -203,8 +203,6 @@ body{
     font-size: 20px;
     cursor: default;
     margin-right: 4px;
-    position: relative;
-    top:-10px;
 }
 #map_time div{
     display: inline-block;
@@ -418,7 +416,6 @@ body{
     height: 60px;
     border: 1px solid rgb(168, 234, 237);
     border-radius: 5px;
-    /* border-bottom: 1px solid rgb(168, 234, 237); */
     padding: 10px ;
 }
 #new_item_del{
@@ -488,15 +485,14 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
 }
-#luxianku_box::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
-    height: 2px;
+#luxianku_box::-webkit-scrollbar {
+    width: 5px;     
 }
-#luxianku_box::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+#luxianku_box::-webkit-scrollbar-thumb {
     background-color: rgba(193, 193, 193);
     background-repeat: no-repeat;
 }
-#luxianku_box::-webkit-scrollbar-track {/*滚动条里面轨道*/
+#luxianku_box::-webkit-scrollbar-track {
     background: #EDEDED;
 }
 #luxianku ul{
@@ -507,15 +503,14 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
 }
-#luxianku ul::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
-    height: 2px;
+#luxianku ul::-webkit-scrollbar {
+    width: 5px;    
 }
-#luxianku ul::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+#luxianku ul::-webkit-scrollbar-thumb {
     background-color: rgba(193, 193, 193);
     background-repeat: no-repeat;
 }
-#luxianku ul::-webkit-scrollbar-track {/*滚动条里面轨道*/
+#luxianku ul::-webkit-scrollbar-track {
     background: #E0D1D1;
 }
 #luxianku li{
