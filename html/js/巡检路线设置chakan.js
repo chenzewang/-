@@ -22,11 +22,10 @@ var nowPath// 从路线库中选的那条路线
 
 function lxk_click(x){ //路线的点选效果+切换objMap
     var lxku=document.getElementById("luxianku").getElementsByTagName("li");
-    console.log(lxku)
     for(var i=0;i<lxku.length;i++){
-        lxku[i].setAttribute('style',"background-color:transparent ;transform: translateY(0px);")
+        lxku[i].setAttribute('style',"background-color:transparent ;")
     }
-    x.setAttribute('style',"background-color: rgba(47, 159, 200, 1);transform: translateY(1px);")
+    x.setAttribute('style',"background-color: rgba(47, 159, 200, 1);")
     objMap=pathLibrary[x.getAttribute("data-id")]
 }
 

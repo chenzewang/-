@@ -498,10 +498,12 @@ body{
 #luxianku ul{
     position: relative;
     display: inline-block;
-    width: 140px;
+    width: 150px;
     height: 105px;
     overflow-y: scroll;
     overflow-x: hidden;
+    position: relative;
+    left: -7px;
 }
 #luxianku ul::-webkit-scrollbar {
     width: 5px;    
@@ -517,11 +519,12 @@ body{
     width: 150px;
     height: 30px;
     list-style: none;
+
 }
 
 #luxianku ul li>span{
     display: inline-block;
-    width: 70px;
+    width: 80px;
     height: 30px;
     color: white;
     line-height: 30px;
