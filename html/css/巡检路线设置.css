@@ -279,7 +279,7 @@ body{
     display: inline-block;
     width: 110px;
     height: 30px;
-    overflow-x:scroll;
+    overflow-x:hidden;
 }
 #map td>div>span::-webkit-scrollbar {
     display: none;
@@ -544,12 +544,10 @@ body{
     width: 36px;
     height: 20px;
     cursor: pointer;
-    background-image: url(../../img/2-2-youce-chakan02.png);
-    background-repeat: no-repeat;
-    border: 0px;
-    background-color: transparent ;
-    position: relative;
-    top:5px;
+    border: 2px solid rgb(20, 221, 231);
+    background-color: rgba(30, 42, 48,0.8);
+    color: white;
+    font-size: 14px;
 }
 #luxianku li:hover{
     background-color: rgba(47, 159, 200, 0.5)

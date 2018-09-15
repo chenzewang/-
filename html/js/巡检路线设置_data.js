@@ -62,14 +62,10 @@ function fresh(){   //刷新路线库
             pathLibrary=data
             $("#luxianku li").empty();
             for(let i=0;i<data.length;i++){
-                let li=$("<li data-id=\""+data[i].id+"\" onclick=\" lxk_click(this)\"><span>"+data[i].name+"</span><button onclick=\"ku_del(this)\"></button><button onclick=\"chakan()\"></button></li>")
+                let li=$("<li data-id=\""+data[i].id+"\" onclick=\" lxk_click(this)\"><span>"+data[i].name+"</span><button onclick=\"ku_del(this)\"></button><button onclick=\"chakan()\">启用</button></li>")
                 $("#luxianku ul:eq(0)").append(li)    
             }
-            for(let i=0;i<data.length;i++){
-                let li=$("<li data-id=\""+data[i].id+"\" onclick=\" lxk_click(this)\"><span>"+data[i].name+"</span><button onclick=\"ku_del(this)\"></button><button onclick=\"chakan()\"></button></li>")
-                $("#luxianku ul:eq(0)").append(li)    
-            }
-            
+      
         }
     });
 }
