@@ -1,18 +1,4 @@
 
-    function addEvent(){
-        for(var i=0;i<3;i++){
-            document.getElementById('kuang1').getElementsByTagName("li")[i].setAttribute('onclick','liClick(this)')
-            }
-    
-        var lxku=document.getElementById("luxianku").getElementsByTagName("li");  
-        for(var j=0;j<lxku.length;j++){
-            lxku[j].setAttribute('onclick','lxk_click(this)');
-            lxku[j].getElementsByTagName("button")[1].setAttribute('onclick','chakan()');
-            lxku[j].getElementsByTagName("button")[0].setAttribute('onclick','ku_del(this)');
-
-        }        
-    }
-    addEvent();
 
     
     //路线模式的点选效果及所选的type
