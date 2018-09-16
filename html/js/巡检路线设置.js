@@ -189,8 +189,11 @@
 
 
 
-    function addMapType(){   //
-        if(event.keyCode == 13){ 
+    function addMapType(evt){   //
+        e=window.event||evt;
+        
+        
+        if(e.keyCode == 13){ 
             var name=$(".creat_new_type:eq(0) textarea:eq(0)").val();
             var model=` 
                         <div class="luxian_type">
