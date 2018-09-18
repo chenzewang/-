@@ -1,15 +1,4 @@
-$(document).ready(function () {
-    $('.pop-close').click(function () {
-        $('#kuang3').hide();
-        $('.bgPop').hide();
 
-    });
-    $('#kuang2 td').click(function () {
-        document.getElementsByClassName("bgPop")[0].setAttribute("style","display:block")
-        $('#kuang3').show();
-    });
-
-})
 
 var objMap={
     id:0,
@@ -20,7 +9,7 @@ var objMap={
     desc:"",                        //路线描述
     created_at:"",                 //路线创建时间
     updated_at:"",                //路线修改时间
-    spots:[                    //这条路线的各个点
+    spots:[                      //这条路线的各个点
     ]
 }
 
@@ -29,7 +18,6 @@ var objMap={
 function submit(){  //提交入库
     objMap.name=$("#map_name").val()
     objMap.desc=$("#map_desc input:eq(0)").val()
-    alert(JSON.stringify(objMap))
     
     $.ajax({
         type : 'POST',

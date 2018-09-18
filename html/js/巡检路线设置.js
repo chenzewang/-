@@ -1,4 +1,15 @@
+$(document).ready(function () {
+    $('.pop-close').click(function () {
+        $('#kuang3').hide();
+        $('.bgPop').hide();
 
+    });
+    $('#kuang2 td').click(function () {
+        document.getElementsByClassName("bgPop")[0].setAttribute("style","display:block")
+        $('#kuang3').show();
+    });
+
+})
 
     
     //路线模式的点选效果及所选的type
@@ -14,11 +25,10 @@
     
      
 
-        //按照巡检点数量生成不同路线框图
-
-        
-
-
+       
+    
+    
+    //按照巡检点数量生成不同路线框图
     var num
     function creatMap(){  //生成路线框图
         if(document.getElementById("map_num").value==0){
@@ -208,3 +218,7 @@
     }
   
     
+
+    function creatNewPath(){
+        objMap={}
+    }
