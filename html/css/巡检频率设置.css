@@ -1,74 +1,138 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: "宋体";
 }
 body{
     position: relative;
     top:100px;
     left:100px;
 }
-
-
 #main{
     background-image: url(../../img/5-1-kuang.png);
     width: 806px;
     height: 278px;
+    display: flex;
+    justify-content:center ;
 }
-input{
-    border-radius: 20px;
-    position: absolute;    
-    border: 2px solid rgb(20,221,231);
-    background-color: rgba(29, 47, 60, 0.8);
+#main>div{
+    width: 200px;
+    height: 200px;
+    margin: 45px 20px 0 20px; 
     color: white;
-    text-align: center;
     
 }
-input:nth-child(2){
-    width: 117px;
-    height: 30px;
-    top: 60px;
-    left: 100px;
-    background-position: 0px 0px;
+p {
+    text-align: center;
+}
+button:active{
+    transform: translateY(2px)
 }
 
-input:nth-child(4){
+
+
+
+#time input{
+    display: block;
     width: 117px;
     height: 30px;
-    top: 164px;
-    left: 100px;
-    background-position:  0 0;
-}input:nth-child(6){
-    width: 120px;
-    height: 100px;
-    top: 110px;
-    left: 355px;
-    background-position: -100px 0px,-100px 100px, 0 0;
-}input:nth-child(8){
-    width: 120px;
-    height: 100px;
-    top: 110px;
-    left: 555px;
-}
-
-span{
-    position: absolute;
+    margin: 0 auto;
+    border: 1px solid rgb(20, 221, 231);
+    border-radius: 15px;
+    background-color: rgba(26,38,45,0.3);
     color: white;
-    font-size: 20px;
-    font-family: "宋体"
 }
-span:nth-child(1){
-    top: 30px;
-    left: 119px;
+#time p:nth-child(1){
+    margin-top: 10px;
 }
-span:nth-child(3){
-    top: 134px;
-    left: 111px;
+#time p:nth-child(3){
+    margin-top: 50px;
 }
-span:nth-child(5){
-    top: 80px;
+
+
+
+
+.add_box{   
+    width: 120px;
+    height: 100px;
+    border: 1px solid rgba(20, 221, 231,0.4);
+    border-right: 0px;
+    border-radius:  15px  0  0 15px;
+    background-color: rgba(26,38,45,0.3);
+    margin: 0 auto;
+    overflow-y: scroll;   
+}
+.add_box::-webkit-scrollbar {
+    width: 8px;    
+    height: 20px;
+}
+.add_box::-webkit-scrollbar-thumb {
+    background-color: rgba(193, 193, 193);
+    background-repeat: no-repeat;
+    }
+.add_box::-webkit-scrollbar-track {
+        background: rgba(20, 221, 231,0.5);
+    }
+.add_box ul{
+    width: 100%;
+    height: 100%;
+
+}
+.add_box li{
+    width: 100%;
+    height: 25%;
+    line-height: 25px;
+    font-size: 15px;
+    overflow: hidden;
+}
+.add_box li:hover{
+    background-color: rgba(20, 221, 231,0.2)
+}
+.address p{
+    margin-bottom: 10px;
+}
+.address input{
+    display: block;
+    width:125px;
+    height: 15px;
+    margin: 5px auto;
+    border: 1px solid rgba(20, 221, 231,0.4);
+    border-radius: 6px;
+    background-color: rgba(26,38,45,0.6);
+    color: white;
+}
+.address button{
+    height: 22px;
+    width: 40px;
+    border: 1px solid rgb(20, 221, 231);
+    border-radius: 5px;
+    background-color: rgba(26,38,45,0.5);
+    cursor: pointer;
+    color: white;
+    margin-left: 40px;
+}
+
+
+
+#set{
+    height: 30px;
+    width: 100px;
+    border: 2px solid rgb(20, 221, 231);
+    border-radius: 15px;
+    background-color: rgba(26,38,45,0.8);
+    cursor: pointer;
+    color: white;
+    position: absolute;
     left: 350px;
+    top:350px;
 }
-span:nth-child(7){
-    top: 80px;
-    left: 550px;
+
+
+
+.normal{
+    background-color: transparent;
+}
+.select{
+    background-color: rgba(20, 221, 231,0.5)!important;
+    
 }
