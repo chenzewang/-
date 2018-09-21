@@ -41,12 +41,18 @@ button:active{
     border-radius: 15px;
     background-color: rgba(26,38,45,0.3);
     color: white;
+    text-align: center;
 }
 #time p:nth-child(1){
     margin-top: 10px;
 }
 #time p:nth-child(3){
     margin-top: 50px;
+}
+#time span{
+    position: relative;
+    top:-25px;
+    left: 165px;
 }
 
 
@@ -67,7 +73,7 @@ button:active{
     height: 20px;
 }
 .add_box::-webkit-scrollbar-thumb {
-    background-color: rgba(193, 193, 193);
+    background-color: rgba(193, 193, 193,0.7);
     background-repeat: no-repeat;
     }
 .add_box::-webkit-scrollbar-track {
