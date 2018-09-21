@@ -9,44 +9,48 @@
     
 </head>
 <body>
-    <div id="kuang"></div>
-    <div id="anniu">
-        <button>锅炉巡检路线</button>
-        <button>汽机巡检路线</button>
-        <button>电气巡检路线</button>        
+    <div id="kuang2">
+
     </div>
-    <div id="youce">
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+    <div class="bgPop"></div> <!-- 框3遮掩层 -->
+    
+    <div id="kuang3">
+        <input id="spot_name" placeholder="巡检设备名称"> 
+        <input id="spot_desc" placeholder="巡检设备描述"> 
         
+        <div id="kuang3_items">
+           
+            <div class="creat_new_item">
+                <input placeholder="巡检条目内容">
+                <input placeholder="单位">
+                <div>
+                    <select>
+                        <option value ="true">确认型</option>
+                        <option value ="false">数值型</option>
+                    </select>
+                </div>
+                <br>                        
+                <input placeholder="最小标准值">
+                <input placeholder="最大标准值"><br>
+                <input placeholder="最小警戒值">
+                <input placeholder="最大标准值"> 
+            </div>
+        </div>
+
+        <span class="pop-close">Ｘ</span>
+        
+</div>
+    <div id="youce">
+        <div onclick="changeObjmap()">锅炉侧</div>
+        <div onclick="changeObjmap()">电气侧</div>
+        <div onclick="changeObjmap()">汽轮机侧</div>
+        <div onclick="changeObjmap()">外围</div>
     </div>
 
     
-
-<script>
-    function liClick(x){
-            for(var i=0;i<3;i++){
-                document.getElementById('anniu').getElementsByTagName("button")[i].setAttribute("style","background-image:url(../img/5-1-dianqixunjianluxian-kuang.png)");
-                }
-                x.setAttribute("style","background-image:url(../img/5-1-guoluxunjianluxian_kuang.png)");   
-                console.log(x)
-        }
-    
-        function addEvent(){
-            for(var i=0;i<3;i++){
-                document.getElementById('anniu').getElementsByTagName("button")[i].setAttribute('onclick','liClick(this)')
-
-            }
-        }
-        addEvent();
-     
-</script>
-
-
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script src="js/实时巡检查看.js"></script>
 
 
 </body>
-
 </html>

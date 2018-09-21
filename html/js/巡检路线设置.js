@@ -183,16 +183,7 @@ $(document).ready(function () {
     }
 
 
-    function fanhui(){   //返回新建路线库页面
-        document.getElementById("kuang1").setAttribute("style","display:block");
-        document.getElementById("kuang2").setAttribute("style","display:block");
-        document.getElementById("kuang3").setAttribute("style","display:none");
-        document.getElementById("kuang4").setAttribute("style","display:none");
-        document.getElementById("kuang5").setAttribute("style","display:none");
-        document.getElementById("fanhui").setAttribute("style","display:none");
-        document.getElementById("tijiao").setAttribute("style","display:block");            
-        
-    }
+
     function ku_del(x){
         x.parentNode.parentNode.removeChild(x.parentNode);
     }
