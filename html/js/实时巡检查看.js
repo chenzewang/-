@@ -16,7 +16,7 @@ $(document).ready(function () {
 var objMap={
     id:0,
     name:"线路1",          //路线名字
-    spotnum:10,       //设备点数
+    spotnum:8,       //设备点数
     specified: true,                  //是否固定
     arrangeable:false,               //是否自由
     desc:"",                        //路线描述
@@ -30,17 +30,19 @@ var objMap={
             tmp: false,
             created_at: "",
             updated_at: "",
+            checked:true,   //true 查过了   false 未查
             items: [{
                 id:"1",
                 content: "内容",
                 unit: "位",
-                itemtype: "1",
+                itemtype: "0",
                 st_min: "23",
                 st_max: "45",
                 al_min: "30",
                 al_max: "40",
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
                 },]
         },{
             id: 1,
@@ -49,6 +51,7 @@ var objMap={
             tmp: true,
             created_at: "",
             updated_at: "",
+            checked:true,
             items: [{
                 id:"1",
                 content: "内容",
@@ -60,6 +63,8 @@ var objMap={
                 al_max: "40",
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
+                data:"50"
+                
                 },{
                     id:"1",
                     content: "内容",
@@ -71,6 +76,8 @@ var objMap={
                     al_max: "40",
                     created_at: "巡检条目创建时间",
                     updated_at: "巡检条目修改时间",
+                    data:"50"
+                    
                     },]
         },{
             id: 1,
@@ -79,6 +86,7 @@ var objMap={
             tmp: false,
             created_at: "",
             updated_at: "",
+            checked:true,
             items: [{
                 id:"1",
                 content: "内容",
@@ -90,6 +98,8 @@ var objMap={
                 al_max: "40",
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
+                data:"50"
+                
                 },{
                     id:"1",
                     content: "内容",
@@ -101,6 +111,8 @@ var objMap={
                     al_max: "40",
                     created_at: "巡检条目创建时间",
                     updated_at: "巡检条目修改时间",
+                    data:"50"
+                    
                     },{
                         id:"1",
                         content: "内容",
@@ -111,6 +123,8 @@ var objMap={
                         al_min: "30",
                         al_max: "40",
                         created_at: "巡检条目创建时间",
+                        data:"50",
+                        
                         updated_at: "巡检条目修改时间",
                         },]
         },{
@@ -120,6 +134,7 @@ var objMap={
             tmp: false,
             created_at: "",
             updated_at: "",
+            checked:true,
             items: [{
                 id:"1",
                 content: "内容",
@@ -131,6 +146,8 @@ var objMap={
                 al_max: "40",
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
+                data:"50",
+                
                 },{
                     id:"1",
                     content: "内容",
@@ -142,6 +159,8 @@ var objMap={
                     al_max: "40",
                     created_at: "巡检条目创建时间",
                     updated_at: "巡检条目修改时间",
+                    data:"50",
+                    
                     },{
                         id:"1",
                         content: "内容",
@@ -153,6 +172,8 @@ var objMap={
                         al_max: "40",
                         created_at: "巡检条目创建时间",
                         updated_at: "巡检条目修改时间",
+                        data:"50",
+                        
                         },{
                             id:"1",
                             content: "内容",
@@ -163,6 +184,8 @@ var objMap={
                             al_min: "30",
                             al_max: "40",
                             created_at: "巡检条目创建时间",
+                            data:"50",
+                            
                             updated_at: "巡检条目修改时间",
                             },{
                                 id:"1",
@@ -174,6 +197,8 @@ var objMap={
                                 al_min: "30",
                                 al_max: "40",
                                 created_at: "巡检条目创建时间",
+                                data:"50",
+                                
                                 updated_at: "巡检条目修改时间",
                                 },]
         },{
@@ -183,6 +208,7 @@ var objMap={
             tmp: false,
             created_at: "",
             updated_at: "",
+            checked:true,
             items: [{
                 id:"1",
                 content: "内容",
@@ -194,6 +220,8 @@ var objMap={
                 al_max: "40",
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
+                data:"50",
+                
                 },{
                     id:"1",
                     content: "内容",
@@ -204,6 +232,8 @@ var objMap={
                     al_min: "30",
                     al_max: "40",
                     created_at: "巡检条目创建时间",
+                    data:"50",
+                    
                     updated_at: "巡检条目修改时间",
                     },{
                         id:"1",
@@ -215,6 +245,8 @@ var objMap={
                         al_min: "30",
                         al_max: "40",
                         created_at: "巡检条目创建时间",
+                        data:"50",
+                        
                         updated_at: "巡检条目修改时间",
                         },{
                             id:"1",
@@ -226,6 +258,8 @@ var objMap={
                             al_min: "30",
                             al_max: "40",
                             created_at: "巡检条目创建时间",
+                            data:"50",
+                            
                             updated_at: "巡检条目修改时间",
                             },{
                                 id:"1",
@@ -237,6 +271,8 @@ var objMap={
                                 al_min: "30",
                                 al_max: "40",
                                 created_at: "巡检条目创建时间",
+                                data:"50",
+                                
                                 updated_at: "巡检条目修改时间",
                                 },{
                                     id:"1",
@@ -248,15 +284,18 @@ var objMap={
                                     al_min: "30",
                                     al_max: "40",
                                     created_at: "巡检条目创建时间",
+                                    data:"50",
+                                    
                                     updated_at: "巡检条目修改时间",
                                     },]
         },{
             id: 1,
             name: "asd",
             desc: "asd",
-            tmp: false,
+            tmp: true,
             created_at: "",
             updated_at: "",
+            checked:false,
             items: [{
                 id:"1",
                 content: "内容",
@@ -268,6 +307,8 @@ var objMap={
                 al_max: "40",
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
+                data:"50",
+                
                 },{
                     id:"1",
                     content: "内容",
@@ -278,6 +319,8 @@ var objMap={
                     al_min: "30",
                     al_max: "40",
                     created_at: "巡检条目创建时间",
+                    data:"50",
+                    
                     updated_at: "巡检条目修改时间",
                     },{
                         id:"1",
@@ -290,6 +333,8 @@ var objMap={
                         al_max: "40",
                         created_at: "巡检条目创建时间",
                         updated_at: "巡检条目修改时间",
+                        data:"50",
+                        
                         },{
                             id:"1",
                             content: "内容",
@@ -301,6 +346,7 @@ var objMap={
                             al_max: "40",
                             created_at: "巡检条目创建时间",
                             updated_at: "巡检条目修改时间",
+                            data:"50",                            
                             },{
                                 id:"1",
                                 content: "内容",
@@ -312,6 +358,8 @@ var objMap={
                                 al_max: "40",
                                 created_at: "巡检条目创建时间",
                                 updated_at: "巡检条目修改时间",
+                                data:"50",                            
+                                
                                 },{
                                     id:"1",
                                     content: "内容",
@@ -323,6 +371,8 @@ var objMap={
                                     al_max: "40",
                                     created_at: "巡检条目创建时间",
                                     updated_at: "巡检条目修改时间",
+                                    data:"50",                            
+                                    
                                     },{
                                         id:"1",
                                         content: "内容",
@@ -334,14 +384,17 @@ var objMap={
                                         al_max: "40",
                                         created_at: "巡检条目创建时间",
                                         updated_at: "巡检条目修改时间",
+                                        data:"50",                            
+                                        
                                         },]
         },{
             id: 1,
             name: "asd",
             desc: "asd",
-            tmp: false,
+            tmp: true,
             created_at: "",
             updated_at: "",
+            checked:false,
             items: [{
                 id:"1",
                 content: "内容",
@@ -353,6 +406,8 @@ var objMap={
                 al_max: "40",
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
+                data:"50",                            
+                
                 },{
                     id:"1",
                     content: "内容",
@@ -364,6 +419,8 @@ var objMap={
                     al_max: "40",
                     created_at: "巡检条目创建时间",
                     updated_at: "巡检条目修改时间",
+                    data:"50",                            
+                    
                     },{
                         id:"1",
                         content: "内容",
@@ -375,217 +432,17 @@ var objMap={
                         al_max: "40",
                         created_at: "巡检条目创建时间",
                         updated_at: "巡检条目修改时间",
-                        },{
-                            id:"1",
-                            content: "内容",
-                            unit: "位",
-                            itemtype: "1",
-                            st_min: "23",
-                            st_max: "45",
-                            al_min: "30",
-                            al_max: "40",
-                            created_at: "巡检条目创建时间",
-                            updated_at: "巡检条目修改时间",
-                            },{
-                                id:"1",
-                                content: "内容",
-                                unit: "位",
-                                itemtype: "1",
-                                st_min: "23",
-                                st_max: "45",
-                                al_min: "30",
-                                al_max: "40",
-                                created_at: "巡检条目创建时间",
-                                updated_at: "巡检条目修改时间",
-                                },{
-                                    id:"1",
-                                    content: "内容",
-                                    unit: "位",
-                                    itemtype: "1",
-                                    st_min: "23",
-                                    st_max: "45",
-                                    al_min: "30",
-                                    al_max: "40",
-                                    created_at: "巡检条目创建时间",
-                                    updated_at: "巡检条目修改时间",
-                                    },{
-                                        id:"1",
-                                        content: "内容",
-                                        unit: "位",
-                                        itemtype: "1",
-                                        st_min: "23",
-                                        st_max: "45",
-                                        al_min: "30",
-                                        al_max: "40",
-                                        created_at: "巡检条目创建时间",
-                                        updated_at: "巡检条目修改时间",
-                                        },{
-                                            id:"1",
-                                            content: "内容",
-                                            unit: "位",
-                                            itemtype: "1",
-                                            st_min: "23",
-                                            st_max: "45",
-                                            al_min: "30",
-                                            al_max: "40",
-                                            created_at: "巡检条目创建时间",
-                                            updated_at: "巡检条目修改时间",
-                                            },]
-        },{
-            id: 1,
-            name: "asd",
-            desc: "asd",
-            tmp: false,
-            created_at: "",
-            updated_at: "",
-            items: [{
-                id:"1",
-                content: "内容",
-                unit: "位",
-                itemtype: "1",
-                st_min: "23",
-                st_max: "45",
-                al_min: "30",
-                al_max: "40",
-                created_at: "巡检条目创建时间",
-                updated_at: "巡检条目修改时间",
-                },{
-                    id:"1",
-                    content: "内容",
-                    unit: "位",
-                    itemtype: "1",
-                    st_min: "23",
-                    st_max: "45",
-                    al_min: "30",
-                    al_max: "40",
-                    created_at: "巡检条目创建时间",
-                    updated_at: "巡检条目修改时间",
-                    },{
-                        id:"1",
-                        content: "内容",
-                        unit: "位",
-                        itemtype: "1",
-                        st_min: "23",
-                        st_max: "45",
-                        al_min: "30",
-                        al_max: "40",
-                        created_at: "巡检条目创建时间",
-                        updated_at: "巡检条目修改时间",
-                        },{
-                            id:"1",
-                            content: "内容",
-                            unit: "位",
-                            itemtype: "1",
-                            st_min: "23",
-                            st_max: "45",
-                            al_min: "30",
-                            al_max: "40",
-                            created_at: "巡检条目创建时间",
-                            updated_at: "巡检条目修改时间",
-                            },{
-                                id:"1",
-                                content: "内容",
-                                unit: "位",
-                                itemtype: "1",
-                                st_min: "23",
-                                st_max: "45",
-                                al_min: "30",
-                                al_max: "40",
-                                created_at: "巡检条目创建时间",
-                                updated_at: "巡检条目修改时间",
-                                },{
-                                    id:"1",
-                                    content: "内容",
-                                    unit: "位",
-                                    itemtype: "1",
-                                    st_min: "23",
-                                    st_max: "45",
-                                    al_min: "30",
-                                    al_max: "40",
-                                    created_at: "巡检条目创建时间",
-                                    updated_at: "巡检条目修改时间",
-                                    },{
-                                        id:"1",
-                                        content: "内容",
-                                        unit: "位",
-                                        itemtype: "1",
-                                        st_min: "23",
-                                        st_max: "45",
-                                        al_min: "30",
-                                        al_max: "40",
-                                        created_at: "巡检条目创建时间",
-                                        updated_at: "巡检条目修改时间",
-                                        },{
-                                            id:"1",
-                                            content: "内容",
-                                            unit: "位",
-                                            itemtype: "1",
-                                            st_min: "23",
-                                            st_max: "45",
-                                            al_min: "30",
-                                            al_max: "40",
-                                            created_at: "巡检条目创建时间",
-                                            updated_at: "巡检条目修改时间",
-                                            },{
-                                                id:"1",
-                                                content: "内容",
-                                                unit: "位",
-                                                itemtype: "1",
-                                                st_min: "23",
-                                                st_max: "45",
-                                                al_min: "30",
-                                                al_max: "40",
-                                                created_at: "巡检条目创建时间",
-                                                updated_at: "巡检条目修改时间",
-                                                },]
-        },{
-            id: 1,
-            name: "asd",
-            desc: "asd",
-            tmp: false,
-            created_at: "",
-            updated_at: "",
-            items: [{
-                id:"1",
-                content: "内容",
-                unit: "位",
-                itemtype: "1",
-                st_min: "23",
-                st_max: "45",
-                al_min: "30",
-                al_max: "40",
-                created_at: "巡检条目创建时间",
-                updated_at: "巡检条目修改时间",
-                },{
-                    id:"1",
-                    content: "内容",
-                    unit: "位",
-                    itemtype: "1",
-                    st_min: "23",
-                    st_max: "45",
-                    al_min: "30",
-                    al_max: "40",
-                    created_at: "巡检条目创建时间",
-                    updated_at: "巡检条目修改时间",
-                    },{
-                        id:"1",
-                        content: "内容",
-                        unit: "位",
-                        itemtype: "1",
-                        st_min: "23",
-                        st_max: "45",
-                        al_min: "30",
-                        al_max: "40",
-                        created_at: "巡检条目创建时间",
-                        updated_at: "巡检条目修改时间",
+                        data:"50",                            
+                        
                         },]
         },{
             id: 1,
             name: "asd",
             desc: "asd",
-            tmp: false,
+            tmp: true,
             created_at: "",
             updated_at: "",
+            checked:false,
             items: [{
                 id:"1",
                 content: "内容",
@@ -597,6 +454,8 @@ var objMap={
                 al_max: "40",
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
+                data:"50",                            
+                
                 },]
         },            
     ]
@@ -644,10 +503,14 @@ var objMap={
 
         jiantou(num);
 
-       
-
-
-
+        for(let i=0;i<objMap.spotnum;i++){
+            if(objMap.spots[i].checked==true){
+                $("#map td").eq(i).css("background-color","rgba(62, 66, 68, 0.80)")
+            }
+            else{
+                $("#map td").eq(i).css("background-color","none")
+            }
+        }
     }
     
     function jiantou(num){  //为路线框图添加箭头
@@ -699,6 +562,9 @@ var objMap={
             $(".creat_new_item:eq("+i+") input:eq(3)").val(objMap.spots[seq].items[i].st_max)
             $(".creat_new_item:eq("+i+") input:eq(4)").val(objMap.spots[seq].items[i].al_min)
             $(".creat_new_item:eq("+i+") input:eq(5)").val(objMap.spots[seq].items[i].al_max)
+            // $(".creat_new_item:eq("+i+") selct:eq(0)").val(objMap.spots[seq].items[i].itemtype)
+            $(".creat_new_item:eq("+i+") div:eq(1)").text(objMap.spots[seq].items[i].data)
+            
         }
     }
     
@@ -707,19 +573,21 @@ var objMap={
     
     function addItem(){        
         var model=`<div class="creat_new_item">
-                    <input placeholder="巡检条目内容">
-                    <input placeholder="单位">
+                    <input placeholder="巡检条目内容"  readonly="readonly">
+                    <input placeholder="单位"  readonly="readonly">
                     <div>
-                        <select>
+                        <select disabled="true">
                             <option value="true">确认型</option>
                             <option value="false">数值型</option>
                         </select>
                     </div>
+                    <div></div>
+                    
                     <br>                        
-                    <input placeholder="最小标准值">
-                    <input placeholder="最大标准值"><br>
-                    <input placeholder="最小警戒值">
-                    <input placeholder="最大标准值"> 
+                    <input placeholder="最小标准值" readonly="readonly">
+                    <input placeholder="最大标准值" readonly="readonly"><br>
+                    <input placeholder="最小警戒值" readonly="readonly">
+                    <input placeholder="最大标准值" readonly="readonly"> 
                     </div>
                 `
         // document.getElementById("kuang3_items").appendChild(model);
@@ -731,4 +599,8 @@ var objMap={
     function changeObjmap(){
         objMap=objMap;
         creatMap()
+        for(let i=0;i<$("#map span").length;i++){
+            $("#map span").text(objMap.spots[i].name)
+        }
     }
+    changeObjmap()
