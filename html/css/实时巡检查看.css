@@ -33,7 +33,20 @@ button:hover{
     text-align: center;
     line-height: 29px;
 }
-
+#now_map{
+    width: 100px;   
+    height: 30px;
+    position: absolute;
+    left:414px;
+    top:30px;
+    border: 2px  solid rgb(20, 221, 231);
+    border-radius:15px;
+    background-color: rgba(26,38,45,0.8) ;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
+}
 
 #youce{
     position: absolute;

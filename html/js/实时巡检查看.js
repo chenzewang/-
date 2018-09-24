@@ -596,11 +596,12 @@ var objMap={
 
 
 
-    function changeObjmap(){
+    function changeObjmap(x){
         objMap=objMap;
         creatMap()
         for(let i=0;i<$("#map span").length;i++){
             $("#map span").text(objMap.spots[i].name)
         }
+        $("#now_map").text($(x).text())
     }
-    changeObjmap()
+    changeObjmap( $("#youce div").eq(0) )
