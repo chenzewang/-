@@ -590,7 +590,6 @@ var objMap={
                     <input placeholder="最大标准值" readonly="readonly"> 
                     </div>
                 `
-        // document.getElementById("kuang3_items").appendChild(model);
         $("#kuang3_items").append(model)
     }
 
@@ -604,4 +603,4 @@ var objMap={
         }
         $("#now_map").text($(x).text())
     }
-    changeObjmap( $("#youce div").eq(0) )
+    changeObjmap( $("#youce>div div").eq(0) )

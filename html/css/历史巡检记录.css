@@ -505,39 +505,34 @@ background-image: url(../../img/6-2-huadongkuai.png)
 
 
 #graph3 th:nth-child(1){
-    width: 180px;
+    width: 240px;
 }
 #graph3 th:nth-child(2){
-    width: 140px;
+    width:240px;
 }
 #graph3 th:nth-child(3){
-    width: 140px;
+    width: 160px;
 }
 #graph3 th:nth-child(4){
-    width: 165px;
-}
-#graph3 th:nth-child(5){
-    width: 310px;
+    width: 298px;
 }
 
+
 #graph3 td:nth-child(1){
-    width: 180px;
+    width: 240px;
 }
 #graph3 td:nth-child(2){
-    width: 140px;
+    width: 240px;
 }
 
 #graph3 td:nth-child(3){
-    width: 140px;
+    width: 160px;
 }
 
 #graph3 td:nth-child(4){
-    width: 165px;
+    width: 285px;
 }
 
-#graph3 td:nth-child(5){
-    width: 297px;
-}
 
 
 
@@ -620,56 +615,34 @@ background-image: url(../../img/6-2-huadongkuai.png)
 
 
 #graph4 th:nth-child(1){
-    width: 85px;
+    width: 200px;
 }
 #graph4 th:nth-child(2){
     width: 145px;
 }
 #graph4 th:nth-child(3){
-    width: 150px;
+    width: 350px;
 }
 #graph4 th:nth-child(4){
-    width: 150px;
-}
-#graph4 th:nth-child(5){
-    width: 145px;
-}
-#graph4 th:nth-child(6){
-    width: 120px;
-}
-#graph4 th:nth-child(7){
-    width: 140px;
+    width: 241px;
 }
 
 #graph4 td:nth-child(1){
-    width: 86px;
+    width: 200px;
 }
 #graph4 td:nth-child(2){
-    width: 147px;
+    width: 145px;
 }
 
 #graph4 td:nth-child(3){
-    width: 152px;
+    width: 350px;
 }
 
 #graph4 td:nth-child(4){
-    width: 152px;
+    width: 228px;
 }
 
-#graph4 td:nth-child(5){
-    width: 147px;
-  
-}
-#graph4 td:nth-child(5) span{ 
-    color: rgb(20,221,231);
-    cursor: pointer;
-}
-#graph4 td:nth-child(6){
-    width: 122px;
-}
-#graph4 td:nth-child(7){
-    width: 129px;
-}
+
 
 
 #record5_left{

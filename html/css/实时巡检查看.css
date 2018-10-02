@@ -54,20 +54,35 @@ button:hover{
     right: -3px;
     width: 68px;
     height: 628px;
-    background-image: url(../../img/5-2-waikuang.png)
-    
+    background-image: url(../../img/5-2-waikuang.png) 
 }
-#youce>div:active{
+#youce>div{
+    width: 66px;
+    max-height: 570px;
+    margin-top: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#youce>div::-webkit-scrollbar {
+    width: 7px;   
+}  
+#youce>div::-webkit-scrollbar-thumb {
+    background-color: rgb(226, 223, 223);
+    background-repeat: no-repeat;
+    }
+#youce>div::-webkit-scrollbar-track {
+        background: rgb(58, 196, 225);
+    }
+#youce>div>div:active{
     transform: translateY(2px)
 }    
-#youce>div{
+#youce>div>div{
     width: 26px;
     font-size: 23px;
     writing-mode: vertical-lr;
     border: 2px solid rgb(53, 195, 225);
     text-align: center;
     padding: 10px 8px 10px 8px;
-
     position: relative;
     left: 13px;
     top:20px;

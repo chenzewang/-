@@ -21,7 +21,6 @@ function searchByOther(){
     for(var i=0;i<record.length;i++){
         record[i].setAttribute("style","display:none")
     }
-    console.log("执行了searchByOther()")
     
     document.getElementById("record3").setAttribute("style","display:block")   
 }
@@ -31,11 +30,8 @@ function searchByEqu(){
     for(var i=0;i<record.length;i++){
         record[i].setAttribute("style","display:none")
     }
-    console.log("执行了searchByEqu()")
     document.getElementById("record4").setAttribute("style","display:block")   
 }
-
-
 
 
 
@@ -244,16 +240,15 @@ function creatGraph2(ob){  //生成路线框图
      var lie=5;    
      var hang=ob.length;  
      var tab=`<table > 
-                <thead><tr><th>选定的巡检次数</th> <th>巡检人</th> <th>巡检路线</th> <th>巡检时间</th> <th>操作</th></tr></thead>
+                <thead> <th>巡检时间</th> <th>巡检路线</th> <th>巡检人</th> <th>详情</th></tr></thead>
                 `
      for(var i=0;i<hang;i++)   
      {
          tab+="<tr>";
-                 tab+=`<td>${ob[i].num}</td>`;
-                 tab+=`<td>${ob[i].man}</td>`;
-                 tab+=`<td>${ob[i].digest}</td>`;
                  tab+=`<td>${ob[i].time1}</td>`;
-                 tab+=`<td><button onclick="chakan1()">查看详情</button></td>`;                 
+                 tab+=`<td>${ob[i].project}</td>`;
+                 tab+=`<td>${ob[i].digest}</td>`;
+                 tab+=`<td>${ob[i].describe}</td>`;
          tab+="</tr>";
      }           
      tab+="</table>"
@@ -269,20 +264,15 @@ function creatGraph2(ob){  //生成路线框图
      var lie=7;    
      var hang=ob.length;  
      var tab=`<table > 
-                <thead><tr><th>序号</th> <th>项目</th> <th>时间1</th> <th>时间2</th> <th>故障信息</th> <th>标准值</th> <th>状态</th></tr></thead>
+                <thead><tr><th>时间</th> <th>设备</th> <th>详情</th> <th>查看详情</th> </tr></thead>
             `
      for(var i=0;i<hang;i++)   
      {
          tab+="<tr>";
-                 tab+=`<td>${ob[i].num}</td>`;
-                 tab+=`<td>${ob[i].project}</td>`;
-                 tab+=`<td>${ob[i].time1}</td>`;
                  tab+=`<td>${ob[i].time2}</td>`;
-                 tab+=`<td><span onclick="chakan4()">${ob[i].breakMessage}</span></td>`;   
-                 tab+=`<td>${ob[i].normalValue}</td>`;                 
-                 tab+=`<td>${ob[i].statu}</td>`;                 
-                              
-                 
+                 tab+=`<td>${ob[i].project}</td>`;
+                 tab+=`<td>${ob[i].describe}</td>`;
+                 tab+=`<td><button onclick="chakan4()">${ob[i].breakMessage}</button></td>`;    
          tab+="</tr>";
      }           
      tab+="</table>"
