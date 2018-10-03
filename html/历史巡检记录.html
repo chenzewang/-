@@ -12,30 +12,38 @@
     <!-- 检索栏 -->
     <div id="search">
 
-                
-        <div id="time">
-            <span>按时间查询</span>
-            <input>
+        <div class="search_box search_box1" onclick="searchByEqu()">
+            <div id="time">
+                <span>按时间查询</span>
+                <input >
+            </div>
+            <div id="equ">
+                <span>按设备查询</span>
+                <input >
+            </div>
         </div>
-        <div id="equ">
-            <span>按设备查询</span>
-            <input onkeyup="searchByEqu()">
-        </div>
-        <div id="map">
-            <span>按巡检路线查询</span>
-            <ul>
-                <li><a onclick="searchByOther()">锅炉路线</a></li>
-                <li><a onclick="searchByOther()">电气路线</a></li>
-                <li><a onclick="searchByOther()">汽机路线</a></li>                    
-            </ul>
-        </div>
-        <div id="man">
-            <span>按巡逻人查询</span>
-            <input onkeyup="searchByOther()">
-        </div>
-        <div id="count">
-            <span>按工号查询</span>
-            <input onkeyup="searchByOther()">
+
+        <div class="search_box search_box2" onclick="searchByOther()">  
+            <div id="map">
+                <span>按巡检路线查询</span>
+                <ul>
+                    <li><a >锅炉路线</a></li>
+                    <li><a >电气路线</a></li>
+                    <li><a >汽机路线</a></li>                    
+                </ul>
+            </div>
+            <div id="time">
+                <span>按时间查询</span>
+                <input>
+            </div>
+            <div id="man">
+                <span>按巡逻人查询</span>
+                <input>
+            </div>
+            <div id="count">
+                <span>按工号查询</span>
+                <input>
+            </div>
         </div>
     
     </div>       
