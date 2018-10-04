@@ -57,26 +57,24 @@ body{
 
 #time{
     width: 330px;
-    height:45px;
+    height:60px;
 }
 
 #equ{
     width: 330px;
-    height:45px;
+    height:60px;
 }
 #man{
     width: 330px;
-    height:45px;
+    height:60px;
 }
 #count{
     width: 330px;
-    height:45px;
+    height:60px;
 }
 #map{
     width: 155px;
-    height:130px;
-    margin-top:20px;
-    
+    height:130px;    
 }
 #map ul{
     width: 130px;
@@ -102,27 +100,43 @@ body{
 }
 .search_box1 #time{
     position: absolute;
-    top:20px;
     left: 20px;;
 }
 #equ{
     position: absolute;
-    top:80px;
+    top:60px;
     left: 20px;;    
 }
 .search_box2 #time{
     position: absolute;
-    top:20px;
+    
 }
 #man{
     position: absolute;
-    top:80px;    
+    top:60px;    
 }
 #count{
     position: absolute;
     left:400px;
-    top:20px;
 }
+.search_box button{
+    height: 30px;
+    width: 70px;
+    border: 2px solid rgb(20,221,231);
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(11, 37, 54,0.6);
+    cursor: pointer;
+    position: absolute;
+    bottom:10px;
+}
+.search_box1 button{
+    left: 100px;
+}
+.search_box2 button{
+    left: 265px;
+}
+
 #record1{
     background-image:url(../../img/6-2-waikuagn5.png);
     width:960px;
