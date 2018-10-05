@@ -130,6 +130,9 @@ body{
     position: absolute;
     bottom:10px;
 }
+.search_box div span,input{
+    display: block
+}
 .search_box1 button{
     left: 100px;
 }
