@@ -15,7 +15,8 @@
         <div class="search_box search_box1" onclick="searchByEqu()">
             <div id="time">
                 <span>按时间查询</span>
-                <input >
+                <div> <input ><span>-</span><input >  
+                </div>
             </div>
             <div id="equ">
                 <span>按设备查询</span>
@@ -30,12 +31,16 @@
                 <ul>
                     <li><a >锅炉路线</a></li>
                     <li><a >电气路线</a></li>
-                    <li><a >汽机路线</a></li>                    
+                    <li><a >汽机路线</a></li>   
+                    <li><a >锅炉路线</a></li>
+                    <li><a >电气路线</a></li>
+                    <li><a >汽机路线</a></li>                   
                 </ul>
             </div>
             <div id="time">
                 <span>按时间查询</span>
-                <input>
+                <div> <input ><span>-</span><input>  
+                </div>
             </div>
             <div id="man">
                 <span>按巡逻人查询</span>
@@ -92,27 +97,7 @@
             <div></div>
         </div>
         <div id="graph2">
-            <table>
-                <thead>
-                    <tr>
-                        <th>送检点</th>
-                        <th>状态</th>
-                        <th>巡检值</th>                    
-                        <th>标准值</th>                      
-                        <th>故障信息描述</th>
-                    </tr>        
-                </thead>
-                <tbody>
-                    <!-- (book,index) index:当前元素在数组位置 -->
-                    <tr v-for="(record2, index) in record2Lib">
-                        <td>{{record2.dian}}</td>
-                        <td>{{record2.statu}}</td>
-                        <td>{{record2.value}}</td>
-                        <td>{{record2.normalValue}}</td>                    
-                        <td>{{record2.describe}}</td>
-                    </tr>
-                </tbody>
-            </table>
+           
         </div>
             
     </div>
@@ -220,9 +205,6 @@
     </div>
         
 
-
-
-<script src="js/vue.min.js"></script>
 <script src="js/历史巡检记录.js"></script>
 <script>
 
