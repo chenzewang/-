@@ -1012,3 +1012,41 @@ background-image: url(../../img/6-2-huadongkuai.png)
     text-align: center;
     font-size: 15px;
 }
+#JTC_MonthSelector table,#JTC_MonthSelector tr, #JTC_MonthSelector th,#JTC_MonthSelector td{
+    border: 1px solid rgb(11, 174, 220);
+    border-collapse:collapse;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+#JTC_MonthSelector input{
+    color:white;
+    text-align: center;
+    font-size: 15px;
+}
+#JTC_MonthSelector{
+    border:0px  !important;
+}
+#JTC_MonthSelector table{
+    background-color: rgba(29, 47, 60, 1)
+}
+#JTC_YearSelector table,#JTC_YearSelector tr, #JTC_YearSelector th,#JTC_YearSelector td{
+    border: 1px solid rgb(11, 174, 220);
+    border-collapse:collapse;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+#JTC_YearSelector{
+    border:0px  !important;
+
+}
+#JTC_YearSelector input{
+    color:white;
+    text-align: center;
+    font-size: 15px;
+    display: inline-block;
+}
+#JTC_YearSelector table{
+    background-color: rgba(29, 47, 60, 1)
+}
