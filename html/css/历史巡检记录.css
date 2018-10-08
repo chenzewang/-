@@ -76,6 +76,7 @@ body{
     border-radius: 10px 0px 0px 10px;   
     position: relative;
     top:1px; 
+    font-size: 16px;
 }
 #time input:nth-child(3){
     height: 22px;
@@ -86,6 +87,8 @@ body{
     border-radius: 0 10px 10px 0px;
     position: relative;
     top:1px; 
+    font-size: 16px;
+
 }
 
 #equ{
@@ -993,4 +996,19 @@ background-image: url(../../img/6-2-huadongkuai.png)
 
 #record2,#record3,#record4,#record5{
     display: none;
+}
+
+
+
+#JTC_BG_DIV table,#JTC_BG_DIV tr, #JTC_BG_DIV th,#JTC_BG_DIV td{
+    border: 1px solid rgb(11, 174, 220);
+    border-collapse:collapse;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+#JTC_BG_DIV input{
+    color:white;
+    text-align: center;
+    font-size: 15px;
 }
