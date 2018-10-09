@@ -637,9 +637,33 @@ background-image: url(../../img/6-2-huadongkuai.png)
     color: white;
     line-height: 60px
 }
-
+#record4 button:nth-child(3){
+    position: absolute;
+    bottom: 22px;
+    left: 260px;
+    border: 1px solid rgb(20,221,231);
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(11, 37, 54,0.6);
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+}
+#record4 button:nth-child(4){
+    position: absolute;
+    bottom: 22px;
+    left: 640px;
+    border: 1px solid rgb(20,221,231);
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(11, 37, 54,0.6);
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+}
 #graph4{
     width: 948px;
+    height: 310px;
     color:white;
     text-align: center;
     margin-top:5px;
@@ -665,7 +689,8 @@ background-image: url(../../img/6-2-huadongkuai.png)
 }
 #graph4 table{
     border-collapse:collapse;
-    width: 100%
+    width: 100%;
+    height: 310px;
 }
 
 #graph4 tbody::-webkit-scrollbar {/*滚动条整体样式*/
@@ -686,7 +711,7 @@ background-image: url(../../img/6-2-huadongkuai.png)
 /*滚动条里面轨道*/
 #graph4 tbody{
     display:block;
-    height: 300px;
+    height: 255px;
     overflow-y: scroll;
     text-align: center;
     width: 100%;
@@ -1011,55 +1036,75 @@ background-image: url(../../img/6-2-huadongkuai.png)
     position: absolute;
     left: 23px;
     top:180px;
-    overflow-y: scroll;
 }
-
-#record5::-webkit-scrollbar {/*滚动条整体样式*/
+#graph5{
+    overflow-y: scroll;
+    height: 390px;    
+}
+#graph5::-webkit-scrollbar {/*滚动条整体样式*/
     width: 12px;     /*高宽分别对应横竖滚动条的尺寸*/
     height: 1px;
 }
-#record5::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+#graph5::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
     background-color: rgba(193, 193, 193);
     background-repeat: no-repeat;
     }
-#record5::-webkit-scrollbar-track {/*滚动条里面轨道*/
+#graph5::-webkit-scrollbar-track {/*滚动条里面轨道*/
         background: rgb(43, 68, 80)
     }
-#record5 table{
+#graph5 table{
     width:100%;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
+#record5_title{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px;
+}
+#record5_title div{
+    display: inline-block;
+  
+}
+#record5_title div:nth-child(1){
+    width: 40%;
+    text-align: center;
+    color: white;
+}    
+#record5_title div:nth-child(2){
+    width: 58%;
+    text-align: center;
+    color: white;
+}  
 table, th, td {
     border: 2px solid rgb(11, 174, 231);
     border-collapse:collapse;    
 }
-#record5 td:nth-child(1){
+#graph5 td:nth-child(1){
     width: 40%;
     text-align: center;
     height: 30px;
     line-height: 30px;
     
 }
-#record5 td:nth-child(2){
+#graph5 td:nth-child(2){
     width: 58%;
     height: 30px;
     text-align: center;
     line-height: 30px;
 }
-#record5 th:nth-child(1){
+#graph5 th:nth-child(1){
     width: 40%;
     height: 30px;
     
 }
-#record5 th:nth-child(2){
+#graph5 th:nth-child(2){
     width: 58%;
     height: 30px;
     
 }
-.value{
 
-}
+
 .value_left{
     width: 40%;
     height: 100%;
@@ -1070,4 +1115,7 @@ table, th, td {
     height: 100%;
     display: inline-block;
     border-left: 1px solid rgb(0, 174, 231)
+}
+.no_pass{
+    color:red;
 }

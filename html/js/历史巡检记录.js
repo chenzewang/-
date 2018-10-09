@@ -486,23 +486,42 @@ function creatGraph5(j){   //j: 第几个spots
     var hang=objMap.spots[j].items.length; 
     var items=objMap.spots[j].items;
     var tab=`<table > 
-               <thead><tr><th>巡检内容</th>  <th>巡检值</th> </tr></thead>
+               
            `
     for(var i=0;i<hang;i++)   
     {
         tab+="<tr>";
                 tab+=`<td>${items[i].content}</td>`;
-                if(items[i].value==false){
-                    tab+=`<td>${items[i].tmp}</td>`;                    
-                }else{
-                    tab+=`
-                        <td>
-                            <div class="value value_left">巡检值： ${items[i].data}</div>
-                            <div class="value value_right">标准值：${items[i].st_max} 警戒值：${items[i].al_max}</div>
-                        </td>
 
-                        `
+                if(items[i].pass==true){
+                    
+                    if(items[i].value==false){
+                        tab+=`<td >通过</td>`;                    
+                    }else{
+                        tab+=`
+                                <td>
+                                    <div class="value value_left ">巡检值： ${items[i].data}</div>
+                                    <div class="value value_right">标准值：${items[i].st_max} 警戒值：${items[i].al_max}</div>
+                                </td>
+                            `        
+                    }
+                }else{
+                    
+                    if(items[i].value==false){
+                        tab+=`<td class="no_pass">未通过</td>`;                    
+                    }else{
+                        tab+=`
+                                <td>
+                                    <div class="value value_left no_pass">巡检值： ${items[i].data}</div>
+                                    <div class="value value_right">标准值：${items[i].st_max} 警戒值：${items[i].al_max}</div>
+                                </td>
+    
+                            `
+                    }
                 }
+
+
+                
         tab+="</tr>";
     }           
     tab+="</table>"
@@ -513,7 +532,7 @@ function chakan4 (){
     document.getElementById("record4").setAttribute("style","display:none")
     document.getElementById("record5").setAttribute("style","display:block")
     for(let i=0;i<objMap.spots.length;i++){
-        $("#record5").append(creatGraph5(i))
+        $("#graph5").append(creatGraph5(i))
     }
  }
 
@@ -547,7 +566,8 @@ function chakan4 (){
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
                 data:"50",   //当前值
-                value:true
+                value:true,
+                pass:false,
                 },]
         },{
             id: 1,
@@ -569,7 +589,8 @@ function chakan4 (){
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
                 data:"50",
-                value:false
+                value:false,
+                pass:true,
                 },{
                     id:"1",
                     content: "内容",
@@ -582,7 +603,9 @@ function chakan4 (){
                     created_at: "巡检条目创建时间",
                     updated_at: "巡检条目修改时间",
                     data:"50",
-                    value:false
+                    value:false,
+                    pass:true,
+                    
                     },]
         },{
             id: 1,
@@ -604,7 +627,8 @@ function chakan4 (){
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
                 data:"50",
-                value:true
+                value:true,
+                pass:true,
                 },{
                     id:"1",
                     content: "内容",
@@ -617,7 +641,8 @@ function chakan4 (){
                     created_at: "巡检条目创建时间",
                     updated_at: "巡检条目修改时间",
                     data:"50",
-                    value:true
+                    value:true,
+                    pass:false,
                     
                     },{
                         id:"1",
@@ -630,7 +655,8 @@ function chakan4 (){
                         al_max: "40",
                         created_at: "巡检条目创建时间",
                         data:"50",
-                        value:false,                        
+                        value:false,     
+                        pass:false,                        
                         updated_at: "巡检条目修改时间",
                         },]
         },{
@@ -653,6 +679,7 @@ function chakan4 (){
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
                 data:"50",
+                pass:true,
                 
                 },{
                     id:"1",
@@ -666,7 +693,9 @@ function chakan4 (){
                     created_at: "巡检条目创建时间",
                     updated_at: "巡检条目修改时间",
                     data:"50",
-                    value:false
+                    value:false,
+                    pass:true,
+                    
                     },{
                         id:"1",
                         content: "内容",
@@ -679,7 +708,9 @@ function chakan4 (){
                         created_at: "巡检条目创建时间",
                         updated_at: "巡检条目修改时间",
                         data:"50",
-                        value:false
+                        value:false,
+                        pass:true,
+                        
                         
                         },{
                             id:"1",
@@ -693,6 +724,7 @@ function chakan4 (){
                             created_at: "巡检条目创建时间",
                             data:"50",
                             value:false,
+                            pass:true,
                             
                             updated_at: "巡检条目修改时间",
                             },{
@@ -707,6 +739,7 @@ function chakan4 (){
                                 created_at: "巡检条目创建时间",
                                 data:"50",
                                 value:false,
+                                pass:true,
                                 
                                 updated_at: "巡检条目修改时间",
                                 },]
