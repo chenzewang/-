@@ -245,7 +245,7 @@ function creatGraph2(ob){  //生成路线框图
      for(var i=0;i<hang;i++)   
      {
          tab+="<tr>";
-                 tab+=`<td>${ob[i].time1}</td>`;
+                 tab+=`<td>${ob[i].des}</td>`;
                  tab+=`<td>${ob[i].project}</td>`;
                  tab+=`<td>${ob[i].digest}</td>`;
                  tab+=`<td>${ob[i].describe}</td>`;
@@ -280,349 +280,436 @@ function creatGraph2(ob){  //生成路线框图
  }
  creatGraph4(obj);
 
- function chakan4 (){
+ 
+
+
+ var objMap={
+    id:0,
+    name:"线路1",          //路线名字
+    spotnum:8,       //设备点数
+    specified: true,                  //是否固定
+    arrangeable:false,               //是否自由
+    desc:"",                        //路线描述
+    created_at:"",                 //路线创建时间
+    updated_at:"",                //路线修改时间  //这条路线的各个点
+    spots:[
+        {
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                value:true
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: true,
+            created_at: "",
+            updated_at: "",
+            checked:true,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",
+                value:false
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    updated_at: "巡检条目修改时间",
+                    data:"50",
+                    value:false
+                    },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",
+                value:true
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    updated_at: "巡检条目修改时间",
+                    data:"50",
+                    value:true
+                    
+                    },{
+                        id:"1",
+                        content: "内容",
+                        unit: "位",
+                        itemtype: "1",
+                        st_min: "23",
+                        st_max: "45",
+                        al_min: "30",
+                        al_max: "40",
+                        created_at: "巡检条目创建时间",
+                        data:"50",
+                        value:false,                        
+                        updated_at: "巡检条目修改时间",
+                        },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",
+                
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    updated_at: "巡检条目修改时间",
+                    data:"50",
+                    value:false
+                    },{
+                        id:"1",
+                        content: "内容",
+                        unit: "位",
+                        itemtype: "1",
+                        st_min: "23",
+                        st_max: "45",
+                        al_min: "30",
+                        al_max: "40",
+                        created_at: "巡检条目创建时间",
+                        updated_at: "巡检条目修改时间",
+                        data:"50",
+                        value:false
+                        
+                        },{
+                            id:"1",
+                            content: "内容",
+                            unit: "位",
+                            itemtype: "1",
+                            st_min: "23",
+                            st_max: "45",
+                            al_min: "30",
+                            al_max: "40",
+                            created_at: "巡检条目创建时间",
+                            data:"50",
+                            value:false,
+                            
+                            updated_at: "巡检条目修改时间",
+                            },{
+                                id:"1",
+                                content: "内容",
+                                unit: "位",
+                                itemtype: "1",
+                                st_min: "23",
+                                st_max: "45",
+                                al_min: "30",
+                                al_max: "40",
+                                created_at: "巡检条目创建时间",
+                                data:"50",
+                                value:false,
+                                
+                                updated_at: "巡检条目修改时间",
+                                },]
+        }           
+    ]
+}
+
+function creatGraph5(j){   //j: 第几个spots
+    
+    var lie=2;    
+    var hang=objMap.spots[j].items.length; 
+    var items=objMap.spots[j].items;
+    var tab=`<table > 
+               <thead><tr><th>巡检内容</th>  <th>巡检值</th> </tr></thead>
+           `
+    for(var i=0;i<hang;i++)   
+    {
+        tab+="<tr>";
+                tab+=`<td>${items[i].content}</td>`;
+                if(items[i].value==false){
+                    tab+=`<td>${items[i].tmp}</td>`;                    
+                }else{
+                    tab+=`
+                        <td>
+                            <div class="value value_left">巡检值： ${items[i].data}</div>
+                            <div class="value value_right">标准值：${items[i].st_max} 警戒值：${items[i].al_max}</div>
+                        </td>
+
+                        `
+                }
+        tab+="</tr>";
+    }           
+    tab+="</table>"
+    return tab;
+}
+
+function chakan4 (){
     document.getElementById("record4").setAttribute("style","display:none")
     document.getElementById("record5").setAttribute("style","display:block")
+    for(let i=0;i<objMap.spots.length;i++){
+        $("#record5").append(creatGraph5(i))
+    }
  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-// var vm=new Vue({
-//     el:"#graph1",
-//     data:{
-//         newRecord:{
-//             num:"1",
-//             time:"20180610",
-//             man:"余某",
-//             digest:"还行",
-//         },
-//         recordLib:[{
-//             num:"2",
-//             time:"20180611",
-//             man:"陈某",
-//             digest:"多处破损",
-//         },{
-//             num:"3",
-//             time:"20180612",
-//             man:"毛某",
-//             digest:"损坏",
-//         },{
-//             num:"4",
-//             time:"20180613",
-//             man:"唐某",
-//             digest:"完好",
-//         },{
-//             num:"4",
-//             time:"20180613",
-//             man:"唐某",
-//             digest:"完好",
-//         },{
-//             num:"4",
-//             time:"20180613",
-//             man:"唐某",
-//             digest:"完好",
-//         },{
-//             num:"4",
-//             time:"20180613",
-//             man:"唐某",
-//             digest:"完好",
-//         },{
-//             num:"4",
-//             time:"20180613",
-//             man:"唐某",
-//             digest:"完好",
-//         },{
-//             num:"4",
-//             time:"20180613",
-//             man:"唐某",
-//             digest:"完好",
-//         },{
-//             num:"4",
-//             time:"20180613",
-//             man:"唐某",
-//             digest:"完好",
-//         }
-//         ]
-//     },//end data
-//     methods:{
-        
-//         lookDetial:function(index){
-//             document.getElementById("record1").setAttribute("style","display:none")
-//             document.getElementById("record2").setAttribute("style","display:block")
-            
-//         },
-//     }
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-// var vm2=new Vue({
-//     el:"#graph2",
-//     data:{
-//         newRecord:{
-//             dian:"1",
-//             statu:"20180610",
-//             value:"余某",
-//             normalValue:"还行",
-//             describe:"还行",
-//         },
-//         record2Lib:[{
-//             dian:"1",
-//             statu:"20180610",
-//             value:"余某",
-//             normalValue:"还行",
-//             describe:"还行",
-//         },{
-//             dian:"2",
-//             statu:"20180610",
-//             value:"余某",
-//             normalValue:"还行",
-//             describe:"还行",
-//         },{
-//             dian:"3",
-//             statu:"20180610",
-//             value:"余某",
-//             normalValue:"还行",
-//             describe:"还行",
-//         },{
-//             dian:"4",
-//             statu:"20180610",
-//             value:"余某",
-//             normalValue:"还行",
-//             describe:"还行",
-//         },{
-//             dian:"5",
-//             statu:"20180610",
-//             value:"余某",
-//             normalValue:"还行",
-//             describe:"还行",
-//         },{
-//             dian:"6",
-//             statu:"20180610",
-//             value:"余某",
-//             normalValue:"还行",
-//             describe:"还行",
-//         },
-//         ]
-//     },//end data
-//     methods:{
-        
-//         lookDetial:function(index){
-//             document.getElementById("record3").setAttribute("style","display:none")
-//             document.getElementById("record2").setAttribute("style","display:block")
-            
-//         },
-        
-//     }
-// })
-
-
-// var vm3=new Vue({
-//     el:"#graph3",
-//     data:{
-//         newRecord:{
-//             num:"1",
-//             man:"20180610",
-//             map:"余某",
-//             time:"还行",
-//         },
-//         record3Lib:[{
-//             num:"1",
-//             man:"20180610",
-//             map:"余某",
-//             time:"还行",
-//         },{
-//             num:"1",
-//             man:"20180610",
-//             map:"余某",
-//             time:"还行",
-//         },{
-//             num:"1",
-//             man:"20180610",
-//             map:"余某",
-//             time:"还行",
-//         },{
-//             num:"1",
-//             man:"20180610",
-//             map:"余某",
-//             time:"还行",
-//         },{
-//             num:"1",
-//             man:"20180610",
-//             map:"余某",
-//             time:"还行",
-//         },{
-//             num:"1",
-//             man:"20180610",
-//             map:"余某",
-//             time:"还行",
-//         },{
-//             num:"1",
-//             man:"20180610",
-//             map:"余某",
-//             time:"还行",
-//         },{
-//             num:"1",
-//             man:"20180610",
-//             map:"余某",
-//             time:"还行",
-//         },{
-//             num:"1",
-//             man:"20180610",
-//             map:"余某",
-//             time:"还行",
-//         },{
-//             num:"1",
-//             man:"20180610",
-//             map:"余某",
-//             time:"还行",
-//         },
-//         ]
-//     },//end data
-//     methods:{
-        
-//         lookDetial:function(index){
-//             document.getElementById("record3").setAttribute("style","display:none")
-//             document.getElementById("record2").setAttribute("style","display:block")
-            
-//         },
-//     }
-// })
-
-
-
-    
-// var vm3=new Vue({
-//     el:"#graph4",
-//     data:{
-//         newRecord:{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },
-//         record4Lib:[{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },{
-//             num:"1",
-//             project:"锅炉",
-//             time1:"20180610",
-//             time2:"20180612",
-//             breakMessage:"还行",
-//             normalValue:"不错",
-//             statu:"损坏",
-//         },
-//         ]
-//     },//end data
-//     methods:{
-        
-//         lookBreakMessage:function(index){
-//             document.getElementById("record4").setAttribute("style","display:none")
-//             document.getElementById("record5").setAttribute("style","display:block")
-//         },
-//     }
-// })
-
-
-
-
+ var objMap={
+    id:0,
+    name:"线路1",          //路线名字
+    spotnum:8,       //设备点数
+    specified: true,                  //是否固定
+    arrangeable:false,               //是否自由
+    desc:"",                        //路线描述
+    created_at:"",                 //路线创建时间
+    updated_at:"",                //路线修改时间  //这条路线的各个点
+    spots:[
+        {
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                value:true
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: true,
+            created_at: "",
+            updated_at: "",
+            checked:true,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",
+                value:false
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    updated_at: "巡检条目修改时间",
+                    data:"50",
+                    value:false
+                    },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",
+                value:true
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    updated_at: "巡检条目修改时间",
+                    data:"50",
+                    value:true
+                    
+                    },{
+                        id:"1",
+                        content: "内容",
+                        unit: "位",
+                        itemtype: "1",
+                        st_min: "23",
+                        st_max: "45",
+                        al_min: "30",
+                        al_max: "40",
+                        created_at: "巡检条目创建时间",
+                        data:"50",
+                        value:false,                        
+                        updated_at: "巡检条目修改时间",
+                        },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",
+                
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    updated_at: "巡检条目修改时间",
+                    data:"50",
+                    value:false
+                    },{
+                        id:"1",
+                        content: "内容",
+                        unit: "位",
+                        itemtype: "1",
+                        st_min: "23",
+                        st_max: "45",
+                        al_min: "30",
+                        al_max: "40",
+                        created_at: "巡检条目创建时间",
+                        updated_at: "巡检条目修改时间",
+                        data:"50",
+                        value:false
+                        
+                        },{
+                            id:"1",
+                            content: "内容",
+                            unit: "位",
+                            itemtype: "1",
+                            st_min: "23",
+                            st_max: "45",
+                            al_min: "30",
+                            al_max: "40",
+                            created_at: "巡检条目创建时间",
+                            data:"50",
+                            value:false,
+                            
+                            updated_at: "巡检条目修改时间",
+                            },{
+                                id:"1",
+                                content: "内容",
+                                unit: "位",
+                                itemtype: "1",
+                                st_min: "23",
+                                st_max: "45",
+                                al_min: "30",
+                                al_max: "40",
+                                created_at: "巡检条目创建时间",
+                                data:"50",
+                                value:false,
+                                
+                                updated_at: "巡检条目修改时间",
+                                },]
+        }           
+    ]
+}
