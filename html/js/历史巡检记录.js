@@ -280,262 +280,6 @@ function creatGraph2(ob){  //生成路线框图
  }
  creatGraph4(obj);
 
- 
-
-
- var objMap={
-    id:0,
-    name:"线路1",          //路线名字
-    spotnum:8,       //设备点数
-    specified: true,                  //是否固定
-    arrangeable:false,               //是否自由
-    desc:"",                        //路线描述
-    created_at:"",                 //路线创建时间
-    updated_at:"",                //路线修改时间  //这条路线的各个点
-    spots:[
-        {
-            id: 1,
-            name: "asd",
-            desc: "asd",
-            tmp: false,
-            created_at: "",
-            updated_at: "",
-            checked:true,   //true 查过了   false 未查
-            items: [{
-                id:"1",
-                content: "内容",
-                unit: "位",
-                itemtype: "0",
-                st_min: "23",
-                st_max: "45",
-                al_min: "30",
-                al_max: "40",
-                created_at: "巡检条目创建时间",
-                updated_at: "巡检条目修改时间",
-                data:"50",   //当前值
-                value:true
-                },]
-        },{
-            id: 1,
-            name: "asd",
-            desc: "asd",
-            tmp: true,
-            created_at: "",
-            updated_at: "",
-            checked:true,
-            items: [{
-                id:"1",
-                content: "内容",
-                unit: "位",
-                itemtype: "1",
-                st_min: "23",
-                st_max: "45",
-                al_min: "30",
-                al_max: "40",
-                created_at: "巡检条目创建时间",
-                updated_at: "巡检条目修改时间",
-                data:"50",
-                value:false
-                },{
-                    id:"1",
-                    content: "内容",
-                    unit: "位",
-                    itemtype: "1",
-                    st_min: "23",
-                    st_max: "45",
-                    al_min: "30",
-                    al_max: "40",
-                    created_at: "巡检条目创建时间",
-                    updated_at: "巡检条目修改时间",
-                    data:"50",
-                    value:false
-                    },]
-        },{
-            id: 1,
-            name: "asd",
-            desc: "asd",
-            tmp: false,
-            created_at: "",
-            updated_at: "",
-            checked:true,
-            items: [{
-                id:"1",
-                content: "内容",
-                unit: "位",
-                itemtype: "1",
-                st_min: "23",
-                st_max: "45",
-                al_min: "30",
-                al_max: "40",
-                created_at: "巡检条目创建时间",
-                updated_at: "巡检条目修改时间",
-                data:"50",
-                value:true
-                },{
-                    id:"1",
-                    content: "内容",
-                    unit: "位",
-                    itemtype: "1",
-                    st_min: "23",
-                    st_max: "45",
-                    al_min: "30",
-                    al_max: "40",
-                    created_at: "巡检条目创建时间",
-                    updated_at: "巡检条目修改时间",
-                    data:"50",
-                    value:true
-                    
-                    },{
-                        id:"1",
-                        content: "内容",
-                        unit: "位",
-                        itemtype: "1",
-                        st_min: "23",
-                        st_max: "45",
-                        al_min: "30",
-                        al_max: "40",
-                        created_at: "巡检条目创建时间",
-                        data:"50",
-                        value:false,                        
-                        updated_at: "巡检条目修改时间",
-                        },]
-        },{
-            id: 1,
-            name: "asd",
-            desc: "asd",
-            tmp: false,
-            created_at: "",
-            updated_at: "",
-            checked:true,
-            items: [{
-                id:"1",
-                content: "内容",
-                unit: "位",
-                itemtype: "1",
-                st_min: "23",
-                st_max: "45",
-                al_min: "30",
-                al_max: "40",
-                created_at: "巡检条目创建时间",
-                updated_at: "巡检条目修改时间",
-                data:"50",
-                
-                },{
-                    id:"1",
-                    content: "内容",
-                    unit: "位",
-                    itemtype: "1",
-                    st_min: "23",
-                    st_max: "45",
-                    al_min: "30",
-                    al_max: "40",
-                    created_at: "巡检条目创建时间",
-                    updated_at: "巡检条目修改时间",
-                    data:"50",
-                    value:false
-                    },{
-                        id:"1",
-                        content: "内容",
-                        unit: "位",
-                        itemtype: "1",
-                        st_min: "23",
-                        st_max: "45",
-                        al_min: "30",
-                        al_max: "40",
-                        created_at: "巡检条目创建时间",
-                        updated_at: "巡检条目修改时间",
-                        data:"50",
-                        value:false
-                        
-                        },{
-                            id:"1",
-                            content: "内容",
-                            unit: "位",
-                            itemtype: "1",
-                            st_min: "23",
-                            st_max: "45",
-                            al_min: "30",
-                            al_max: "40",
-                            created_at: "巡检条目创建时间",
-                            data:"50",
-                            value:false,
-                            
-                            updated_at: "巡检条目修改时间",
-                            },{
-                                id:"1",
-                                content: "内容",
-                                unit: "位",
-                                itemtype: "1",
-                                st_min: "23",
-                                st_max: "45",
-                                al_min: "30",
-                                al_max: "40",
-                                created_at: "巡检条目创建时间",
-                                data:"50",
-                                value:false,
-                                
-                                updated_at: "巡检条目修改时间",
-                                },]
-        }           
-    ]
-}
-
-function creatGraph5(j){   //j: 第几个spots
-    
-    var lie=2;    
-    var hang=objMap.spots[j].items.length; 
-    var items=objMap.spots[j].items;
-    var tab=`<table > 
-               
-           `
-    for(var i=0;i<hang;i++)   
-    {
-        tab+="<tr>";
-                tab+=`<td>${items[i].content}</td>`;
-
-                if(items[i].pass==true){
-                    
-                    if(items[i].value==false){
-                        tab+=`<td >通过</td>`;                    
-                    }else{
-                        tab+=`
-                                <td>
-                                    <div class="value value_left ">巡检值： ${items[i].data}</div>
-                                    <div class="value value_right">标准值：${items[i].st_max} 警戒值：${items[i].al_max}</div>
-                                </td>
-                            `        
-                    }
-                }else{
-                    
-                    if(items[i].value==false){
-                        tab+=`<td class="no_pass">未通过</td>`;                    
-                    }else{
-                        tab+=`
-                                <td>
-                                    <div class="value value_left no_pass">巡检值： ${items[i].data}</div>
-                                    <div class="value value_right">标准值：${items[i].st_max} 警戒值：${items[i].al_max}</div>
-                                </td>
-    
-                            `
-                    }
-                }
-
-
-                
-        tab+="</tr>";
-    }           
-    tab+="</table>"
-    return tab;
-}
-
-function chakan4 (){
-    document.getElementById("record4").setAttribute("style","display:none")
-    document.getElementById("record5").setAttribute("style","display:block")
-    for(let i=0;i<objMap.spots.length;i++){
-        $("#graph5").append(creatGraph5(i))
-    }
- }
-
  var objMap={
     id:0,
     name:"线路1",          //路线名字
@@ -679,9 +423,163 @@ function chakan4 (){
                 created_at: "巡检条目创建时间",
                 updated_at: "巡检条目修改时间",
                 data:"50",
-                pass:true,
+                pass:false,
                 
                 },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    updated_at: "巡检条目修改时间",
+                    data:"50",
+                    pass:false,
+                    
+                    },{
+                        id:"1",
+                        content: "内容",
+                        unit: "位",
+                        itemtype: "1",
+                        st_min: "23",
+                        st_max: "45",
+                        al_min: "30",
+                        al_max: "40",
+                        created_at: "巡检条目创建时间",
+                        updated_at: "巡检条目修改时间",
+                        data:"50",
+                        pass:false,
+                        
+                        },{
+                            id:"1",
+                            content: "内容",
+                            unit: "位",
+                            itemtype: "1",
+                            st_min: "23",
+                            st_max: "45",
+                            al_min: "30",
+                            al_max: "40",
+                            created_at: "巡检条目创建时间",
+                            updated_at: "巡检条目修改时间",
+                            data:"50",
+                            pass:false,
+                            
+                            },{
+                                id:"1",
+                                content: "内容",
+                                unit: "位",
+                                itemtype: "1",
+                                st_min: "23",
+                                st_max: "45",
+                                al_min: "30",
+                                al_max: "40",
+                                created_at: "巡检条目创建时间",
+                                updated_at: "巡检条目修改时间",
+                                data:"50",
+                                pass:false,
+                                
+                                },{
+                                    id:"1",
+                                    content: "内容",
+                                    unit: "位",
+                                    itemtype: "1",
+                                    st_min: "23",
+                                    st_max: "45",
+                                    al_min: "30",
+                                    al_max: "40",
+                                    created_at: "巡检条目创建时间",
+                                    updated_at: "巡检条目修改时间",
+                                    data:"50",
+                                    pass:false,
+                                    
+                                    },{
+                                        id:"1",
+                                        content: "内容",
+                                        unit: "位",
+                                        itemtype: "1",
+                                        st_min: "23",
+                                        st_max: "45",
+                                        al_min: "30",
+                                        al_max: "40",
+                                        created_at: "巡检条目创建时间",
+                                        updated_at: "巡检条目修改时间",
+                                        data:"50",
+                                        pass:false,
+                                        
+                                        },{
+                                            id:"1",
+                                            content: "内容",
+                                            unit: "位",
+                                            itemtype: "1",
+                                            st_min: "23",
+                                            st_max: "45",
+                                            al_min: "30",
+                                            al_max: "40",
+                                            created_at: "巡检条目创建时间",
+                                            updated_at: "巡检条目修改时间",
+                                            data:"50",
+                                            pass:false,
+                                            
+                                            },{
+                                                id:"1",
+                                                content: "内容",
+                                                unit: "位",
+                                                itemtype: "1",
+                                                st_min: "23",
+                                                st_max: "45",
+                                                al_min: "30",
+                                                al_max: "40",
+                                                created_at: "巡检条目创建时间",
+                                                updated_at: "巡检条目修改时间",
+                                                data:"50",
+                                                pass:false,
+                                                
+                                                },{
+                                                    id:"1",
+                                                    content: "内容",
+                                                    unit: "位",
+                                                    itemtype: "1",
+                                                    st_min: "23",
+                                                    st_max: "45",
+                                                    al_min: "30",
+                                                    al_max: "40",
+                                                    created_at: "巡检条目创建时间",
+                                                    updated_at: "巡检条目修改时间",
+                                                    data:"50",
+                                                    pass:false,
+                                                    
+                                                    },{
+                                                        id:"1",
+                                                        content: "内容",
+                                                        unit: "位",
+                                                        itemtype: "1",
+                                                        st_min: "23",
+                                                        st_max: "45",
+                                                        al_min: "30",
+                                                        al_max: "40",
+                                                        created_at: "巡检条目创建时间",
+                                                        updated_at: "巡检条目修改时间",
+                                                        data:"50",
+                                                        pass:false,
+                                                        
+                                                        },{
+                                                            id:"1",
+                                                            content: "内容",
+                                                            unit: "位",
+                                                            itemtype: "1",
+                                                            st_min: "23",
+                                                            st_max: "45",
+                                                            al_min: "30",
+                                                            al_max: "40",
+                                                            created_at: "巡检条目创建时间",
+                                                            updated_at: "巡检条目修改时间",
+                                                            data:"50",
+                                                            pass:false,
+                                                            
+                                                            },{
                     id:"1",
                     content: "内容",
                     unit: "位",
@@ -724,7 +622,7 @@ function chakan4 (){
                             created_at: "巡检条目创建时间",
                             data:"50",
                             value:false,
-                            pass:true,
+                            pass:false,
                             
                             updated_at: "巡检条目修改时间",
                             },{
@@ -746,3 +644,101 @@ function chakan4 (){
         }           
     ]
 }
+ 
+ function creatGraph5(ob){  //生成路线框图
+    
+     var lie=7;    
+     var hang=ob.length;  
+     var tab=`<table > 
+                <thead><tr><th>巡检内容</th> <th>巡检值</th></tr></thead>
+            `
+     for(var i=0;i<hang;i++)   
+        {
+            tab+="<tr>";
+                tab+=`<td>${ob[i].content}</td>`;
+
+                if(ob[i].pass==true){
+                    
+                    if(ob[i].value==false){
+                        tab+=`<td >通过</td>`;                    
+                    }else{
+                        tab+=`
+                                <td>
+                                    <div class="value value_left ">巡检值： ${ob[i].data}</div>
+                                    <div class="value value_right">标准值：${ob[i].st_max} 警戒值：${ob[i].al_max}</div>
+                                </td>
+                            `        
+                    }
+                }else{
+                    
+                    if(ob[i].value==false){
+                        tab+=`<td class="no_pass">未通过</td>`;                    
+                    }else{
+                        tab+=`
+                                <td>
+                                    <div class="value value_left no_pass">巡检值： ${ob[i].data}</div>
+                                    <div class="value value_right">标准值：${ob[i].st_max} 警戒值：${ob[i].al_max}</div>
+                                </td>
+                            `
+                    }
+                    }   
+            } 
+     tab+="</table>"
+     document.getElementById("graph5").innerHTML=tab;
+ }
+ creatGraph5(objMap.spots[3].items);
+                                                                                                
+
+// function creatGraph5(j){   //j: 第几个spots
+    
+//     var lie=2;    
+//     var hang=objMap.spots[j].items.length; 
+//     var items=objMap.spots[j].items;
+//     var tab=`<table > 
+               
+//            `
+//     for(var i=0;i<hang;i++)   
+//     {
+//         tab+="<tr>";
+//                 tab+=`<td>${items[i].content}</td>`;
+
+//                 if(items[i].pass==true){
+                    
+//                     if(items[i].value==false){
+//                         tab+=`<td >通过</td>`;                    
+//                     }else{
+//                         tab+=`
+//                                 <td>
+//                                     <div class="value value_left ">巡检值： ${items[i].data}</div>
+//                                     <div class="value value_right">标准值：${items[i].st_max} 警戒值：${items[i].al_max}</div>
+//                                 </td>
+//                             `        
+//                     }
+//                 }else{
+                    
+//                     if(items[i].value==false){
+//                         tab+=`<td class="no_pass">未通过</td>`;                    
+//                     }else{
+//                         tab+=`
+//                                 <td>
+//                                     <div class="value value_left no_pass">巡检值： ${items[i].data}</div>
+//                                     <div class="value value_right">标准值：${items[i].st_max} 警戒值：${items[i].al_max}</div>
+//                                 </td>
+    
+//                             `
+//                     }
+//                 }
+
+
+                
+//         tab+="</tr>";
+//     }           
+//     tab+="</table>"
+//     return tab;
+// }
+
+function chakan4 (){
+    document.getElementById("record4").setAttribute("style","display:none")
+    document.getElementById("record5").setAttribute("style","display:block")
+
+ }
