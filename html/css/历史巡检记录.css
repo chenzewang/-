@@ -644,7 +644,7 @@ background-image: url(../../img/6-2-huadongkuai.png)
 }
 #record4 button:nth-child(3){
     position: absolute;
-    bottom: 22px;
+    bottom: 19px;
     left: 260px;
     border: 1px solid rgb(20,221,231);
     border-radius: 15px;
@@ -698,26 +698,10 @@ background-image: url(../../img/6-2-huadongkuai.png)
     height: 310px;
 }
 
-#graph4 tbody::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 13px;     /*高宽分别对应横竖滚动条的尺寸*/
-    height: 1px;
-}
-#graph4 tbody::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-    background-color: rgba(193, 193, 193);
-    }
-    #graph4 tbody::-webkit-scrollbar-thumb:hover {/*滚动条里面小方块*/
-        background-color: rgba(168, 168, 168);
-        }
-#graph4 tbody::-webkit-scrollbar-track {/*滚动条里面轨道*/
-        background: #EDEDED;
-    }
-/*滚动条整体样式*/
-/*滚动条里面小方块*/
-/*滚动条里面轨道*/
+
 #graph4 tbody{
     display:block;
-    height: 255px;
-    overflow-y: scroll;
+    height: 261px;
     text-align: center;
     width: 100%;
 
@@ -752,7 +736,7 @@ background-image: url(../../img/6-2-huadongkuai.png)
 }
 
 #graph4 td:nth-child(4){
-    width: 228px;
+    width: 241px;
 }
 
 
@@ -1036,7 +1020,6 @@ background-image: url(../../img/6-2-huadongkuai.png)
 }
 
 #record5{
-    background-image: url(../../img/6-2-waikuagn5.png);
     width: 960px;
     height: 438px;
     position: absolute;
@@ -1051,7 +1034,7 @@ background-image: url(../../img/6-2-huadongkuai.png)
 }
 #graph5 tbody{
     overflow-y: scroll;
-    height: 360px;    
+    height: 300px;    
     display:block;
 }
 
@@ -1079,37 +1062,49 @@ background-image: url(../../img/6-2-huadongkuai.png)
     width: 378px;
     text-align: center;
     height: 42px;
-    line-height: 30px;
     
 }
 #graph5 td:nth-child(2){
     width: 560px;
     height: 42px;
     text-align: center;
-    line-height: 30px;
 }
 #graph5 th:nth-child(1){
-    width: 40%;
+    width: 374px;
     height: 52px;
     
 }
 #graph5 th:nth-child(2){
-    width: 562px;
+    width: 565px;
     height: 52px;
     
 }
-
+#record5 button:nth-child(2){
+    position: relative;
+    height: 30px;
+    width: 70px;
+    border: 2px solid rgb(20,221,231);
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(10, 36, 54, 0.60);
+    cursor: pointer;
+    bottom: 40px;
+    left: 435px;
+}
 
 .value_left{
     width: 40%;
     height: 100%;
     display: inline-block;
+    line-height: 42px;
+    
 }
 .value_right{
     width: 58%;
     height: 100%;
     display: inline-block;
-    border-left: 1px solid rgb(0, 174, 231)
+    border-left: 1px solid rgb(0, 174, 231);
+    line-height: 42px;
 }
 .no_pass{
     color:red;
