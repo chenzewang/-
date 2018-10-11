@@ -151,7 +151,7 @@ function creatGraph1(ob){  //生成路线框图
                  tab+=`<td>${ob[i].time}</td>`;
                  tab+=`<td>${ob[i].man}</td>`;
                  tab+=`<td>${ob[i].digest}</td>`;
-                 tab+=`<td><button onclick="chakan1()">查看详情</button></td>`;                 
+                 tab+=`<td><button onclick="chakan4()">查看详情</button></td>`;                 
          tab+="</tr>";
      }           
      tab+="</table>"
@@ -647,55 +647,8 @@ function creatGraph2(ob){  //生成路线框图
  creatGraph5(objMap.spots[3].items);
                                                                                                 
 
-// function creatGraph5(j){   //j: 第几个spots
-    
-//     var lie=2;    
-//     var hang=objMap.spots[j].items.length; 
-//     var items=objMap.spots[j].items;
-//     var tab=`<table > 
-               
-//            `
-//     for(var i=0;i<hang;i++)   
-//     {
-//         tab+="<tr>";
-//                 tab+=`<td>${items[i].content}</td>`;
-
-//                 if(items[i].pass==true){
-                    
-//                     if(items[i].value==false){
-//                         tab+=`<td >通过</td>`;                    
-//                     }else{
-//                         tab+=`
-//                                 <td>
-//                                     <div class="value value_left ">巡检值： ${items[i].data}</div>
-//                                     <div class="value value_right">标准值：${items[i].st_max} 警戒值：${items[i].al_max}</div>
-//                                 </td>
-//                             `        
-//                     }
-//                 }else{
-                    
-//                     if(items[i].value==false){
-//                         tab+=`<td class="no_pass">未通过</td>`;                    
-//                     }else{
-//                         tab+=`
-//                                 <td>
-//                                     <div class="value value_left no_pass">巡检值： ${items[i].data}</div>
-//                                     <div class="value value_right">标准值：${items[i].st_max} 警戒值：${items[i].al_max}</div>
-//                                 </td>
-    
-//                             `
-//                     }
-//                 }
-
-
-                
-//         tab+="</tr>";
-//     }           
-//     tab+="</table>"
-//     return tab;
-// }
-
 function chakan4 (){
+    document.getElementById("record1").setAttribute("style","display:none")
     document.getElementById("record4").setAttribute("style","display:none")
     document.getElementById("record5").setAttribute("style","display:block")
 
