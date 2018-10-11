@@ -571,7 +571,7 @@ body{
 }
 #record4>button:nth-child(4){
     position: absolute;
-    bottom: 22px;
+    bottom: 19px;
     left: 640px;
     border: 1px solid rgb(20,221,231);
     border-radius: 15px;
