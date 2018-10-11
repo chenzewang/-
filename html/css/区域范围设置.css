@@ -45,12 +45,11 @@ body{
 }    
  
 #background{
-    background-image:url(../../img/13-1-kuang.png);
     width:961px;
     height: 195px;
     position: absolute;
     left: 20px;
-    top: 240px;
+    top: 140px;
 
 }
 
@@ -63,7 +62,7 @@ body{
 }
 
 #graph1 table,th,td{
-    border: 1px solid rgb(11, 174, 231);
+    border: 2px solid rgb(11, 174, 231);
 }
 #graph1 th{
     height:52px;
@@ -95,7 +94,7 @@ body{
 /*滚动条里面轨道*/
 #graph1 tbody{
     display:block;
-    height: 125px;
+    height: 389px;
     overflow-y: scroll;
     text-align: center;
 }
