@@ -119,7 +119,21 @@ var obj=[{
     project:"锅炉",
     time1:"20180610",
     time2:"20180612",
-},
+},{
+    num:"1",
+    time:"20180911",
+    man:"陈某",
+    digest:"还行还行",
+    dian:"1",
+    statu:"无状态",
+    value:"1000000",
+    normalValue:"还行",
+    breakMessage:"还行",    
+    describe:"还行",
+    project:"锅炉",
+    time1:"20180610",
+    time2:"20180612",
+}
 ]
 
 

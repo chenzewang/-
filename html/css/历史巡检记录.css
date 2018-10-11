@@ -533,7 +533,30 @@ background-image: url(../../img/6-2-huadongkuai.png)
     left: 23px;
     top:170px;
 }
-
+#record3>button:nth-child(2){
+    position: absolute;
+    bottom: 27px;
+    left: 260px;
+    border: 1px solid rgb(20,221,231);
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(11, 37, 54,0.6);
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+}
+#record3>button:nth-child(3){
+    position: absolute;
+    bottom: 27px;
+    left: 640px;
+    border: 1px solid rgb(20,221,231);
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(11, 37, 54,0.6);
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+}
 
 #graph3{
     width: 948px;
@@ -565,27 +588,11 @@ background-image: url(../../img/6-2-huadongkuai.png)
     width: 100%
 }
 
-#graph3 tbody::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 13px;     /*高宽分别对应横竖滚动条的尺寸*/
-    height: 1px;
-}
-#graph3 tbody::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-    background-color: rgba(193, 193, 193);
-    }
-    #graph3 tbody::-webkit-scrollbar-thumb:hover {/*滚动条里面小方块*/
-        background-color: rgba(168, 168, 168);
-        }
-#graph3 tbody::-webkit-scrollbar-track {/*滚动条里面轨道*/
-        background: #EDEDED;
-    }
-/*滚动条整体样式*/
-/*滚动条里面小方块*/
-/*滚动条里面轨道*/
 #graph3 tbody{
     display:block;
-    height: 360px;
-    overflow-y: scroll;
+    height: 302px;
     text-align: center;
+    overflow: hidden;
 }
 #graph3 thead tr{
     display:block;
@@ -618,7 +625,7 @@ background-image: url(../../img/6-2-huadongkuai.png)
 }
 
 #graph3 td:nth-child(4){
-    width: 285px;
+    width: 298px;
 }
 
 
@@ -642,7 +649,7 @@ background-image: url(../../img/6-2-huadongkuai.png)
     color: white;
     line-height: 60px
 }
-#record4 button:nth-child(3){
+#record4>button:nth-child(3){
     position: absolute;
     bottom: 19px;
     left: 260px;
@@ -654,7 +661,7 @@ background-image: url(../../img/6-2-huadongkuai.png)
     height: 30px;
     width: 70px;
 }
-#record4 button:nth-child(4){
+#record4>button:nth-child(4){
     position: absolute;
     bottom: 22px;
     left: 640px;
@@ -704,7 +711,7 @@ background-image: url(../../img/6-2-huadongkuai.png)
     height: 261px;
     text-align: center;
     width: 100%;
-
+    overflow: hidden;
 }
 #graph4 thead tr{
     display:block;
