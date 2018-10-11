@@ -136,109 +136,7 @@ var obj=[{
 }
 ]
 
-
-function creatGraph1(ob){  //生成路线框图
-    
-     var lie=5;    
-     var hang=ob.length;  
-     var tab=`<table > 
-                <thead><tr><th>序号</th> <th>时间</th> <th>巡检人</th> <th>异常摘要</th> <th>操作</th></tr></thead>
-              `
-     for(var i=0;i<hang;i++)   
-     {
-         tab+="<tr>";
-                 tab+=`<td>${ob[i].num}</td>`;
-                 tab+=`<td>${ob[i].time}</td>`;
-                 tab+=`<td>${ob[i].man}</td>`;
-                 tab+=`<td>${ob[i].digest}</td>`;
-                 tab+=`<td><button onclick="chakan4()">查看详情</button></td>`;                 
-         tab+="</tr>";
-     }           
-     tab+="</table>"
-     document.getElementById("graph1").innerHTML=tab;
- }
- creatGraph1(obj);
-
-function chakan1(){
- document.getElementById("record1").setAttribute("style","display:none")
- document.getElementById("record2").setAttribute("style","display:block")
-}
-
-
-
-
-
-
-function creatGraph2(ob){  //生成路线框图
-    
-     var lie=5;    
-     var hang=ob.length;  
-     var tab=`<table > 
-                <thead><tr><th>送检点</th> <th>状态</th> <th>巡检值</th> <th>标准值</th> <th>故障信息描述</th></tr></thead>              
-                `
-     for(var i=0;i<hang;i++)   
-     {
-         tab+="<tr>";
-                 tab+=`<td>${ob[i].dian}</td>`;
-                 tab+=`<td>${ob[i].statu}</td>`;
-                 tab+=`<td>${ob[i].value}</td>`;
-                 tab+=`<td>${ob[i].normalValue}</td>`;
-                 tab+=`<td>${ob[i].describe}</td>`;                 
-         tab+="</tr>";
-     }           
-     tab+="</table>"
-     document.getElementById("graph2").innerHTML=tab;
- }
- creatGraph2(obj);
-
-
-
- function creatGraph3(ob){  //生成路线框图
-    
-     var lie=5;    
-     var hang=ob.length;  
-     var tab=`<table > 
-                <thead> <th>巡检时间</th> <th>巡检路线</th> <th>巡检人</th> <th>详情</th></tr></thead>
-                `
-     for(var i=0;i<hang;i++)   
-     {
-         tab+="<tr>";
-                 tab+=`<td>${ob[i].des}</td>`;
-                 tab+=`<td>${ob[i].project}</td>`;
-                 tab+=`<td>${ob[i].digest}</td>`;
-                 tab+=`<td>${ob[i].describe}</td>`;
-         tab+="</tr>";
-     }           
-     tab+="</table>"
-     document.getElementById("graph3").innerHTML=tab;
- }
- creatGraph3(obj);
-
-
-
-
- function creatGraph4(ob){  //生成路线框图
-    
-     var lie=7;    
-     var hang=ob.length;  
-     var tab=`<table > 
-                <thead><tr><th>时间</th> <th>设备</th> <th>详情</th> <th>查看详情</th> </tr></thead>
-            `
-     for(var i=0;i<hang;i++)   
-     {
-         tab+="<tr>";
-                 tab+=`<td>${ob[i].time2}</td>`;
-                 tab+=`<td>${ob[i].project}</td>`;
-                 tab+=`<td>${ob[i].describe}</td>`;
-                 tab+=`<td><button onclick="chakan4()">${ob[i].breakMessage}</button></td>`;    
-         tab+="</tr>";
-     }           
-     tab+="</table>"
-     document.getElementById("graph4").innerHTML=tab;
- }
- creatGraph4(obj);
-
- var objMap={
+var objMap={
     id:0,
     name:"线路1",          //路线名字
     spotnum:8,       //设备点数
@@ -602,10 +500,133 @@ function creatGraph2(ob){  //生成路线框图
         }           
     ]
 }
+
+function creatGraph1(ob){  //生成路线框图
+    
+     var lie=5;    
+     var hang=ob.length;  
+     var tab=`<table > 
+                <thead><tr><th>序号</th> <th>时间</th> <th>巡检人</th> <th>异常摘要</th> <th>操作</th></tr></thead>
+              `
+     for(var i=0;i<hang;i++)   
+     {
+         tab+="<tr>";
+                 tab+=`<td>${ob[i].num}</td>`;
+                 tab+=`<td>${ob[i].time}</td>`;
+                 tab+=`<td>${ob[i].man}</td>`;
+                 tab+=`<td>${ob[i].digest}</td>`;
+                 tab+=`<td><button onclick="chakan2()">查看详情</button></td>`;                 
+         tab+="</tr>";
+     }           
+     tab+="</table>"
+     document.getElementById("graph1").innerHTML=tab;
+ }
+ creatGraph1(obj);
+
+function chakan1(){
+ document.getElementById("record1").setAttribute("style","display:none")
+ document.getElementById("record2").setAttribute("style","display:block")
+}
+
+
+
+
+
+
+function creatGraph2(spots){  //生成路线框图  
+    var text="";
+    for(let j=0;j<spots.length;j++){
+        let tab=`<table > 
+                    <thead><tr><th>${spots[j].name}</th></tr></thead>`  //标题(spot名)
+            
+            for(let i=0;i<spots[j].items.length;i++)   
+            {
+            tab+="<tr>";
+                tab+=`<td>${spots[j].items[i].content}</td>`;
+
+                if(spots[j].items[i].pass==true){
+                    
+                    if(spots[j].items[i].value==false){
+                        tab+=`<td >通过</td>`;                    
+                    }else{
+                        tab+=`<td>
+                                <div class="value value_left ">巡检值： ${spots[j].items[i].data}</div>
+                                <div class="value value_right">标准值：${spots[j].items[i].st_max} 警戒值：${spots[j].items[i].al_max}</div>
+                            </td>`        
+                    }
+                }else{ 
+                    if(spots[j].items[i].value==false){
+                        tab+=`<td class="no_pass">未通过</td>`;                    
+                    }else{
+                        tab+=`<td>
+                                <div class="value value_left no_pass">巡检值： ${spots[j].items[i].data}</div>
+                                <div class="value value_right">标准值：${spots[j].items[i].st_max} 警戒值：${spots[j].items[i].al_max}</div>
+                            </td> `
+                    }
+                    }   
+            } 
+            tab+="</table>"
+        text+=tab
+    }
+     document.getElementById("graph2").innerHTML=text;
+ }
+ creatGraph2(objMap.spots);
+
+function chakan2(){
+    document.getElementById("record1").setAttribute("style","display:none")
+    document.getElementById("record4").setAttribute("style","display:none")
+    document.getElementById("record2").setAttribute("style","display:block")
+}
+
+
+ function creatGraph3(ob){  //生成路线框图
+    
+     var lie=5;    
+     var hang=ob.length;  
+     var tab=`<table > 
+                <thead> <th>巡检时间</th> <th>巡检路线</th> <th>巡检人</th> <th>详情</th></tr></thead>
+                `
+     for(var i=0;i<hang;i++)   
+     {
+         tab+="<tr>";
+                 tab+=`<td>${ob[i].des}</td>`;
+                 tab+=`<td>${ob[i].project}</td>`;
+                 tab+=`<td>${ob[i].digest}</td>`;
+                 tab+=`<td>${ob[i].describe}</td>`;
+         tab+="</tr>";
+     }           
+     tab+="</table>"
+     document.getElementById("graph3").innerHTML=tab;
+ }
+ creatGraph3(obj);
+
+
+
+
+ function creatGraph4(ob){  //生成路线框图
+    
+     var lie=7;    
+     var hang=ob.length;  
+     var tab=`<table > 
+                <thead><tr><th>时间</th> <th>设备</th> <th>详情</th> <th>查看详情</th> </tr></thead>
+            `
+     for(var i=0;i<hang;i++)   
+     {
+         tab+="<tr>";
+                 tab+=`<td>${ob[i].time2}</td>`;
+                 tab+=`<td>${ob[i].project}</td>`;
+                 tab+=`<td>${ob[i].describe}</td>`;
+                 tab+=`<td><button onclick="chakan4()">${ob[i].breakMessage}</button></td>`;    
+         tab+="</tr>";
+     }           
+     tab+="</table>"
+     document.getElementById("graph4").innerHTML=tab;
+ }
+ creatGraph4(obj);
+
  
  function creatGraph5(ob){  //生成路线框图
     
-     var lie=7;    
      var hang=ob.length;  
      var tab=`<table > 
                 <thead><tr><th>巡检内容</th> <th>巡检值</th></tr></thead>

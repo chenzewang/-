@@ -319,8 +319,8 @@ body{
 
 #record2>button:nth-child(3){
     position: absolute;
-    bottom: 27px;
-    left: 260px;
+    bottom: 17px;
+    left: 438px;
     border: 1px solid rgb(20,221,231);
     border-radius: 15px;
     color: white;
@@ -329,18 +329,7 @@ body{
     height: 30px;
     width: 70px;
 }
-#record2>button:nth-child(4){
-    position: absolute;
-    bottom: 27px;
-    left: 640px;
-    border: 1px solid rgb(20,221,231);
-    border-radius: 15px;
-    color: white;
-    background-color: rgba(11, 37, 54,0.6);
-    cursor: pointer;
-    height: 30px;
-    width: 70px;
-}
+
 #record2_title{
     height: 50px;
 }
@@ -372,71 +361,75 @@ body{
 }
 
 
-
-
-#graph2{
-    height: 168px;
-    color: white;
-    text-align: center;
+#graph2 table,#graph2 td{
+    border-width: 1px !important;
 }
-
-
-#graph2 td{
-    height: 60px;
-}
-
 #graph2 table{
-    border-collapse:collapse;
-    width: 100%
+    width: 100%;
+    margin-bottom: 20px;
 }
-#graph2 th {
-    height: 52px;
-}
-#graph2 td {
-    height: 42px;
-}
-#graph2 th:nth-child(1){
-    width: 89px;
-    height: 40px;
-}
-#graph2 td:nth-child(1){
-    width: 88px;
-    height: 40px;
-}
-#graph2 th:nth-child(2){
-    width: 120px;
-}
-#graph2 td:nth-child(2){
-    width: 120px;
-}
-#graph2 th:nth-child(3){
-    width: 100px;
-}
-#graph2 td:nth-child(3){
-    width: 100px;
-}
-#graph2 th:nth-child(4){
-    width: 100px;
-}
-#graph2 td:nth-child(4){
-    width: 100px;
-}
-#graph2 th:nth-child(5){
-    width: 530px;
-}
-#graph2 td:nth-child(5){
-    width: 530px;
-}
+
 #graph2 tbody{
     display:block;
-    height: 260px;
-    overflow-y: hidden;
     text-align: center;
 }
 #graph2 thead tr{
     display:block;
 }
 
+#graph2{
+    width: 948px;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 330px;
+    overflow-y: scroll;
+    border-bottom: 2px solid rgb(0, 147, 237);
+    border-top: 2px solid rgb(0, 147, 237);
+    
+}
+#graph2::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 12px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+#graph2::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    background-color: rgba(193, 193, 193);
+    background-repeat: no-repeat;
+    }
+#graph2::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        background: rgb(43, 68, 80)
+    }
+#graph2 thead tr{
+    display:block;
+}
+
+#graph2 table{
+    width:100%;
+    color: white;
+    border-collapse:collapse;
+    
+}
+
+#graph2 td:nth-child(1){
+    width: 374px;
+    text-align: center;
+    height: 42px;
+    
+}
+#graph2 td:nth-child(2){
+    width: 565px;
+    height: 42px;
+    text-align: center;
+}
+#graph2 th:nth-child(1){
+    width: 933px;
+    height: 52px;
+    
+}
+#graph2 th:nth-child(2){
+    width:0px;
+    height: 52px;
+    
+}
 
 
 
