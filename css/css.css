@@ -49,6 +49,9 @@
     position: absolute;
     top:39px;
 }
+#fucntion ul{
+    max-height: 300px;
+}
 #function li{
     width: 145px;
     height: 37px;
@@ -63,6 +66,9 @@
 #check{
     position: absolute;
     top:326px;
+}
+#check ul {
+    max-height: 420px;
 }
 #check li{
     width: 145px;
