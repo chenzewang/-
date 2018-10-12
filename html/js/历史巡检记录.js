@@ -533,7 +533,7 @@ function chakan1(){
 
 
 
-function creatGraph2(spots){  //生成路线框图  
+function creatGraph2(spots){  
     var text="";
     for(let j=0;j<spots.length;j++){
         let tab=`<table > 
