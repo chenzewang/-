@@ -12,7 +12,11 @@
     <div id="search">
         <div id="time">
             <span>按时间</span>
-            <input>
+            <div> 
+                <input type="text" onclick="JTC.setday({startDay: '2010-01-01'})">
+                <span>-</span>
+                <input type="text" onclick="JTC.setday({startDay: '2018-10-08'})">  
+            </div>        
         </div>
         
         <div id="map">
@@ -56,5 +60,11 @@
 
     <script src="js/vue.min.js"></script>    
     <script src="js/异常事件统计.js"></script>
+    <script language="javascript" src="js/JTimer.js"></script>  
+    <script>  
+           JTC.setToday('2018/10/12');   //设置今天的日期
+           JTC.setDateFormat('yyyy/MM/dd');   //设置返回格式  
+           JTC.setDateRange('2010-01-01', '2019-01-01', true);  //设置可选日期范围  
+    </script>  
 </body>
 </html>

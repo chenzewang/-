@@ -13,7 +13,7 @@ var JTC = (function () {
 
     config = {
         dayBgColor: ['rgba(29, 47, 50, 0.6)', 'rgba(29, 47, 60, 0.6)', 'rgba(29, 47, 60, 0.6)'], //鼠标移动的颜色
-        dayColor: ['white', '#white', '#gary'], //日期字体颜色:1.上月和下月的日期; 2.本月; 3.不可选时
+        dayColor: ['white', 'rgb(11, 174, 220)', 'gray'], //日期字体颜色:1.上月和下月的日期; 2.本月; 3.不可选时
         format: 'yyyy-MM-dd',   //返回日期值的格式
         outObject: null,
         startDay: null,     

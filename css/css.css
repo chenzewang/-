@@ -21,6 +21,13 @@
     height: 700px;
     display: inline-block;
 }
+#menu a {
+    color: white;
+    text-align: center;
+    text-decoration:none; 
+    font-size: 18px;    
+    line-height: 37px;
+}
 #menu li:hover{
     cursor:pointer; 
     margin-left:-4px;
