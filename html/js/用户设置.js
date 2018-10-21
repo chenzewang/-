@@ -1,3 +1,10 @@
+document.getElementById("add").onclick=function(){
+    document.getElementById("add_div").setAttribute("style","display:block")
+}
+
+document.getElementsByClassName("pop-close")[0].onclick=function(){
+    document.getElementById("add_div").setAttribute("style","display:none")
+}
 
 function chakan(){
  document.getElementById("background").setAttribute("style","display:none")
@@ -119,4 +126,5 @@ function creatMap(ob){  //生成路线框图
     document.getElementById("graph").innerHTML=tab;
 }
 creatMap(obj);
+
 
