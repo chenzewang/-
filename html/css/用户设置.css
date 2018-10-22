@@ -92,10 +92,6 @@ button:active{
     font-size: 15px;   
 }
 
-#operate{
-    
-}
-
 #operate button{
     border: 2px solid rgb(20,221,231);
     background-color: rgba(29, 47, 60, 0.8);
@@ -180,7 +176,6 @@ button:active{
     background-color: rgba(29, 47, 60, 0.8);
     color: white;
     text-align: center;
-    font-size: 15px;
     height: 30px;
     width: 50px;
     font-size: 18px;
@@ -326,4 +321,37 @@ button:active{
     margin: 0;
     overflow: hidden;
     font-size: 17px;
+}
+
+#add_name{
+    color: white;
+    position: relative;
+    top: 0px;
+    height: 30px;
+    margin: 0;
+    overflow: hidden;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center
+}
+#record #detail{
+    height: 280px
+}
+
+#record #photo{
+    top:0px;
+}
+
+#add_tijiao{
+    display: block;
+    border: 2px solid rgb(20,221,231);
+    background-color: rgba(29, 47, 60, 0.8);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    height: 30px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 25px;
+    cursor: pointer;
 }
