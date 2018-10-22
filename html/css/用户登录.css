@@ -12,7 +12,7 @@ button:active{
     position: relative;
     padding: 10%;
     border: 2px solid rgb(11, 174, 231);
-    background-color: rgba(29, 47, 60, 0.6);
+    background-color: rgb(29, 61, 82);
     border-radius: 20px;
 }
 p{

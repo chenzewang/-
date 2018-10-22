@@ -3,6 +3,10 @@
     padding: 0px;
     list-style:none;
     font-family: "宋体";
+    outline: none;
+}
+button:active{
+    transform: translateY(2px)
 }
 #main{
     background-image: url(../img/Beijing.png);
@@ -90,13 +94,23 @@
     top: -592px;
     display: inline-block;
 }
-#shouye{
+#zhuxiao{
     display: inline-block;
-    width: 90px;
-    height: 37px;
-    background-image:url("../img/BiaoTi_shouye.png") ,url("../img/BiaoTi_shouye_kuang.png");
-    background-repeat: no-repeat, no-repeat;  
-    background-position: 24px 8px,0 0;
+    width: 82px;
+    height: 33px;
+    border: 2px solid rgb(20,221,231);
+    background-color: rgba(29, 47, 60, 0.8);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 20px;
+    position: absolute;
+    right: 50px;
+    top:7px;
 }
 #page{
     display: inline-block;
