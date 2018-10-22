@@ -1,6 +1,9 @@
 *{
     outline: none;
 }
+input{
+    text-indent:3px;    
+}
 button:active{
     transform: translateY(2px);
 }
@@ -28,7 +31,9 @@ button:active{
     display: flex;    
     flex-direction: column ;   
     justify-content: center ;
-    align-items:center
+    align-items:center;
+    position: relative;
+    top:20px;
 }
 #photo img{
     display: block;    
@@ -310,4 +315,15 @@ button:active{
     color: white;
     font-size: 20px;
     cursor: pointer;
+}
+
+#current{
+    color:white;
+    position: relative;
+    top:30px;
+    width: 200px;
+    height: 30px;
+    margin: 0;
+    overflow: hidden;
+    font-size: 17px;
 }

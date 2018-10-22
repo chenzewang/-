@@ -96,8 +96,6 @@ button:active{
 }
 #zhuxiao{
     display: inline-block;
-    width: 82px;
-    height: 33px;
     border: 2px solid rgb(20,221,231);
     background-color: rgba(29, 47, 60, 0.8);
     border-radius: 15px;
