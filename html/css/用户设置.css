@@ -324,21 +324,19 @@ button:active{
     font-size: 17px;
 }
 
-#add_name{
-    color: white;
-    position: relative;
-    top: 0px;
-    height: 30px;
-    margin: 0;
-    overflow: hidden;
-    font-size: 17px;
-    line-height: 30px;
-    text-align: center
+#record .pop-close{
+    top:10px;
+    right: 10px;
 }
 #record #detail{
-    height: 280px
+    height: 280px;
+    position: relative;
+    top:20px;
 }
-
+#record #detail div:nth-child(1){
+    position: relative;
+    left: -8px;
+}
 #record #photo{
     top:0px;
 }
@@ -355,4 +353,5 @@ button:active{
     margin: 0 auto;
     margin-top: 25px;
     cursor: pointer;
+    z-index: 2;
 }
