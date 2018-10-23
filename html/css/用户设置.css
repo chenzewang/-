@@ -194,10 +194,10 @@ button:active{
     width: 150px;
 }
 #graph th:nth-child(2){
-    width: 150px;
+    width: 130px;
 }
 #graph td:nth-child(2){
-    width: 150px;
+    width: 130px;
 }
 #graph th:nth-child(3){
     width: 150px;
@@ -212,23 +212,28 @@ button:active{
     width: 150px;
 }
 #graph th:nth-child(5){
-    width: 150px;
+    width: 130px;
 }
 #graph td:nth-child(5){
-    width: 150px;
+    width: 130px;
 }
 #graph th:nth-child(6){
-    width: 171px;
+    width: 106px;
 }
 #graph td:nth-child(6){
-    width: 158px;
+    width: 106px;
+}
+#graph th:nth-child(7){
+    width: 105px;
+}
+#graph td:nth-child(7){
+    width: 92px;
 }
 
-#graph td:nth-child(6) button:nth-child(1){
-    position: relative;
-    left: -10px;
+#graph td button{
+    font-size: 15px;
 }
-#graph td:nth-child(6) button:nth-child(2){
+#graph td:nth-child(7) button{
     position: relative;
     left: 10px;
 }
