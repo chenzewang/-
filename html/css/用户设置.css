@@ -24,7 +24,7 @@ button:active{
     padding-top: 40px;
 }
 
-#photo{
+.photo{
     height:300px;
     width: 200px;
     float: left;
@@ -35,18 +35,18 @@ button:active{
     position: relative;
     top:20px;
 }
-#photo img{
+.photo img{
     display: block;    
     width: 120px;
     height: 160px;
 }
-#photo span{
+.photo span{
     display: block;
     text-align: center;
     color: white;
     margin-top: 10px;
 }
-#photo button{
+.photo button{
     display: block;
     border: 2px solid rgb(20,221,231);
     background-color: rgba(29, 47, 60, 0.8);
@@ -61,7 +61,7 @@ button:active{
 }
 
 
-#detail{
+.detail{
     height: 300px;
     width: 200px;
     display: flex;    
@@ -69,11 +69,11 @@ button:active{
     justify-content: space-between ;
     align-items:center
 }
-#detail span{
+.detail span{
     color: white;
     font-size: 15px;
 }
-#detail input{
+.detail input{
     border: 1px solid rgb(20,221,231);
     background-color: rgba(29, 47, 60, 0.8);
     border-radius: 15px;
@@ -82,7 +82,7 @@ button:active{
     width: 100px;
     font-size: 15px;    
 }
-#detail select{
+.detail select{
     border: 1px solid rgb(20,221,231);
     background-color: rgba(29, 47, 60, 0.8);
     border-radius: 15px;
@@ -328,16 +328,16 @@ button:active{
     top:10px;
     right: 10px;
 }
-#record #detail{
+#record .detail{
     height: 280px;
     position: relative;
     top:20px;
 }
-#record #detail div:nth-child(1){
+#record .detail div:nth-child(1){
     position: relative;
     left: -8px;
 }
-#record #photo{
+#record .photo{
     top:0px;
 }
 
