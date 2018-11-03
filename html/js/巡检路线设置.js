@@ -8,6 +8,19 @@ $(document).ready(function () {
         document.getElementsByClassName("bgPop")[0].setAttribute("style","display:block")
         $('#kuang3').show();
     });
+    
+
+
+    $('#imp').click(function () {
+        var hei=$("#imp_template ul li").length*30+25+"px"
+        $("#imp_template").css("height",hei);
+    });
+    $(document).on('click',':not(.impg)',function(){
+            $("#imp_template").css("height","0px");
+        })
+    $(".impg").click(function(event){
+        event.stopPropagation();
+    });
 
 })
 
