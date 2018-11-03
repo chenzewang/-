@@ -91,7 +91,7 @@ button:active{
     height: 40px;
     position: relative;
     left: 57px;
-    top: -592px;
+    top: -606px;
     display: inline-block;
 }
 #zhuxiao{
@@ -115,4 +115,10 @@ button:active{
     position: absolute;
     top: 109px;
     left: 179px;
+}
+#current{
+    color:white;
+    display:inline-block;
+    font-size: 20px;
+    line-height: 40px;
 }

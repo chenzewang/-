@@ -235,7 +235,7 @@ button:active{
 }
 #graph td:nth-child(7) button{
     position: relative;
-    left: 10px;
+    left: 8px;
 }
 
 #operate2{
