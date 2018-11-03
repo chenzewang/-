@@ -218,8 +218,44 @@ body{
     line-height: 30px;    
 }
 
-
-
+#imp_template{
+    position: absolute;
+    top: 115px;
+    left: 625px;
+    overflow: hidden;
+    height: 175px;
+    transition: height 0.3s;    
+}
+#imp_template ul{
+    width: 140px;
+    height: 170px;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    background-image: none;
+    z-index: 3;
+    border: 2px solid rgb(20,221,231);
+    background-color: rgb(26,38,45);
+    border-radius: 15px;
+    overflow: hidden;
+}
+#imp_template li{
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    background-image: none !important;
+    width: 100% !important;
+    margin-bottom: 2px;
+    margin-top: 0px;
+}
+#imp_template button{
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0;
+}
+#imp_template li:hover{
+    background-color: rgb(76, 90, 98);
+}    
 
 
 #kuang2{
