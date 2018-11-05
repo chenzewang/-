@@ -318,7 +318,6 @@ body{
 #graph2 tbody::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
     border-radius: 10px;
     background-color: #F90;
-background-image: url(../../img/6-2-huadongkuai.png)
     }
 #graph2 tbody::-webkit-scrollbar-track {/*滚动条里面轨道*/
         border-radius: 10px;

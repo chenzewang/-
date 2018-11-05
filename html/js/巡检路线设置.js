@@ -12,8 +12,11 @@ $(document).ready(function () {
 
 
     $('#imp').click(function () {
-        var hei=$("#imp_template ul li").length*30+25+"px"
-        $("#imp_template").css("height",hei);
+        var hei=$("#imp_template ul li").length*30+25+"px";
+        var hei2=$("#imp_template ul li").length*30+30+"px";
+        console.log(hei);
+        $("#imp_template").css("height",hei2);
+        $("#imp_template ul").css("height",hei);
     });
     $(document).on('click',':not(.impg)',function(){
             $("#imp_template").css("height","0px");

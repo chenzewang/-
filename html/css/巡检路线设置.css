@@ -228,7 +228,6 @@ body{
 }
 #imp_template ul{
     width: 140px;
-    height: 170px;
     background-attachment: fixed;
     top: 0;
     left: 0;
@@ -247,6 +246,9 @@ body{
     width: 100% !important;
     margin-bottom: 2px;
     margin-top: 0px;
+}
+#imp_template li:last-child{
+    margin-bottom: 0px;
 }
 #imp_template button{
     height: 100% !important;
@@ -760,3 +762,20 @@ button:hover{
 #fanhui{
     display: none;
 }
+
+
+
+
+.scroll_content,.luxian_type ul, .luxianku_box{
+    -ms-scroll-chaining: chained;
+    -ms-overflow-style: none;
+    -ms-content-zooming: zoom;
+    -ms-scroll-rails: none;
+    -ms-content-zoom-limit-min: 100%;
+    -ms-content-zoom-limit-max: 500%;
+    -ms-scroll-snap-type: proximity;
+    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+    -ms-overflow-style: none;
+    overflow: auto;
+}
+
