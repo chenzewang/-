@@ -27,14 +27,16 @@
         <div class="search_box search_box2" onclick="searchByOther()">  
             <div id="map">
                 <span>按巡检路线查询</span>
-                <ul>
-                    <li><a >锅炉路线</a></li>
-                    <li><a >电气路线</a></li>
-                    <li><a >汽机路线</a></li>   
-                    <li><a >锅炉路线</a></li>
-                    <li><a >电气路线</a></li>
-                    <li><a >汽机路线</a></li>                   
-                </ul>
+                <div class="map_ul_box scrollbox scroll_content">
+                    <ul>
+                        <li><a >锅炉路线</a></li>
+                        <li><a >电气路线</a></li>
+                        <li><a >汽机路线</a></li>   
+                        <li><a >锅炉路线</a></li>
+                        <li><a >电气路线</a></li>
+                        <li><a >汽机路线</a></li>                   
+                    </ul>
+                </div>
             </div>
             <div id="time">
                 <span>按时间查询</span>
@@ -111,6 +113,7 @@
     </div>
         
 <script src="js/jquery-1.8.0.min.js"></script>    
+<script src="js/scroll.min.js"></script>
 <script src="js/历史巡检记录.js"></script>
 <script language="javascript" src="js/JTimer.js"></script>  
    <script>  

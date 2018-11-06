@@ -34,26 +34,26 @@ function submit(){  //提交入库
 }//close submit()
 
 var pathLibrary=[]
-function fresh(){   //刷新路线库
-    for(let i=0;i<$("#luxianku ul:eq(0) li").length;i++){
-        $("#luxianku ul:eq(0) li").remove()
+function fresh() {
+    //刷新路线库
+    for (var i = 0; i < $("#luxianku ul:eq(0) li").length; i++) {
+        $("#luxianku ul:eq(0) li").remove();
     }
 
     $.ajax({
-        type : 'get',
-        url : 'http://140.143.183.49/paths/retrieve',
-        dataType : "jsonp",
-        error : function() {
+        type: 'get',
+        url: 'http://140.143.183.49/paths/retrieve',
+        dataType: "jsonp",
+        error: function error() {
             alert('发送失败');
         },
-        success : function(data) {
-            pathLibrary=data
+        success: function success(data) {
+            pathLibrary = data;
             $("#luxianku li").empty();
-            for(let i=0;i<data.length;i++){
-                let li=$("<li data-id=\""+data[i].id+"\" onclick=\" lxk_click(this)\"><span>"+data[i].name+"</span><button onclick=\"ku_del(this)\"></button><button>启用</button></li>")
-                $("#luxianku ul:eq(0)").append(li)    
+            for (i = 0; i < data.length; i++) {
+                var li = $("<li data-id=\"" + data[i].id + "\" onclick=\" lxk_click(this)\"><span>" + data[i].name + "</span><button onclick=\"ku_del(this)\"></button><button>启用</button></li>");
+                $("#luxianku ul:eq(0)").append(li);
             }
-      
         }
     });
 }

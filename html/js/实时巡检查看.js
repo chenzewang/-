@@ -497,13 +497,13 @@ var objMap={
                 document.getElementById("map").getElementsByTagName("td")[h].setAttribute('style','float:right');
             }
         }
-        for(let h=0;h<document.getElementById("map").getElementsByTagName("div").length;h++){
+        for(var h=0;h<document.getElementById("map").getElementsByTagName("div").length;h++){
             document.getElementById("map").getElementsByTagName("div")[h].setAttribute("data-spot-seq",h)//为框图添加序号
         }
 
         jiantou(num);
 
-        for(let i=0;i<objMap.spotnum;i++){
+        for(var i=0;i<objMap.spotnum;i++){
             if(objMap.spots[i].checked==true){
                 $("#map td").eq(i).css("background-color","rgba(62, 66, 68, 0.80)")
             }
@@ -537,7 +537,7 @@ var objMap={
     function up(x){  //点击框图，弹出书写框
         //先清空书写框
         var input=document.getElementById("kuang3").getElementsByTagName("input"); 
-        for(let j=0;j<input.length;j++){
+        for(var j=0;j<input.length;j++){
             input[j].value="";
         }
         //书写框出现，遮掩层出现
@@ -548,14 +548,14 @@ var objMap={
 
         var seq=kuangx.getAttribute("data-spot-seq"); //当前查看的spot的序号
         $(".creat_new_item").remove();//清除div-item
-        for(let n=0;n<objMap.spots[seq].items.length;n++){
+        for(var n=0;n<objMap.spots[seq].items.length;n++){
             addItem()
         }
 
         //把objMap的数据输入到书写框里
         $("#spot_name").val(objMap.spots[seq].name)
         $("#spot_desc").val(objMap.spots[seq].desc)
-        for(let i=0;i<$(".creat_new_item").length;i++){    
+        for(var i=0;i<$(".creat_new_item").length;i++){    
             $(".creat_new_item:eq("+i+") input:eq(0)").val(objMap.spots[seq].items[i].content)
             $(".creat_new_item:eq("+i+") input:eq(1)").val(objMap.spots[seq].items[i].unit)
             $(".creat_new_item:eq("+i+") input:eq(2)").val(objMap.spots[seq].items[i].st_min)
@@ -570,35 +570,15 @@ var objMap={
     
     
     
-    
-    function addItem(){        
-        var model=`<div class="creat_new_item">
-                    <input placeholder="巡检条目内容"  readonly="readonly">
-                    <input placeholder="单位"  readonly="readonly">
-                    <div>
-                        <select disabled="true">
-                            <option value="true">确认型</option>
-                            <option value="false">数值型</option>
-                        </select>
-                    </div>
-                    <div></div>
-                    
-                    <br>                        
-                    <input placeholder="最小标准值" readonly="readonly">
-                    <input placeholder="最大标准值" readonly="readonly"><br>
-                    <input placeholder="最小警戒值" readonly="readonly">
-                    <input placeholder="最大标准值" readonly="readonly"> 
-                    </div>
-                `
-        $("#kuang3_items").append(model)
+    function addItem() {
+        var model = "<div class=\"creat_new_item\">\n <input placeholder=\"\u5DE1\u68C0\u6761\u76EE\u5185\u5BB9\"  readonly=\"readonly\">\n  <input placeholder=\"\u5355\u4F4D\"  readonly=\"readonly\">\n <div>\n   <select disabled=\"true\">\n  <option value=\"true\">\u786E\u8BA4\u578B</option>\n  <option value=\"false\">\u6570\u503C\u578B</option>\n   </select>\n   </div>\n  <div></div>\n   \n  <br>                        \n                    <input placeholder=\"\u6700\u5C0F\u6807\u51C6\u503C\" readonly=\"readonly\">\n                    <input placeholder=\"\u6700\u5927\u6807\u51C6\u503C\" readonly=\"readonly\"><br>\n                    <input placeholder=\"\u6700\u5C0F\u8B66\u6212\u503C\" readonly=\"readonly\">\n                    <input placeholder=\"\u6700\u5927\u6807\u51C6\u503C\" readonly=\"readonly\"> \n                    </div>\n                ";
+        $("#kuang3_items").append(model);
     }
-
-
 
     function changeObjmap(x){
         objMap=objMap;
         creatMap()
-        for(let i=0;i<$("#map span").length;i++){
+        for(var i=0;i<$("#map span").length;i++){
             $("#map span").text(objMap.spots[i].name)
         }
         $("#now_map").text($(x).text())

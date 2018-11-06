@@ -3,6 +3,20 @@
     padding: 0px;
     outline: none;
 }
+select{
+    
+    -moz-appearance:none;
+    background-image: url("../../img/sanjiao.png");
+    background-position-x: 140px;
+    background-position-y: 7px;
+
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    padding-left: 5px;
+    padding-right: 20px;
+    background-size: 14px 14px;
+}
+select::-ms-expand { display: none; }   
 
 #search{
     background-image: url(../../img/13-1-kuang.png);

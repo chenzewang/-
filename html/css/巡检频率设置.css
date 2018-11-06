@@ -71,7 +71,7 @@ button:active{
     overflow-y: scroll;   
 }
 .add_box::-webkit-scrollbar {
-    width: 8px;    
+    width: 0px;    
     height: 20px;
 }
 .add_box::-webkit-scrollbar-thumb {
@@ -83,8 +83,6 @@ button:active{
     }
 .add_box ul{
     width: 100%;
-    height: 100%;
-
 }
 .add_box li{
     width: 100%;
@@ -119,7 +117,23 @@ button:active{
     color: white;
     margin-left: 40px;
 }
+.scroll_content{
+    -ms-scroll-chaining: chained;
+    -ms-overflow-style: none;
+    -ms-content-zooming: zoom;
+    -ms-scroll-rails: none;
+    -ms-content-zoom-limit-min: 100%;
+    -ms-content-zoom-limit-max: 500%;
+    -ms-scroll-snap-type: proximity;
+    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+    -ms-overflow-style: none;
+    overflow: auto;
+}
 
+.scroll_box{
+    left: 156px;
+    top:29px !important;
+}
 
 
 #set{

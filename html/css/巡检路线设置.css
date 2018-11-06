@@ -14,7 +14,7 @@ select{
     padding-right: 20px;
     background-size: 14px 14px;
 }
-
+select::-ms-expand { display: none; }   
 body{
     width: 100px;
     height: 630px;
@@ -189,6 +189,7 @@ body{
     height: 30px;
     font-size: 20px;
     line-height: 30px;    
+    overflow: hidden;
 }
 
 #map_time{
@@ -276,7 +277,7 @@ body{
     line-height: 29px;
 }
 #kuang2::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 13px;     /*高宽分别对应横竖滚动条的尺寸*/
+    width: 0px;     /*高宽分别对应横竖滚动条的尺寸*/
     height: 2px;
 }
 #kuang2::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
@@ -287,10 +288,10 @@ body{
         background: #EDEDED;
     }
 #map{
-    margin-left: 10px;
-    margin-top: 10px;
+
     position: relative;
-    left: -30px;
+    left: 00px;
+    top:10px;
 }
 #map td{
     width: 110px;
@@ -373,6 +374,7 @@ body{
 #kuang3_items{
     overflow-y: scroll;
     width: 100%;
+    height: 300px;
 }
 /* #kuang3_items::-webkit-scrollbar {
     display:none
@@ -419,10 +421,6 @@ body{
     transform: translateY(2px);
 }
 
-#kuang3_items{
-    width: 100%;
-    height: 300px;
-}
 .del_item{
     width: 60px;
 }
@@ -540,19 +538,49 @@ body{
     width: 192px;
     max-height: 540px;
     margin-top: 42px;
-    overflow-y: scroll;
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+}
+#luxianku_box>div{
+    width: 192px;
+    max-height: 540px;
+    overflow-y: auto;
     overflow-x: hidden;
 }
-#luxianku_box::-webkit-scrollbar {
-    width: 5px;     
+.scroll_box{
+    border: 0px;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236) !important;
+    }
+#luxianku_box>div::-webkit-scrollbar {
+    width: 0px;     
 }
-#luxianku_box::-webkit-scrollbar-thumb {
-    background-color: rgba(193, 193, 193);
-    background-repeat: no-repeat;
+.scroll_content{
+    -ms-scroll-chaining: chained;
+    -ms-overflow-style: none;
+    -ms-content-zooming: zoom;
+    -ms-scroll-rails: none;
+    -ms-content-zoom-limit-min: 100%;
+    -ms-content-zoom-limit-max: 500%;
+    -ms-scroll-snap-type: proximity;
+    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+    -ms-overflow-style: none;
+    overflow: auto;
+    scrollbar-arrow-color: rgba(255, 255, 255, 0.0);
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: rgba(255, 255, 255, 0.0);
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: rgba(255, 255, 255, 0.0);
+    /*滚动条阴影*/
+    scrollbar-shadow-color:rgba(255, 255, 255, 0.0);
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: rgba(255, 255, 255, 0.0);
 }
-#luxianku_box::-webkit-scrollbar-track {
-    background: #EDEDED;
-}
+
+
+
+
+
 #luxianku ul{
     display: inline-block;
     width: 150px;
@@ -762,20 +790,3 @@ button:hover{
 #fanhui{
     display: none;
 }
-
-
-
-
-.scroll_content,.luxian_type ul, .luxianku_box{
-    -ms-scroll-chaining: chained;
-    -ms-overflow-style: none;
-    -ms-content-zooming: zoom;
-    -ms-scroll-rails: none;
-    -ms-content-zoom-limit-min: 100%;
-    -ms-content-zoom-limit-max: 500%;
-    -ms-scroll-snap-type: proximity;
-    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
-    -ms-overflow-style: none;
-    overflow: auto;
-}
-

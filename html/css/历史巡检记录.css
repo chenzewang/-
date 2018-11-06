@@ -112,29 +112,40 @@ body{
     width: 155px;
     height:130px;    
 }
+#map .scroll_box{
+    left: 128px;
+    top: 25px !important;
+}
 #map ul{
+
+    list-style: none;
+    text-align: center;
+}
+.map_ul_box{
     width: 130px;
     height:90px;
     border: 2px solid rgb(20,221,231);
     border-right: 0px;
     background-color: rgba(29, 47, 60, 0.8);
     border-radius: 15px 0 0 15px;
-    list-style: none;
-    text-align: center;
     overflow-y: scroll;
 }
-
-#map ul::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 8px;     /*高宽分别对应横竖滚动条的尺寸*/
-    height: 1px;
+.scroll_content{
+    -ms-scroll-chaining: chained;
+    -ms-overflow-style: none;
+    -ms-content-zooming: zoom;
+    -ms-scroll-rails: none;
+    -ms-content-zoom-limit-min: 100%;
+    -ms-content-zoom-limit-max: 500%;
+    -ms-scroll-snap-type: proximity;
+    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+    -ms-overflow-style: none;
+    overflow: auto;
 }
-#map ul::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-    background-color: rgba(193, 193, 193,1);
-    background-repeat: no-repeat;
-    }
-#map ul::-webkit-scrollbar-track {/*滚动条里面轨道*/
-        background: rgb(60,93,108)
-    }
+.scrollbox::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 0px;     /*高宽分别对应横竖滚动条的尺寸*/
+}
+
 #map li{
     margin-top:5px;
 }

@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
     $('.pop-close').click(function () {
         $('#kuang3').hide();
@@ -58,17 +60,19 @@ $(document).ready(function () {
         var tab="<table id=\"map\"> "
         
     
-        for(let i=0;i<objMap.num;i++){   //为objMap添加spot
-            let objSpot={
-            "id": 1,
-            "name": "",
-            "desc": "",
-            "tmp": false,
-            "created_at": "",
-            "updated_at": "",
-            "items": []
-            }
-            objMap.spots.push(objSpot)
+       
+        for (i = 0; i < objMap.num; i++) {
+            //为objMap添加spot
+            var objSpot = {
+                    "id": 1,
+                    "name": "",
+                    "desc": "",
+                    "tmp": false,
+                    "created_at": "",
+                    "updated_at": "",
+                    "items": []
+            };
+            objMap.spots.push(objSpot);
         }
 
 
@@ -96,7 +100,7 @@ $(document).ready(function () {
                 document.getElementById("map").getElementsByTagName("td")[h].setAttribute('style','float:right');
             }
         }
-        for(let h=0;h<document.getElementById("map").getElementsByTagName("div").length;h++){
+        for(h=0;h<document.getElementById("map").getElementsByTagName("div").length;h++){
             document.getElementById("map").getElementsByTagName("div")[h].setAttribute("data-spot-seq",h)//为框图添加序号
         }
 
@@ -126,7 +130,7 @@ $(document).ready(function () {
     function up(x){  //点击框图，弹出书写框
         //先清空书写框
         var input=document.getElementById("kuang3").getElementsByTagName("input"); 
-        for(let j=0;j<input.length;j++){
+        for(var j=0;j<input.length;j++){
             input[j].value="";
         }
         //书写框出现，遮掩层出现
@@ -138,7 +142,7 @@ $(document).ready(function () {
         //把objMap的数据输入到书写框里
         $("#spot_name").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].name)
         $("#spot_desc").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].desc)
-        for(let i=0;i<$(".creat_new_item").length;i++){    
+        for(var i=0;i<$(".creat_new_item").length;i++){    
             $(".creat_new_item:eq("+i+") input:eq(0)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].content)
             $(".creat_new_item:eq("+i+") input:eq(1)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].unit)
             $(".creat_new_item:eq("+i+") input:eq(2)").val(objMap.spots[kuangx.getAttribute("data-spot-seq")].items[i].st_min)
@@ -155,9 +159,9 @@ $(document).ready(function () {
         
         objMap.spots[kuangx.getAttribute("data-spot-seq")].items=[]  //清空objMap.spots[kuangx.getAttribute("data-spot-seq")].items
 
-        for(let i=0;i<$(".creat_new_item").length;i++){ 
+        for(var i=0;i<$(".creat_new_item").length;i++){ 
             //各item的数据保存到spot
-            let item={};
+            var item={};
             item.content=$(".creat_new_item:eq("+i+") input:eq(0)").val()
             item.unit=$(".creat_new_item:eq("+i+") input:eq(1)").val()
             item.itemtype="false"
@@ -176,7 +180,7 @@ $(document).ready(function () {
     }
     function del(){  //清空某spot         
         var input=document.getElementById("kuang3").getElementsByTagName("input");        
-        for(let i=0;i<input.length;i++){
+        for(var i=0;i<input.length;i++){
             input[i].value="";
         }//清空kuang3所有输入框
         
@@ -190,7 +194,7 @@ $(document).ready(function () {
     function addItem(){
         var new_item=model.cloneNode(true);
         document.getElementById("kuang3_items").appendChild(new_item);
-        saveItem()
+        saveItem();
     }
     
     function delItem(x){
@@ -212,20 +216,16 @@ $(document).ready(function () {
         
         if(e.keyCode == 13){ 
             var name=$(".creat_new_type:eq(0) textarea:eq(0)").val();
-            var model=` 
-                        <div class="luxian_type">
-                            <div class="title">${name}</div>
-                            <ul></ul>
-                        </div>
-                    `
+            var model = " \n<div class=\"luxian_type\">\n<div class=\"title\">" + name + "</div>\n<ul ></ul>\n</div>\n";
             $(".luxian_type:last").before(model)
             $(".creat_new_type:eq(0) textarea:eq(0)").val("")          
         }
         fresh() 
+        scrollsY(".scrollbox");
     }
   
+    scrollsY(".scrollbox");
     
+   
 
-    function creatNewPath(){
-        objMap={}
-    }
+    
