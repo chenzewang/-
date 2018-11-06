@@ -80,7 +80,7 @@ body{
 }
 
 #graph1 tbody::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 13px;     /*高宽分别对应横竖滚动条的尺寸*/
+    /* width: 13px;     高宽分别对应横竖滚动条的尺寸 */
     height: 1px;
 }
 #graph1 tbody::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
@@ -90,14 +90,22 @@ body{
 #graph1 tbody::-webkit-scrollbar-track {/*滚动条里面轨道*/
         background: #EDEDED;
     }
-/*滚动条整体样式*/
-/*滚动条里面小方块*/
-/*滚动条里面轨道*/
+
 #graph1 tbody{
     display:block;
     height: 389px;
     overflow-y: scroll;
     text-align: center;
+    /*ie下三角箭头的颜色*/
+    scrollbar-arrow-color: rgba(20,221,231,0.3);
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: rgb(193, 193, 193);
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #EDEDED;
+    /*滚动条阴影*/
+    /* scrollbar-shadow-color: transparent; */
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #EDEDED;
 }
 #graph1 thead tr{
     display:block;
@@ -147,7 +155,7 @@ body{
     width: 170px;
 }
 #graph1 td:nth-child(5){
-    width: 157px;
+    width: 152px;
 }
 
 

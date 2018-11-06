@@ -251,7 +251,7 @@ body{
 }
 
 #graph1 tbody::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 13px;     /*高宽分别对应横竖滚动条的尺寸*/
+    /* width: 13px;     高宽分别对应横竖滚动条的尺寸 */
     height: 1px;
 }
 #graph1 tbody::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
@@ -267,6 +267,16 @@ body{
     height: 360px;
     overflow-y: scroll;
     text-align: center;
+    /*ie下三角箭头的颜色*/
+    scrollbar-arrow-color: rgba(20,221,231,0.3);
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: rgb(193, 193, 193);
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #EDEDED;
+    /*滚动条阴影*/
+    /* scrollbar-shadow-color: transparent; */
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #EDEDED;
 }
 #graph1 thead tr{
     display:block;
@@ -300,10 +310,10 @@ body{
     width: 400px;
 }
 #graph1 th:nth-child(5){
-    width: 175px;
+    width: 173px;
 }
 #graph1 td:nth-child(5){
-    width: 163px;
+    width: 156px;
 }
 
 
@@ -383,6 +393,16 @@ body{
 #graph2 tbody{
     display:block;
     text-align: center;
+    /*ie下三角箭头的颜色*/
+    scrollbar-arrow-color: rgba(20,221,231,0.3);
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: rgb(193, 193, 193);
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #EDEDED;
+    /*滚动条阴影*/
+    /* scrollbar-shadow-color: transparent; */
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #EDEDED;
 }
 #graph2 thead tr{
     display:block;
@@ -512,6 +532,16 @@ body{
     height: 302px;
     text-align: center;
     overflow: hidden;
+    /*ie下三角箭头的颜色*/
+    scrollbar-arrow-color: rgba(20,221,231,0.3);
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: rgb(193, 193, 193);
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #EDEDED;
+    /*滚动条阴影*/
+    /* scrollbar-shadow-color: transparent; */
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #EDEDED;
 }
 #graph3 thead tr{
     display:block;
@@ -631,6 +661,16 @@ body{
     text-align: center;
     width: 100%;
     overflow: hidden;
+    /*ie下三角箭头的颜色*/
+    scrollbar-arrow-color: rgba(20,221,231,0.3);
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: rgb(193, 193, 193);
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #EDEDED;
+    /*滚动条阴影*/
+    /* scrollbar-shadow-color: transparent; */
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #EDEDED;
 }
 #graph4 thead tr{
     display:block;
@@ -962,6 +1002,16 @@ body{
     overflow-y: scroll;
     height: 300px;    
     display:block;
+    /*ie下三角箭头的颜色*/
+    scrollbar-arrow-color: rgba(20,221,231,0.3);
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: rgb(193, 193, 193);
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #EDEDED;
+    /*滚动条阴影*/
+    /* scrollbar-shadow-color: transparent; */
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #EDEDED;
 }
 
 #graph5 thead tr{
@@ -970,6 +1020,7 @@ body{
 #graph5 tbody::-webkit-scrollbar {/*滚动条整体样式*/
     width: 12px;     /*高宽分别对应横竖滚动条的尺寸*/
     height: 1px;
+    
 }
 #graph5 tbody::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
     background-color: rgba(193, 193, 193);
