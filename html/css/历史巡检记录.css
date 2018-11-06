@@ -388,6 +388,8 @@ body{
 #graph2 table{
     width: 100%;
     margin-bottom: 20px;
+    color: white;
+    border-collapse:collapse;
 }
 
 #graph2 tbody{
@@ -433,12 +435,6 @@ body{
     display:block;
 }
 
-#graph2 table{
-    width:100%;
-    color: white;
-    border-collapse:collapse;
-    
-}
 
 #graph2 td:nth-child(1){
     width: 374px;

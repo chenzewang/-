@@ -790,3 +790,174 @@ button:hover{
 #fanhui{
     display: none;
 }
+
+
+
+
+.pop-close2{
+    position: relative;
+    left: 900px;
+    top: -375px;
+    color:white;
+    cursor: pointer;
+    font-size: 30px;
+}
+.no_pass {
+    color: red;
+}
+.value_left {
+    width: 40%;
+    height: 100%;
+    display: inline-block;
+    line-height: 42px;
+}
+.value_right {
+    width: 58%;
+    height: 100%;
+    display: inline-block;
+    border-left: 1px solid rgb(0, 174, 231);
+    line-height: 42px;
+}
+#record2{
+    /* display: none; */
+}
+
+#record2{
+    background-image:url(../../img/6-2-waikuagn5.png);
+    width:953px;
+    height: 438px;
+    position: absolute;
+    left: 23px;
+    top:170px;
+    background-color: rgb(33,51,62);
+
+}
+#record2>div{
+    width: 947px;
+    margin-left:5px; 
+}
+
+#record2>button:nth-child(3){
+    position: absolute;
+    bottom: 17px;
+    left: 438px;
+    border: 1px solid rgb(20,221,231);
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(11, 37, 54,0.6);
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+}
+
+#record2_title{
+    height: 50px;
+}
+
+#record2_title div{
+    display: inline-block;
+    width: 15%;
+    height: 25px;
+    border: 1px solid rgb(20,221,231);
+    border-radius: 10px;
+    background-color: rgba(29, 47, 60, 0.8);
+    margin-left: 20%;
+    margin-top: 17px;
+    text-align: center;
+    color: white;
+}
+
+#record2_title button{
+    border: 0px;
+    background-color: transparent;
+    background-image: url(../../img/10-2-ziti_shengchengxunjianbaogao_kuagn.png);
+    background-repeat: no-repeat;
+    color:white;  
+    margin-left: 30%;
+    margin-top: 5px;
+    width: 154px;;
+    height: 34px;    
+    cursor: pointer;  
+}
+
+
+#graph2 table,#graph2 td{
+    border-width: 1px !important;
+    border: 1px solid rgb(11, 174, 231);
+}
+#graph2 table{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#graph2 tbody{
+    display:block;
+    text-align: center;
+    /*ie下三角箭头的颜色*/
+    scrollbar-arrow-color: rgba(20,221,231,0.3);
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: rgb(193, 193, 193);
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #EDEDED;
+    /*滚动条阴影*/
+    /* scrollbar-shadow-color: transparent; */
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #EDEDED;
+}
+#graph2 thead tr{
+    display:block;
+}
+
+#graph2{
+    width: 948px;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 330px;
+    overflow-y: scroll;
+    border-bottom: 2px solid rgb(0, 147, 237);
+    border-top: 2px solid rgb(0, 147, 237);
+    
+}
+#graph2::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 12px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+#graph2::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    background-color: rgba(193, 193, 193);
+    background-repeat: no-repeat;
+    }
+#graph2::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        background: rgb(43, 68, 80)
+    }
+#graph2 thead tr{
+    display:block;
+}
+
+#graph2 table{
+    width:100%;
+    color: white;
+    border-collapse:collapse;
+    
+}
+
+#graph2 td:nth-child(1){
+    width: 374px;
+    text-align: center;
+    height: 42px;
+    
+}
+#graph2 td:nth-child(2){
+    width: 565px;
+    height: 42px;
+    text-align: center;
+}
+#graph2 th:nth-child(1){
+    width: 933px;
+    height: 52px;
+    
+}
+#graph2 th:nth-child(2){
+    width:0px;
+    height: 52px;
+    
+}
