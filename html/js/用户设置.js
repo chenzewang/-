@@ -109,11 +109,11 @@ function creatMap(ob){  //生成路线框图
     var lie=6;    
     var hang=ob.length;  
     var tab=`<table id=\"map\"> 
-                <thead><tr><th>用户名</th> <th>姓名</th> <th>工号</th> <th>专业</th> <th>权限</th><th>照片</th> <th>功能</th> </tr></thead>
+                <thead><tr><th><input type="checkbox"  /> <span class="x"></></th> <th>姓名</th> <th>工号</th> <th>专业</th> <th>权限</th><th>照片</th> <th>功能</th> </tr></thead>
             `
         for(let i=0;i<hang;i++){
             tab+=`<tr>`;
-                tab+=`<td>${ob[i].num}</td>`;
+                tab+=`<td><input type="checkbox"  /></td>`;
                 tab+=`<td>${ob[i].place}</td>`;
                 tab+=`<td>${ob[i].statu}</td>`;
                 tab+=`<td>${ob[i].active}</td>`;
@@ -128,3 +128,9 @@ function creatMap(ob){  //生成路线框图
 creatMap(obj);
 
 
+$("#map thead input[type='checkbox']").click(function(){ 
+        $("#map input[type='checkbox']").attr("checked","true"); 
+    }) 
+$("#map thead .x").click(function(){ 
+        $("#map input[type='checkbox']").removeAttr("checked"); 
+    }) 

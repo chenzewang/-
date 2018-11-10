@@ -136,6 +136,18 @@ button:active{
     color: white;
     display: none;
 }
+#record input[type="checkbox"]{
+    width: 1.5em;
+    height: 1.5em;
+}
+.x{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-image: url(../../img/x.png);
+    background-size: 20px;
+}
 
 #graph{
     height: 480px;
@@ -144,7 +156,6 @@ button:active{
     border-top: 2px solid rgb(11, 174, 231);
     margin-top: 45px;
 }
-
 
 #graph table,th,td{
     border: 1px solid rgb(11, 174, 231);
@@ -265,7 +276,7 @@ button:active{
     border-radius: 15px;
     color: white;
     height: 25px;
-    width: 100px;
+    width: 100px !important;
     font-size: 15px; 
     margin-left: 40px;
     margin-top: 12px;
@@ -279,7 +290,7 @@ button:active{
     height: 25px;
     width: 200px;
     font-size: 15px; 
-    margin-left: 500px;
+    margin-left: 280px;
     margin-top: 12px;
 }
 
