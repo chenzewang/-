@@ -80,18 +80,17 @@
                     </div>
                     <div class="creat_new_item">
                         <input placeholder="巡检条目内容">
-                        <input placeholder="单位">
-                        <div>
+                        <input placeholder="单位"><br>                        
+                        <input placeholder="最小标准值">
+                        <input placeholder="最大标准值"><br>
+                        <input placeholder="最小警戒值">
+                        <input placeholder="最大标准值">
+                        <div id="kuang3_select">
                             <select>
                                 <option value ="true">确认型</option>
                                 <option value ="false">数值型</option>
                             </select>
                         </div>
-                        <br>                        
-                        <input placeholder="最小标准值">
-                        <input placeholder="最大标准值"><br>
-                        <input placeholder="最小警戒值">
-                        <input placeholder="最大标准值"> 
                         <button id="new_item_del" onclick="delItem(this)">删除</button>
                     </div>
                 </div>
@@ -158,12 +157,10 @@
 
 
 
-
-
-        
         <script src="js/scroll.min.js"></script>
         <script src="js/巡检路线设置chakan.js"></script>
         <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+        <script src="../js/pla.js"></script>
         <script src="js/巡检路线设置.js"></script>
         <script src="js/巡检路线设置_data.js"></script>
 </body>

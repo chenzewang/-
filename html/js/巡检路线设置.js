@@ -655,3 +655,7 @@ $(document).ready(function () {
         document.getElementById("graph2").innerHTML = text;
     }
     creatGraph2(objMap.spots);
+
+
+
+    $('input').placeholder({isUseSpan:true,onInput:true});

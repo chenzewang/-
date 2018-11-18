@@ -4,8 +4,11 @@
     outline:none
     
 }
-select{
+y
 
+
+
+select{
     -moz-appearance:none;
     background-image: url("../../img/sanjiao.png");
     background-repeat: no-repeat;
@@ -370,6 +373,8 @@ body{
     width: 110px;
     height: 30px;
     overflow-x:hidden;
+    overflow-y:hidden;
+
 }
 #map td>div>span::-webkit-scrollbar {
     display: none;
@@ -405,10 +410,9 @@ body{
     border: 0px;
     color:white;
     text-align: center;
-    display: inline-block;
-    margin-left: 10px;
-    margin-top: 10px;
-    
+    font-size: 18px;
+    line-height: 28px;
+
 }
 #spot_desc{
     background-image: url(../../img/1_Neirongkuang03_01.png);
@@ -418,7 +422,8 @@ body{
     border: 0px;
     color:white;
     text-align: center;
-    display: inline-block
+    font-size: 18px;
+    line-height: 28px;
 }
 #kuang3_items{
     overflow-y: auto;
@@ -451,6 +456,7 @@ body{
     font-size: 18px;    
     left: 390px;
     bottom:28px;
+
 }
 #kuang3_add{
     background-image:url(../../img/1_shouye_kuang.png);
@@ -492,6 +498,7 @@ body{
     top:20px;
     left: 45px;
 }
+
 .creat_new_item input{
     border: 1px solid rgb(20, 221, 231);
     background-color: rgb(26,38,45);
@@ -504,20 +511,28 @@ body{
     border: 1px solid rgb(168, 234, 237);
     border-radius: 5px;
     padding: 10px ;
+    position: relative;
 }
 #new_item_del{
     position: relative;
-    left: 170px;
-    top: -23px;
-    
+    left: 80px;
+    top: -20px;
     border: 2px solid rgb(20, 221, 231);
     border-radius: 10px;
     background-color: rgb(26,38,45);
+    float :right;
 }
 #kuang3 select{
     background-color: rgb(60,93,108);    
     color: white;
     background-position: 50px 3px;
+}
+#kuang3_select{
+    display: inline-block;
+    float :right;
+    position: relative; 
+    left: -70px;
+    top: -20px; 
 }
 #spot_guding select{
     width:40px;
@@ -590,47 +605,16 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
 }
-#luxianku_box>div{
-    width: 192px;
-    max-height: 540px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-.scroll_box{
-    border: 0px;
-    border-radius: 5px;
-    background-color: rgb(236, 236, 236) !important;
-    }
+
+
 #luxianku_box>div::-webkit-scrollbar {
     width: 0px;     
 }
-/* .scroll_content{
-    -ms-scroll-chaining: chained;
-    -ms-overflow-style: none;
-    -ms-content-zooming: zoom;
-    -ms-scroll-rails: none;
-    -ms-content-zoom-limit-min: 100%;
-    -ms-content-zoom-limit-max: 500%;
-    -ms-scroll-snap-type: proximity;
-    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
-    -ms-overflow-style: none;
-    overflow: auto;
-    scrollbar-arrow-color: rgba(255, 255, 255, 0.0);
-
-    scrollbar-face-color: rgba(255, 255, 255, 0.0);
-    scrollbar-highlight-color: rgba(255, 255, 255, 0.0);
-    scrollbar-shadow-color:rgba(255, 255, 255, 0.0);
-    scrollbar-track-color: rgba(255, 255, 255, 0.0);
-} */
-
-
-
-
 
 #luxianku ul{
     display: inline-block;
     width: 150px;
-    /* height: 100%; */
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 #luxianku ul::-webkit-scrollbar {
