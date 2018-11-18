@@ -73,7 +73,11 @@ body{
 }
 
 
-
+#graph1_tab2_box{
+    max-height: 389px;
+    overflow-y: scroll;
+    border-bottom: 2px solid rgb(20,221,231);
+}
 #graph1 table{
     border-collapse:collapse;
     width: 100%
@@ -93,8 +97,7 @@ body{
 
 #graph1 tbody{
     display:block;
-    height: 389px;
-    overflow-y: scroll;
+
     text-align: center;
     /*ie下三角箭头的颜色*/
     scrollbar-arrow-color: rgba(20,221,231,0.3);

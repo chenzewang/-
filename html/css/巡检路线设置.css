@@ -22,17 +22,8 @@ body{
     font-family:"宋体";
 }
 #kuang1{
-    background-image: url(../../img/1-1-mingmingzu.png),
-    url(../../img/1-1-xunjiandianshuliang.png),
-    url(../../img/1-1-xunjianmoshi.png),
-    url(../../img/1_Neirongkuang01.png);
-    background-position: 10px 15px, 
-    230px 15px,
-    500px 15px,
-    0px 0px;  
-
-    background-repeat: no-repeat,no-repeat,no-repeat;
-
+    background-image: url(../../img/1_Neirongkuang01.png);
+    background-repeat: no-repeat;
     position: absolute;
     left: 10px;
     top: 40px;
@@ -40,108 +31,148 @@ body{
     height: 147px;
 }
 
+#kuang1>div{
+    float: left;
+    position: relative;
+}
+#kuang1_input{
+    width: 79%;
+    height: 100%;
+}
+
+
+#kuang1_btn{
+    width: 20%;
+    height: 100%
+}
+
+
 
 #map_name{
-    width: 115px;
-    height: 29px;
-    margin-left: 79px;
-    margin-top: 12px;
-    background-color:rgba(26,38,45,0.6);
-    text-align: center;
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    position: absolute;
+    top: 7px;
+    left: 10px;
     color:white;
+    font-size: 20px;
+}
+
+#map_name_select{
+    display: inline-block;
+    z-index: 3;
+    border: 1px solid rgb(20, 221, 231);
+    background-color: rgba(26,38,45,0.8);
     border-radius: 10px;
-    border: 2px solid rgb(20, 221, 231);
-    background-position: 92px 6px;
+    width: 145px;
+    height: 30px;
+    text-align: center;
+
+}
+#map_name_select>span{
+    line-height: 30px;
+}
+#map_name_option{
+    position: absolute;
+    left: 80px;
+    top: 35px ;
+    border: 1px solid rgb(20, 221, 231);
+    background-color: rgb(26,38,45);
+    border-radius: 10px;
+    z-index: 50;
+    transition: height 0.3s;
+}
+#map_name_option li{ 
+    display: none;
+    height: 25px;
+    width: 145px;
+    list-style: none;
+    line-height: 25px;
+    cursor: default;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+#map_name_option li:hover{ 
+    background-color: rgba(20, 221, 231,0.4);
 }
 #map_num{
-    background-image: url(../../img/1_Neirongkuang_dianji.png);
-    width: 115px;
+    display: inline-block;
+    width: 200px;
     height: 29px;
-    margin-left: 139px;
-    margin-top: 12px;
+    position: absolute;
+    left: 240px;
+    top:7px;
     background-color: transparent;
     border: 0px;
     color:white;
-    text-align: center;
     background-repeat: no-repeat;
-
+    font-size: 20px;
 }
-#kuang1 ul{
+#map_num input{
+    border: 1px solid rgb(20, 221, 231);
+    background-color: rgba(26,38,45,0.8);
+    border-radius: 10px;
+    color: white;
+    width: 80px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#map_path{
+    width: 150px;
+    height: 175px;
+    position: absolute;
+    left: 476px;;
+    top: 7px;
+}
+#map_path p{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+#map_select{
+    display: block;
+    margin: 0px auto;
     position: relative;
     top: 5px;
-    left: 485px;
+    left: 0px;
     width:116px;
     height: 84px;
-    background-image: url(../../img/1_Neirongkuang_dianji02.png);
     list-style: none;
-
+    border: 1px solid rgb(20, 221, 231);
+    border-radius: 5px;
+    background-color: rgba(26,38,45,0.8)
 }
-#kuang1 li{
+#map_select li{
     background-repeat: no-repeat;
-    width:110px;
-    height: 25px;
-    margin-top: 4px;
+    width:100%;
+    height: 28px;
     cursor: pointer;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 28px;
 }
-
-#kuang1 li:nth-child(1){
-    background-image: url(../../img/1-1-gudingluxian.png);
-    background-position: 12px 0px;
-}
-#kuang1 li:nth-child(2){
-    background-image: url(../../img/1-1-ziyouluxian.png);
-    background-position: 12px 0px;
-
-}
-#kuang1 li:nth-child(3){
-    background-image: url(../../img/1-1-yonghuzixuan.png);
-    background-position: 12px 0px;
+#map_select li:hover{
+    background-color: rgba(20, 221, 231,0.4);
 }
 
 .looking{
-    border:2px solid rgb(42, 181, 210);
-    border-radius: 10px ;
+    background-color: rgba(20, 221, 231,0.6);
 }
 
-
-
-#kuang1 button{
-    display: inline-block;
-    width: 147px;
-    height: 37px;
-    background-repeat: no-repeat;
-    background-color:transparent;
-    border: 0px;
-    cursor: pointer;
-}
-#kuang1 button:active{
-    transform: translateY(2px);
-}
-
-#kuang1 button:nth-child(4){
-    
-    background-image:url(../../img/3-1-shengchengluxiankuangtu.png) ,url(../../img/1_Neirongkuang_dianji03.png);
-    background-position: 10px 7px, 0px 0px;
-    position: relative;
-    left: 620px;
-    top: -100px;
-}
-#kuang1 button:nth-child(5){
-    
-    background-image: url(../../img/3-1-daorumuban.png),url(../../img/1_Neirongkuang_dianji03.png);
-    background-position: 32px 7px, 0px 0px;
-    position: relative;
-    left: 468px;
-    top: -52px;
-}
 #map_desc{
-    position: relative;
+    position: absolute;
     left: 10px;
-    top: -90px;
+    top: 80px;
     width: 400px;
     height: 60px;
     color: white;
-    text-align: center;
 }
 #map_desc span{
     font-size: 20px;
@@ -161,45 +192,41 @@ body{
     align-items:flex-start;
     overflow: auto;
     color: white;
-    font-size: 19px;
+    font-size: 18px;
+    overflow: hidden;
 }
 #map_name2{
-    position: relative;
-    left: -4px;
-    top: -186px;
-    width: 220px;
-    height: 35px;
-    text-align: center;
-    padding-left: 14px;
+    position: absolute;
+    left: 10px;
+    top: 45px;
+    width: 250px;
+    height: 30px;
     color: white;
 }
 #map_name2 span{
     font-size: 20px;
+    line-height: 30px;
     cursor: default;
-    margin-right: 4px;
-    position: relative;
-    top:-10px;
+    margin-right: 10px;
 }
-#map_name2 textarea{
+#map_name2 input{
     border: 1px solid rgb(20, 221, 231);
     background-color: rgba(26,38,45,0.8);
     border-radius: 10px;
     color: white;    
     width: 143px;
     height: 30px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;    
     overflow: hidden;
 }
 
 #map_time{
-    position: relative;
-    left: 210px;
-    top: -220px;
+    position: absolute;
+    left: 240px;
+    top:43px;
     width: 250px;
     height: 35px;
-    text-align: center;
-    padding-left: 14px;
     color: white;
 }
 #map_time span{
@@ -213,27 +240,47 @@ body{
     background-color: rgba(26,38,45,0.8);
     border-radius: 10px;
     color: white;    
-    width: 150px;
+    width: 120px;
     height: 30px;
     font-size: 20px;
-    line-height: 30px;    
+    line-height: 30px; 
+    text-align: center;
+}
+
+#kuang1_btn button{
+    display: block;
+    width: 147px;
+    height: 37px;
+    background-repeat: no-repeat;
+    background-color:transparent;
+    border: 0px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+#kuang1_btn button:active{
+    transform: translateY(2px);
+}
+
+#kuang1_btn button:nth-child(1){
+    background-image:url(../../img/1_Neirongkuang_dianji03.png);
+}
+#kuang1 button:nth-child(2){
+    background-image: url(../../img/1_Neirongkuang_dianji03.png);
 }
 
 #imp_template{
     position: absolute;
     top: 115px;
-    left: 625px;
+    left: 630px;
     overflow: hidden;
     height: 0px;
-    transition: height 0.3s;    
+    transition: height 0.2s;    
+    z-index: 200;
 }
 #imp_template ul{
     width: 140px;
     background-attachment: fixed;
-    top: 0;
-    left: 0;
     background-image: none;
-    z-index: 3;
     border: 2px solid rgb(20,221,231);
     background-color: rgb(26,38,45);
     border-radius: 15px;
@@ -243,8 +290,7 @@ body{
     height: 30px;
     font-size: 16px;
     line-height: 30px;
-    background-image: none !important;
-    width: 100% !important;
+    width: 100% ;
     margin-bottom: 2px;
     margin-top: 0px;
 }
@@ -252,12 +298,15 @@ body{
     margin-bottom: 0px;
 }
 #imp_template button{
-    height: 100% !important;
-    width: 100% !important;
+    height: 100% ;
+    width: 100% ;
     margin: 0;
+    background-color: rgba(26,38,45,0.8);
+    border:0px;
+    border-radius: 0px;
 }
 #imp_template li:hover{
-    background-color: rgb(76, 90, 98);
+    background-color: rgba(20,221,231,0.6)
 }    
 
 
@@ -538,8 +587,8 @@ body{
     width: 192px;
     max-height: 540px;
     margin-top: 42px;
-    /* overflow-y: scroll;
-    overflow-x: hidden; */
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 #luxianku_box>div{
     width: 192px;
@@ -555,7 +604,7 @@ body{
 #luxianku_box>div::-webkit-scrollbar {
     width: 0px;     
 }
-.scroll_content{
+/* .scroll_content{
     -ms-scroll-chaining: chained;
     -ms-overflow-style: none;
     -ms-content-zooming: zoom;
@@ -567,15 +616,12 @@ body{
     -ms-overflow-style: none;
     overflow: auto;
     scrollbar-arrow-color: rgba(255, 255, 255, 0.0);
-    /*滚动条滑块按钮的颜色*/
+
     scrollbar-face-color: rgba(255, 255, 255, 0.0);
-    /*滚动条整体颜色*/
     scrollbar-highlight-color: rgba(255, 255, 255, 0.0);
-    /*滚动条阴影*/
     scrollbar-shadow-color:rgba(255, 255, 255, 0.0);
-    /*滚动条轨道颜色*/
     scrollbar-track-color: rgba(255, 255, 255, 0.0);
-}
+} */
 
 
 
@@ -584,8 +630,7 @@ body{
 #luxianku ul{
     display: inline-block;
     width: 150px;
-    height: 105px;
-    overflow-y: scroll;
+    /* height: 100%; */
     overflow-x: hidden;
 }
 #luxianku ul::-webkit-scrollbar {
@@ -639,12 +684,14 @@ body{
 }
 .luxian_type{
     width: 200px;
-    height: 105px;
+    min-height: 100px;
+    display: inline-flex;    
     margin-top: 10px;
 }
 .luxian_type .title{
     width: 25px;
-    height: 100px;
+    min-height: 100px;
+    max-height: 200px;
     border: 1px solid rgb(20, 221, 231);
     border-left: 0px;
     border-radius: 5px;
@@ -657,24 +704,22 @@ body{
     float: left;
 }
 
-.creat_new_type .title{
-    cursor: pointer;
-}
+
 .creat_new_type textarea{
+    min-height: 100px;
     width: 25px;
-    height: 100px;
+    height: 95%;
     writing-mode: vertical-lr;
     background-color: transparent;
     border: 0px; 
     color: white;
     font-size: 20px;
     text-align: center;
+    overflow: hidden;
 }
 
-textarea::-webkit-scrollbar {/*滚动条整体样式*/
-    display:none;
-    
-}
+
+
 
 
 
@@ -819,9 +864,8 @@ button:hover{
     line-height: 42px;
 }
 #record2{
-    /* display: none; */
+    display: none;
 }
-
 #record2{
     background-image:url(../../img/6-2-waikuagn5.png);
     width:953px;

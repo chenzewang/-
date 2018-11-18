@@ -30,7 +30,7 @@ function submit(){  //提交入库
         }
     });
         
-    fresh()
+    // fresh()
 }//close submit()
 
 var pathLibrary=[]

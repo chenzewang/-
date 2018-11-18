@@ -14,24 +14,13 @@ button:active{
 button:hover{
     cursor: pointer;
 }
-.scroll_content{
-    -ms-scroll-chaining: chained;
-    -ms-overflow-style: none;
-    -ms-content-zooming: zoom;
-    -ms-scroll-rails: none;
-    -ms-content-zoom-limit-min: 100%;
-    -ms-content-zoom-limit-max: 500%;
-    -ms-scroll-snap-type: proximity;
-    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
-    -ms-overflow-style: none;
-    overflow: auto;
-}
+
 
 
 
 #kuang2{
     border: 2px solid rgb(20, 221, 231) ;
-    border-radius: 15px;
+    border-radius: 15px 0px 0px 15px;
     background-color: rgba(26,38,45,0.8) ;
     position: absolute;
     left: 70px;
@@ -39,7 +28,7 @@ button:hover{
     width: 795px;
     min-height:150px;
     max-height: 325px;
-    overflow-y: scroll	;
+    overflow-y: scroll;
     color: white;
     text-align: center;
     line-height: 29px;
@@ -88,7 +77,7 @@ button:hover{
     transform: translateY(2px)
 }    
 #youce>div>div{
-    width: 26px;
+    width: 18px;
     font-size: 23px;
     writing-mode: vertical-lr;
     border: 2px solid rgb(53, 195, 225);

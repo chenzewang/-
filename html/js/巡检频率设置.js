@@ -25,7 +25,6 @@ function add1() {
     $("#address1 ul:eq(0)").append(tag);
     obj.address1.push(content);
     $("#add_input1").val("");
-    scrollsY(".scrollbox");
     
 }
 
@@ -41,7 +40,6 @@ function add2() {
 
     obj.address2.push(content);
     $("#add_input2").val("");
-    scrollsY(".scrollbox");
     
 }
 
@@ -54,7 +52,6 @@ function del1(){  //从一级通讯录删除选中的某条
 function del2(){ //从二级通讯录删除选中的某条
     $(li).remove();
     obj.address2.splice(index,1)
-    scrollsY(".scrollbox");
     
 }
 
@@ -78,4 +75,3 @@ function set (){
     });
 }
 
-scrollsY(".scrollbox");

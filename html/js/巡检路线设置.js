@@ -378,9 +378,8 @@ $(document).ready(function () {
 
 
     $('#imp').click(function () {
-        var hei=$("#imp_template ul li").length*30+25+"px";
+        var hei=$("#imp_template ul li").length*30+12+"px";
         var hei2=$("#imp_template ul li").length*30+30+"px";
-        console.log(hei);
         $("#imp_template").css("height",hei2);
         $("#imp_template ul").css("height",hei);
     });
@@ -391,19 +390,51 @@ $(document).ready(function () {
         event.stopPropagation();
     });
 
+
+
+    $('#map_name_select').click(function () {
+        $("#map_name_option").css("display","block");
+        $("#map_name_option li").css("display","block");
+    });
+    $(document).on('click',':not(.map_name_view)',function(){
+            $("#map_name_option").css("display","none");
+            $("#map_name_option li").css("display","none");
+        })
+    $(".map_name_view").click(function(event){
+        event.stopPropagation();
+    });
+    
+
+
 })
 
-    
+    function luxian_type_title() {   //.titlt高度
+        for (var i = 0; i < $(".luxian_type").length; i++) {
+            var height = $(".luxian_type").eq(i).css("height");
+            $(".luxian_type .title").eq(i).css("height", height);
+        }
+    }luxian_type_title();
+
+
+
     //路线模式的点选效果及所选的type
-    var nowMapType=null;//提交到库时使用
+    var nowMapType=null;
     function liClick(x){
         for(var i=0;i<3;i++){
-            document.getElementById('kuang1').getElementsByTagName("li")[i].classList.remove("looking");           
+            $("#map_select li").removeClass("looking");   
             }
-        x.classList.add("looking");
+        $(x).addClass("looking");
         nowMapType=x;
     }
-    //路线库的点选效果
+    
+    function mapNameclick(x){
+        for(var i=0;i<3;i++){
+            $("#map_name_option li").removeClass("looking");   
+            }
+        $(x).addClass("looking");
+        $("#map_name_select>span").eq(0).text( $(x).attr("data-chose") );
+    }
+    
     
      
 
@@ -413,11 +444,11 @@ $(document).ready(function () {
     //按照巡检点数量生成不同路线框图
     var num
     function creatMap(){  //生成路线框图
-        if(document.getElementById("map_num").value==0){
+        if( $("#map_num>input").eq(0).val()==0){
             alert("请输入框图数目")
             return
         }
-        num=document.getElementById("map_num").value;
+        num=$("#map_num>input").eq(0).val();
         objMap.num=num;
         var lie;    if(num>=5) lie=5;else lie=num;
         var hang;   hang=Math.ceil(num/5);
@@ -584,11 +615,10 @@ $(document).ready(function () {
             $(".luxian_type:last").before(model)
             $(".creat_new_type:eq(0) textarea:eq(0)").val("")          
         }
-        fresh() 
-        scrollsY(".scrollbox");
+        // fresh() 
+        luxian_type_title()
     }
   
-    scrollsY(".scrollbox");
     
    
 

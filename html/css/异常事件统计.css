@@ -26,13 +26,13 @@ select::-ms-expand { display: none; }
     position: absolute;
     left: 20px;
     color:white;
-    display: flex;
-    justify-content: space-between ;
-    align-items: center ;
     top:10px;
     padding-left: 55px;
 }
 #search>div{
+    display: inline-table;
+    margin: 20px;
+    margin-top:60px;
     width: 15%;
     margin-right: 10px;
 }
@@ -50,7 +50,7 @@ select::-ms-expand { display: none; }
     border-image: initial;
     border-radius: 15px;
     position: relative;
-    top:10px;
+    top:26px;
 }
 select{
     width: 160px;
@@ -111,27 +111,27 @@ input{
 
 #graph1 table{
     border-collapse:collapse;
-    width: 100%
+
 }
 
-#graph1 tbody::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 13px;     /*高宽分别对应横竖滚动条的尺寸*/
+#graph1_tab2_box::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 15px;     /*高宽分别对应横竖滚动条的尺寸*/
     height: 1px;
 }
-#graph1 tbody::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+#graph1_tab2_box::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
     background-color: rgba(193, 193, 193);
     background-repeat: no-repeat;
     }
-#graph1 tbody::-webkit-scrollbar-track {/*滚动条里面轨道*/
+#graph1_tab2_box::-webkit-scrollbar-track {/*滚动条里面轨道*/
         background: #EDEDED;
     }
-/*滚动条整体样式*/
-/*滚动条里面小方块*/
-/*滚动条里面轨道*/
+#graph1_tab2_box{
+    max-height: 347px;
+    overflow-y: scroll;
+    border-bottom: 2px solid rgb(20,221,231);
+}
 #graph1 tbody{
     display:block;
-    height: 347px;
-    overflow-y: scroll;
     text-align: center;
 }
 #graph1 thead tr{
@@ -173,7 +173,7 @@ input{
     width: 151px;
 }
 #graph1 td:nth-child(6){
-    width: 137px;
+    width: 134px;
 }
 #graph1 button{
     background-color: rgba(29, 47, 60, 0.8);

@@ -249,6 +249,10 @@ body{
     border-collapse:collapse;
     width: 100%
 }
+#graph1_table2_box{
+    max-height: 360px;
+    overflow-y: scroll;
+}
 
 #graph1 tbody::-webkit-scrollbar {/*滚动条整体样式*/
     /* width: 13px;     高宽分别对应横竖滚动条的尺寸 */
@@ -264,8 +268,6 @@ body{
 
 #graph1 tbody{
     display:block;
-    height: 360px;
-    overflow-y: scroll;
     text-align: center;
     /*ie下三角箭头的颜色*/
     scrollbar-arrow-color: rgba(20,221,231,0.3);
@@ -284,7 +286,7 @@ body{
 
 
 #graph1 th:nth-child(1){
-    width: 89px;
+    width: 90px;
     height: 40px;
 }
 #graph1 td:nth-child(1){
@@ -440,7 +442,6 @@ body{
     width: 374px;
     text-align: center;
     height: 42px;
-    
 }
 #graph2 td:nth-child(2){
     width: 565px;
@@ -448,14 +449,19 @@ body{
     text-align: center;
 }
 #graph2 th:nth-child(1){
-    width: 933px;
+    width: 374px;
     height: 52px;
-    
+    border-right: 0px;
+}
+#graph2 th:nth-child(1) span{
+    position: relative;
+    left: 230px;;
 }
 #graph2 th:nth-child(2){
-    width:0px;
+    width:565px;
     height: 52px;
-    
+    border-left: 0px;
+
 }
 
 
@@ -525,7 +531,7 @@ body{
 
 #graph3 tbody{
     display:block;
-    height: 302px;
+    /* height: 302px; */
     text-align: center;
     overflow: hidden;
     /*ie下三角箭头的颜色*/
@@ -653,7 +659,7 @@ body{
 
 #graph4 tbody{
     display:block;
-    height: 261px;
+    /* height: 261px; */
     text-align: center;
     width: 100%;
     overflow: hidden;
@@ -995,8 +1001,7 @@ body{
     height: 430px;
 }
 #graph5 tbody{
-    overflow-y: scroll;
-    height: 300px;    
+
     display:block;
     /*ie下三角箭头的颜色*/
     scrollbar-arrow-color: rgba(20,221,231,0.3);
@@ -1028,9 +1033,12 @@ body{
 #graph5 table{
     width:100%;
     color: white;
-
 }
-
+#graph5_table2_box{
+    max-height: 300px;
+    overflow-y: scroll;
+    border-bottom: 2px solid rgb(20,221,231);
+}
 #graph5 td:nth-child(1){
     width: 378px;
     text-align: center;
