@@ -16,7 +16,7 @@ $(document).ready(function () {
 var objMap={
     id:0,
     name:"线路1",          //路线名字
-    spotnum:8,       //设备点数
+    spotnum:29,       //设备点数
     specified: true,                  //是否固定
     arrangeable:false,               //是否自由
     desc:"",                        //路线描述
@@ -24,6 +24,447 @@ var objMap={
     updated_at:"",                //路线修改时间  //这条路线的各个点
     spots:[
         {
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
             id: 1,
             name: "asd",
             desc: "asd",
@@ -482,7 +923,9 @@ var objMap={
                 }
             for(var j=1;j<=lie;j++)
             {
-                tab+="<td><div onclick=\"up(this)\" ><span></span><img class=\"jiantou\"></div></td>";
+                tab+="<td><div onclick=\"up(this)\"  style=\" position:relative;     \" >\
+                <span class=\" spot_name\"></span> <img class=\"jiantou\"><span class=\" spot_time\">2018.11.27</span>\
+                </div></td>";
             }
             tab+="</tr>";
         }           
@@ -505,7 +948,7 @@ var objMap={
 
         for(var i=0;i<objMap.spotnum;i++){
             if(objMap.spots[i].checked==true){
-                $("#map td").eq(i).css("background-color","rgba(62, 66, 68, 0.80)")
+                $("#map td").eq(i).css("background-color","rgba(120, 120, 120, 0.80)")
             }
             else{
                 $("#map td").eq(i).css("background-color","none")
@@ -578,9 +1021,224 @@ var objMap={
     function changeObjmap(x){
         objMap=objMap;
         creatMap()
-        for(var i=0;i<$("#map span").length;i++){
-            $("#map span").text(objMap.spots[i].name)
+        for(var i=0;i<$(".spot_name").length;i++){
+            $(".spot_name").eq(i).text(objMap.spots[i].name)
         }
         $("#now_map").text($(x).text())
     }
     changeObjmap( $("#youce>div div").eq(0) )
+
+
+
+
+
+
+
+    var obj = [{
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }, {
+        num: "1",
+        time: "20180911",
+        man: "陈某",
+        digest: "还行还行",
+        dian: "1",
+        statu: "无状态",
+        value: "1000000",
+        normalValue: "还行",
+        breakMessage: "还行",
+        describe: "还行",
+        project: "锅炉",
+        time1: "20180610",
+        time2: "20180612"
+    }];
+
+    function creatGraph1(ob) {
+        //生成路线框图
+    
+        var lie = 5;
+        var hang = ob.length;
+        var tab = "<table >\n<thead><tr><th>巡检路线</th> <th>巡检时间</th> <th>巡检人</th> <th>查看</th> <th>完成</th></tr></thead>\n ";
+        tab += "</table>";
+        
+        tab += "<div id='graph1_table2_box'><table >\n";
+    
+        for (var i = 0; i < hang; i++) {
+            tab += "<tr>";
+            tab += "<td>" + ob[i].num + "</td>";
+            tab += "<td>" + ob[i].time + "</td>";
+            tab += "<td>" + ob[i].man + "</td>";
+            tab += "<td><button onclick=\"chakan2()\">查看</button></td>";
+            tab += "<td><button onclick=\"chakan2()\">完成</button></td>";
+            tab += "</tr>";
+        }
+        
+        tab += "</div></table>";
+        document.getElementById("graph1").innerHTML = tab;
+    }
+    creatGraph1(obj);

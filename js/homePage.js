@@ -21,7 +21,6 @@ addEvent();
 
 
 $(document).on('click','#myTab > li',function(e){
-    //清除原来显示的tab页
     var oldTab = $("#myTab li.active").removeClass("active").find("a[data-toggle='tab']");
     $(oldTab.attr("href")).removeClass("active");
     //设置新的显示tab页
@@ -47,19 +46,21 @@ $(document).on('click','#myTab > li',function(e){
   url:      打开的iframe的url
   innerTab: 是否是内部弹出页（打开的tab页触发添加新的tab页），默认为undefined/false
   */
-  function addTab(id,text,url,innerTab) {
+  function addTab(text,url,innerTab) {
     //如果某个页面已经打开，则切换到该页显示即可，不会新添加tab页
   
 
-
-
-    if($('#myTab #tab-'+id).length > 0){
-      $('#myTab  #tab-' + id + ' a').tab('show');
-    }else{
-       
-      var tab_id = "tab-" + id,
-      tab_content_id = "tab-content-"+id;
+    // if($('#myTab #tab-'+id).length > 0){
+    //   $('#myTab  #tab-' + id + ' a').tab('show');
+    // }else{
       
+
+      var id=$("#myTab li").length;
+
+      var tab_id = "tab-" + id,
+
+      tab_content_id = "tab-content-"+id;
+
       //添加tab页签
       $("#myTab > li").removeClass("active");
       $("#myTab").append("<li id='" + tab_id + "' class='active'><a data-toggle='tab' href='#"
@@ -71,9 +72,10 @@ $(document).on('click','#myTab > li',function(e){
       $(".tab-content").append("<div id='"+ tab_content_id +"' class='active'>"
         + "<iframe id='iframepage" + (pageCounter++) + "' name='iframepage" + (pageCounter+1) 
         + "' width='100%' height='100%' frameborder='0' border='0' scrolling='no'  src='" + url + "'></iframe></div>");      
-    }
+    // }
     //刷新切换tab的历史记录
     refreshTabHistory(false/*isDelete*/,id);
+    refreshWidth();
     //重新设置tab页签的宽度
   }
   //参数id为tab的标志，但是并不是tab页的id属性，真正的id属性值是"tab-"+id
@@ -89,8 +91,9 @@ $(document).on('click','#myTab > li',function(e){
       tabJQ.remove();
       tabContentJQ.remove();
       refreshTabHistory(true/*isDelete*/,id);
-      $('#tab-' + currentTabId + ' > a').tab('show').click();
+      $('#tab-' + currentTabId + ' > a').tab('show');
     }
+    refreshWidth();
   }
   //关闭当前tab页的快速方法
   function closeCurrentTab(){
@@ -128,4 +131,32 @@ $(document).on('click','#myTab > li',function(e){
       refreshTabHistory.histoty.push(curTabId);
     }
     currentTabId = refreshTabHistory.histoty[refreshTabHistory.histoty.length - 1];
+  }
+
+
+  function refreshWidth(){
+    var panelWidth = $('#myTab').width() /*可用的宽度     */, 
+    
+    tabs = $('#myTab > li'),
+    tabContentAverageWidth = 0/*tab > a标签的宽度*/,
+    minTabAverageWidth = 25/*margin-left:5,X按钮宽度为20*/,
+    zeroContentTabWidth = 35/*当tab > a标签宽度为0时tab标签对应的宽度是30px，外加上margin-left:5*/,
+    aPaddingLeft = 10/*tab > a标签的padding-left默认是10，当averageWidth< 35需要调整*/;
+    
+    averageWidth = parseInt(panelWidth/(tabs.length),10);// 每个tab的宽度
+    if(averageWidth >= zeroContentTabWidth){
+      tabContentAverageWidth = averageWidth - zeroContentTabWidth;
+      
+    /*35 > averageWidth >= 25*/ 
+    }else if(averageWidth >= minTabAverageWidth){
+      tabContentAverageWidth = 0;
+      aPaddingLeft = averageWidth - minTabAverageWidth;
+      
+    //averageWidth < 25
+    }else{
+      tabContentAverageWidth = 0;
+      aPaddingLeft = 0;
+    }
+    //tab页签名称元素a标签的宽度和padding-left。这个是在box-sizing:border-box。的情况下
+    tabs.find('>a').css({'width':(tabContentAverageWidth + aPaddingLeft),'padding-left':aPaddingLeft});
   }

@@ -16,7 +16,7 @@
             $(this).each(function () {
                 var _this = this;
                 var supportPlaceholder = 'placeholder' in document.createElement('input');
-                if (1) {
+                if (!supportPlaceholder) {
                     if($(_this).attr('placeholder')){
                         var defaultValue = $(_this).attr('placeholder');
                     }else{

@@ -135,16 +135,20 @@ button:active{
 #myTab{
     display: inline-block;
     height: 40px;
+    width: 910px;
 }
 #myTab li{
-    padding-left: 5px;
+    /* padding-left: 5px; */
     float: left;
     color: white;
     /* width: 110px; */
     height: 40px;
-    line-height: 40px;
+    line-height: 36px;
     border: 1px solid gray;
     border-radius: 5px;
+}
+#myTab a{
+    max-width: 115px;
 }
 #myTab li:active{
     transform: translateY(1px)

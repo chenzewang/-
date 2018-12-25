@@ -375,7 +375,17 @@ $(document).ready(function () {
         $('#kuang3').show();
     });
     
-
+    $("#luxianku").on("click",".title",function(){
+            var height;
+            var li=$(this).next().find("li");
+            height = li.length * 30 +25+ "px";
+            if ($(this).next().css("height") === "0px") {
+                $(this).next().css("height", height);
+            } else {
+              $(this).next().css("height", "0px");
+            }
+          }
+    )
 
     $('#imp').click(function () {
         var hei=$("#imp_template ul li").length*30+12+"px";
@@ -400,20 +410,14 @@ $(document).ready(function () {
             $("#map_name_option").css("display","none");
             $("#map_name_option li").css("display","none");
         })
-    $(".map_name_view").click(function(event){
-        event.stopPropagation();
-    });
-    
-
-
 })
 
-    function luxian_type_title() {   //.titlt高度
-        for (var i = 0; i < $(".luxian_type").length; i++) {
-            var height = $(".luxian_type").eq(i).css("height");
-            $(".luxian_type .title").eq(i).css("height", height);
-        }
-    }luxian_type_title();
+    // function luxian_type_title() {   //.titlt高度
+    //     for (var i = 0; i < $(".luxian_type").length; i++) {
+    //         var height = $(".luxian_type").eq(i).css("height");
+    //         $(".luxian_type .title").eq(i).css("height", height);
+    //     }
+    // }luxian_type_title();
 
 
 
@@ -593,7 +597,7 @@ $(document).ready(function () {
     }
     
     function delItem(x){
-        x.parentNode.parentNode.removeChild(x.parentNode);
+        x.parentNode.parentNode.parentNode.removeChild(x.parentNode.parentNode);
         saveItem()
     }
 
@@ -616,13 +620,10 @@ $(document).ready(function () {
             $(".creat_new_type:eq(0) textarea:eq(0)").val("")          
         }
         // fresh() 
-        luxian_type_title()
     }
   
     
    
-
-    
 
 
     function creatGraph2(spots) {
@@ -639,13 +640,13 @@ $(document).ready(function () {
                     if (spots[j].items[i].value == false) {
                         tab += "<td >\u901A\u8FC7</td>";
                     } else {
-                        tab += "<td>\n                                <div class=\"value value_left \">\u5DE1\u68C0\u503C\uFF1A " + spots[j].items[i].data + "</div>\n                                <div class=\"value value_right\">\u6807\u51C6\u503C\uFF1A" + spots[j].items[i].st_max + " \u8B66\u6212\u503C\uFF1A" + spots[j].items[i].al_max + "</div>\n                            </td>";
+                        tab += "<td>\n <div class=\"value value_left \">\u5DE1\u68C0\u503C\uFF1A " + spots[j].items[i].data + "</div>\n                                <div class=\"value value_right\">\u6807\u51C6\u503C\uFF1A" + spots[j].items[i].st_max + " \u8B66\u6212\u503C\uFF1A" + spots[j].items[i].al_max + "</div>\n                            </td>";
                     }
                 } else {
                     if (spots[j].items[i].value == false) {
                         tab += "<td class=\"no_pass\">\u672A\u901A\u8FC7</td>";
                     } else {
-                        tab += "<td>\n                                <div class=\"value value_left no_pass\">\u5DE1\u68C0\u503C\uFF1A " + spots[j].items[i].data + "</div>\n                                <div class=\"value value_right\">\u6807\u51C6\u503C\uFF1A" + spots[j].items[i].st_max + " \u8B66\u6212\u503C\uFF1A" + spots[j].items[i].al_max + "</div>\n                            </td> ";
+                        tab += "<td>\n   <div class=\"value value_left no_pass\">\u5DE1\u68C0\u503C\uFF1A " + spots[j].items[i].data + "</div>\n                                <div class=\"value value_right\">\u6807\u51C6\u503C\uFF1A" + spots[j].items[i].st_max + " \u8B66\u6212\u503C\uFF1A" + spots[j].items[i].al_max + "</div>\n                            </td> ";
                     }
                 }
             }
@@ -657,5 +658,3 @@ $(document).ready(function () {
     creatGraph2(objMap.spots);
 
 
-
-    $('input').placeholder({isUseSpan:true,onInput:true});

@@ -1,20 +1,7 @@
 *{
     outline: none;
 }
-select{
 
-    -moz-appearance:none;
-    background-image: url("../../img/sanjiao.png");
-    background-position-x: 80px;
-    background-position-y: 5px;
-
-    background-repeat: no-repeat;
-    -webkit-appearance: none;
-    padding-left: 5px;
-    padding-right: 20px;
-    background-size: 14px 14px;
-}
-select::-ms-expand { display: none; }   
 input{
     text-indent:3px;    
 }
@@ -37,9 +24,7 @@ button:active{
     text-align: center;
     padding-top: 40px;
 }
-#message{
-    
-}
+
 .photo{
     height:300px;
     width: 200px;
@@ -52,6 +37,7 @@ button:active{
     display: block;    
     width: 120px;
     height: 160px;
+    margin: 10px auto;
 }
 .photo span{
     display: block;
@@ -68,7 +54,7 @@ button:active{
     text-align: center;
     height: 30px;
     width: 100px;
-    margin: 0 20px;
+    margin: 0 auto;
     margin-top: 25px;
     cursor: pointer;
 }
@@ -77,12 +63,16 @@ button:active{
 .detail{
     height: 300px;
     width: 200px;
-
+    float: left;
     align-items:center
+}
+.detail>div{
+    margin-bottom: 34px;
 }
 .detail span{
     color: white;
     font-size: 15px;
+    line-height: 25px;
 }
 .detail input{
     border: 1px solid rgb(20,221,231);
@@ -102,7 +92,50 @@ button:active{
     width: 100px;
     font-size: 15px;   
 }
+#detail_power>span{
+    line-height: 29px;
+}
+#detail_power_select{
+    display: inline-block;
+    border: 1px solid rgb(20,221,231);
+    background-color: rgba(29, 47, 60, 0.8);
+    border-radius: 15px;
+    color: white;
+    height: 25px;
+    width: 100px;
+    font-size: 15px;   
+}
+#detail_power_select {
+    line-height: 25px;
+}
+#detail_power_option{
+    display: none;
+    width: 100px;
+    position: absolute;
+    top: 290px;
+    left: 286px;
+    border: 1px solid rgb(20, 221, 231);
+    background-color: rgb(26,38,45);
+    border-radius: 10px;
+    z-index: 50;
+    padding: 0;
+    overflow: hidden;
+}
+#detail_power_option li{
+    list-style: none;
+    color: white;
+    font-size: 14px;
+    width: 100%;   
+    cursor: default;
+    text-align: center;
+}
+#detail_power_option li:hover{
+    background-color: rgba(20, 221, 231,0.4);
+}
+.looking{
+    background-color: rgba(20, 221, 231,0.6);
 
+}
 #operate button{
     border: 2px solid rgb(20,221,231);
     background-color: rgba(29, 47, 60, 0.8);
@@ -116,9 +149,7 @@ button:active{
     cursor: pointer;
 }
 
-/* #background{
-    display: none;
-} */
+
 
 
 
@@ -182,14 +213,14 @@ button:active{
 #graph tbody::-webkit-scrollbar-track {/*滚动条里面轨道*/
         background: #EDEDED;
     }
-/*滚动条整体样式*/
-/*滚动条里面小方块*/
-/*滚动条里面轨道*/
+
 #graph tbody{
     display:block;
-    height: 425px;
-    overflow-y: scroll;
     text-align: center;
+}
+#grapg_table2_box{
+    height: 423px;
+    overflow-y: scroll;
 }
 #graph thead tr{
     display:block;
@@ -208,49 +239,49 @@ button:active{
     border-image: initial;
     border-radius: 15px;
 }
-
 #graph th:nth-child(1){
-    width: 150px;
-}
-#graph td:nth-child(1){
-    width: 150px;
-}
-#graph th:nth-child(2){
-    width: 130px;
-}
-#graph td:nth-child(2){
-    width: 130px;
-}
-#graph th:nth-child(3){
-    width: 150px;
-}
-#graph td:nth-child(3){
-    width: 150px;
-}
-#graph th:nth-child(4){
-    width: 150px;
-}
-#graph td:nth-child(4){
-    width: 150px;
-}
-#graph th:nth-child(5){
-    width: 130px;
-}
-#graph td:nth-child(5){
-    width: 130px;
-}
-#graph th:nth-child(6){
-    width: 106px;
-}
-#graph td:nth-child(6){
-    width: 106px;
-}
-#graph th:nth-child(7){
+    width: 145px;
+  }
+  #graph td:nth-child(1){
+    width: 145px;
+  }
+  #graph th:nth-child(2){
+    width: 165px;
+  }
+  #graph td:nth-child(2){
+    width: 165px;
+  }
+  #graph th:nth-child(3){
+    width: 165px;
+  }
+  #graph td:nth-child(3){
+    width: 165px;
+  }
+  #graph th:nth-child(4){
+    width: 165px;
+  }
+  #graph td:nth-child(4){
+    width: 165px;
+  }
+  #graph th:nth-child(5){
+    width: 145px;
+  }
+  #graph td:nth-child(5){
+    width: 145px;
+  }
+  #graph th:nth-child(6){
+    width: 134px;
+  }
+  #graph td:nth-child(6){
+    width: 117px;
+  }
+  /* #graph th:nth-child(7){
     width: 105px;
-}
-#graph td:nth-child(7){
-    width:87px;
-}
+  }
+  #graph td:nth-child(7){
+    width: 87px;
+  }
+   */
 
 #graph td button{
     font-size: 15px;
@@ -261,10 +292,11 @@ button:active{
 }
 
 #operate2{
-    height: 30px;
+    height: 40px;
     width: 100%;
-    display: flex;
     align-items: center;
+    position: relative;
+    top:-6px;
 }
 
 #operate2 button {
@@ -287,8 +319,9 @@ button:active{
     height: 25px;
     width: 200px;
     font-size: 15px; 
-    margin-left: 280px;
-    margin-top: 12px;
+    position: absolute;
+    left: 730px;
+    top: 11px;
 }
 
 #chakan_img img{
@@ -318,8 +351,12 @@ button:active{
     margin-right:20px;
     margin-top: 11px; 
 }
-
+#add_detail>div{
+    margin-bottom: 24px;
+}
 #add_div{
+    height: 400px;
+    width: 400px;
     padding: 20px;
     position: absolute;
     top:50px;
@@ -329,6 +366,57 @@ button:active{
     border-radius: 20px;
     display: none;
 }
+
+
+
+#add_file_input{
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+
+
+#add_select{
+    display: inline-block;
+    border: 1px solid rgb(20,221,231);
+    background-color: rgba(29, 47, 60, 0.8);
+    border-radius: 15px;
+    color: white;
+    height: 25px;
+    width: 100px;
+    font-size: 15px;
+    text-align: center;
+}
+#add_option{
+    width: 100px;
+    position: absolute;
+    top: 169px;
+    left: 34px;
+    border: 1px solid rgb(20, 221, 231);
+    background-color: rgb(26,38,45);
+    border-radius: 10px;
+    z-index: 50;
+    padding: 0;
+    overflow: hidden;
+    display: none;
+}
+#add_option li:hover{
+    background-color: rgba(20, 221, 231,0.4);
+
+}
+#add_option li{
+    list-style: none;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    cursor: default;
+    text-align: center;
+}
+
+
+
+
+
 
 .pop-close {
     position: absolute;
@@ -369,7 +457,7 @@ button:active{
 }
 
 #add_tijiao{
-    display: block;
+    float: left;
     border: 2px solid rgb(20,221,231);
     background-color: rgba(29, 47, 60, 0.8);
     border-radius: 15px;
@@ -377,8 +465,15 @@ button:active{
     text-align: center;
     height: 30px;
     width: 100px;
-    margin: 0 auto;
-    margin-top: 25px;
     cursor: pointer;
     z-index: 2;
+    position: relative;
+    top: 70px;
+    left: -40px;
 }
+
+
+
+
+
+

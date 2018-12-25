@@ -131,7 +131,7 @@ body{
     height: 175px;
     position: absolute;
     left: 476px;;
-    top: 7px;
+    top: 12px;
 }
 #map_path p{
     color: white;
@@ -145,13 +145,14 @@ body{
     top: 5px;
     left: 0px;
     width:116px;
-    height: 84px;
+    height: 32px;
+    color: white;
     list-style: none;
     border: 1px solid rgb(20, 221, 231);
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: rgba(26,38,45,0.8)
 }
-#map_select li{
+/* #map_select li{
     background-repeat: no-repeat;
     width:100%;
     height: 28px;
@@ -160,7 +161,7 @@ body{
     font-size: 18px;
     text-align: center;
     line-height: 28px;
-}
+} */
 #map_select li:hover{
     background-color: rgba(20, 221, 231,0.4);
 }
@@ -193,10 +194,9 @@ body{
     background-color: rgba(26,38,45,0.8) ;
     text-align: left;
     align-items:flex-start;
-    overflow: auto;
+    overflow: hidden;
     color: white;
     font-size: 18px;
-    overflow: hidden;
 }
 #map_name2{
     position: absolute;
@@ -207,7 +207,7 @@ body{
     color: white;
 }
 #map_name2 span{
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     cursor: default;
     margin-right: 10px;
@@ -249,7 +249,28 @@ body{
     line-height: 30px; 
     text-align: center;
 }
-
+#map_operator{
+    position: absolute;
+    left: 490px;
+    top: 76px;
+    width: 122px;
+    height: 35px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+#map_operator div{
+    display: inline-block;
+    border: 1px solid rgb(20, 221, 231);
+    background-color: rgba(26,38,45,0.8);
+    border-radius: 10px;
+    color: white;
+    width: 122px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
 #kuang1_btn button{
     display: block;
     width: 147px;
@@ -266,9 +287,13 @@ body{
 
 #kuang1_btn button:nth-child(1){
     background-image:url(../../img/1_Neirongkuang_dianji03.png);
+    position: relative;
+    top:17px;
 }
 #kuang1 button:nth-child(2){
     background-image: url(../../img/1_Neirongkuang_dianji03.png);
+    position: relative;
+    top:19px;
 }
 
 #imp_template{
@@ -333,39 +358,24 @@ body{
     height: 2px;
 }
 #kuang2::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-    background-color: rgba(193, 193, 193);
+    background-color: rgba(193, 193, 193, 0);
     background-repeat: no-repeat;
     }
 #kuang2::-webkit-scrollbar-track {/*滚动条里面轨道*/
         background: #EDEDED;
     }
 #map{
-
-    position: relative;
-    left: 00px;
-    top:10px;
+    margin-top:10px;
 }
 #map td{
     width: 110px;
     height: 29px;
-    
     border:2px solid rgb(42, 181, 210);
     border-radius: 10px ;
     margin-left: 38px;
     margin-bottom: 30px;
     background-color: rgba(30, 45, 55 ,1)
 }
-#map td{
-    width: 110px;
-    height: 29px;
-    
-    border:2px solid rgb(42, 181, 210);
-    border-radius: 10px ;
-    margin-left: 38px;
-    margin-bottom: 30px;
-    background-color: rgba(30, 45, 55 ,1)
-}
-
 
 #map td>div>span{
     position: relative;
@@ -374,7 +384,6 @@ body{
     height: 30px;
     overflow-x:hidden;
     overflow-y:hidden;
-
 }
 #map td>div>span::-webkit-scrollbar {
     display: none;
@@ -400,39 +409,41 @@ body{
     height: 400px;
     z-index: 100;
 }
-
+#kuang3 label{
+    color: gray;
+}
 
 #spot_name{
-    background-image: url(../../img/1_Neirongkuang03_01.png);
     width: 148px;
-    height: 28px;
-    background-color: transparent;
-    border: 0px;
+    height: 25px;
+    background-color: rgb(26,38,45);
+    border: 1px solid rgb(20, 221, 231) !important;
+    border-radius: 10px;
     color:white;
     text-align: center;
     font-size: 18px;
-    line-height: 28px;
-
+    line-height: 25px;
+    border: 1px;
+    margin-top: 10px;
 }
 #spot_desc{
-    background-image: url(../../img/1_Neirongkuang03_01.png);
     width: 148px;
-    height: 28px;
-    background-color: transparent;
-    border: 0px;
+    height: 25px;
+    background-color: rgb(26,38,45);
+    border: 1px solid rgb(20, 221, 231);
+    border-radius: 10px;
     color:white;
     text-align: center;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 25px;
 }
 #kuang3_items{
     overflow-y: auto;
     width: 100%;
     height: 300px;
+    overflow-x: hidden;
 }
-/* #kuang3_items::-webkit-scrollbar {
-    display:none
-}     */
+
 #kuang3_items::-webkit-scrollbar {/*滚动条整体样式*/
     width: 13px;     /*高宽分别对应横竖滚动条的尺寸*/
     height: 1px;
@@ -456,7 +467,6 @@ body{
     font-size: 18px;    
     left: 390px;
     bottom:28px;
-
 }
 #kuang3_add{
     background-image:url(../../img/1_shouye_kuang.png);
@@ -476,27 +486,13 @@ body{
     transform: translateY(2px);
 }
 
-.del_item{
-    width: 60px;
-}
-#spot_guding{
-    display: inline-block;
-    color: white;
 
-}
 .new_item button{
     margin:10px 0px  10px 238px;
     border: 2px solid rgb(20, 221, 231);
     border-radius: 10px;
     background-color: rgb(26,38,45);
     padding: 0px 10px;;
-}
-.creat_new_item div:nth-child(3){
-    display: inline-block;
-    color: white;
-    position: relative;
-    top:20px;
-    left: 45px;
 }
 
 .creat_new_item input{
@@ -506,42 +502,58 @@ body{
     border-radius: 10px;
     color: white;
 }
+
 .creat_new_item{
-    height: 60px;
+    display: table;
     border: 1px solid rgb(168, 234, 237);
     border-radius: 5px;
     padding: 10px ;
-    position: relative;
+    width: 579px;
 }
+
 #new_item_del{
-    position: relative;
-    left: 80px;
-    top: -20px;
     border: 2px solid rgb(20, 221, 231);
     border-radius: 10px;
     background-color: rgb(26,38,45);
-    float :right;
 }
+
 #kuang3 select{
     background-color: rgb(60,93,108);    
     color: white;
     background-position: 50px 3px;
 }
+
 #kuang3_select{
     display: inline-block;
-    float :right;
     position: relative; 
-    left: -70px;
-    top: -20px; 
+    left: -50px;
 }
-#spot_guding select{
-    width:40px;
-    height: 25px;
+#kuang3_items_from{
+    float: left;
 }
+#kuang3_items_opera{
+    position: relative;
+    top: 47px;
+    left: 100px;
+}
+#kuang3_items_from>div{
+    display:inline-block;
+    text-align: -webkit-center;
+}
+#kuang3_items_from label{
+    color: white;
+    display: block; 
+    width: 100px;
+    color: gray;
+    font-size: 14px;
+}
+
+
+
 .pop-close{
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
     color: white;
     font-size: 20px;
     cursor: pointer;
@@ -569,7 +581,6 @@ body{
 }
 #tijiao:active{
     transform: translateY(2px);
-
 }
 
 #xinjian{
@@ -586,7 +597,6 @@ body{
 }
 #xinjian:active{
     transform: translateY(2px);
-
 }
 
 
@@ -605,17 +615,21 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
 }
-
-
-#luxianku_box>div::-webkit-scrollbar {
-    width: 0px;     
+#luxianku_box::-webkit-scrollbar {
+    width: 8px;    
+}
+#luxianku_box::-webkit-scrollbar-thumb {
+    background-color: rgba(20, 221, 231,0.6);
+    background-repeat: no-repeat;
+}
+#luxianku_box::-webkit-scrollbar-track {
+    background: #E0D1D1;
 }
 
-#luxianku ul{
-    display: inline-block;
-    width: 150px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+.luxian_type>div{
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.3s;
 }
 #luxianku ul::-webkit-scrollbar {
     width: 5px;    
@@ -628,22 +642,23 @@ body{
     background: #E0D1D1;
 }
 #luxianku li{
-    width: 150px;
+    /* width: 150px; */
     height: 30px;
     list-style: none;
 }
 
 #luxianku ul li>span{
     display: inline-block;
-    width: 80px;
+    width: 100px;
     height: 30px;
     color: white;
     line-height: 30px;
 }
 #luxianku button:active{
-    transform: translateY(2px);
+    transform: translateY(1px);
 }
 #luxianku ul li>button:nth-child(2){
+    float: right;
     width: 25px;
     height: 19px;
     cursor: pointer;
@@ -651,10 +666,10 @@ body{
     background-repeat: no-repeat;
     border: 0px;
     background-color: transparent ;
-    position: relative;
-    top:4px;
+    margin-top:6px; 
 }
 #luxianku ul li>button:nth-child(3){
+    float: right;
     width: 36px;
     height: 20px;
     cursor: pointer;
@@ -662,38 +677,43 @@ body{
     background-color: rgba(30, 42, 48,0.8);
     color: white;
     font-size: 14px;
+    margin-top:5px; 
 }
 #luxianku li:hover{
     background-color: rgba(47, 159, 200, 0.5)
 }
 .luxian_type{
-    width: 200px;
-    min-height: 100px;
-    display: inline-flex;    
     margin-top: 10px;
+    margin-left: 8px;
 }
 .luxian_type .title{
-    width: 25px;
-    min-height: 100px;
-    max-height: 200px;
+    height: 25px;
     border: 1px solid rgb(20, 221, 231);
     border-left: 0px;
     border-radius: 5px;
-    margin-left:4px; 
-    writing-mode: vertical-lr;
     color:white;
     font-size: 20px;  
     text-align: center;  
     cursor: default;
-    float: left;
+    overflow: hidden;
 }
 
-
+.path_search{
+    background-color: rgba(47, 62, 70, 0.8);
+    height: 25px;
+    width: 90%;
+    border: 1px solid  gray;
+    border-top:0px;
+    margin-top:2px;
+    color:white;
+    border-radius: 5px;
+}
+#luxianku::-webkit-input-placeholder {
+    color: #fff;
+  }
 .creat_new_type textarea{
-    min-height: 100px;
-    width: 25px;
+    width: 100%;
     height: 95%;
-    writing-mode: vertical-lr;
     background-color: transparent;
     border: 0px; 
     color: white;

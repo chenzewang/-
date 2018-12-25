@@ -17,7 +17,6 @@
                     <span>命名组</span>
                     <div id="map_name_select" class="map_name_view">
                         <span>选择1</span>
-                        
                     </div>
                 </div>
                 <ul id="map_name_option" class="map_name_view">
@@ -32,11 +31,20 @@
 
                 <div id="map_path">
                     <p>巡检模式</p>
+
+                    <select name="" id="map_select">
+                        <option value="固定路线" >固定路线</option>
+                        <option value="自由路线" >自由路线</option>
+                        <option value="用户自选" >用户自选</option>
+                    </select>
+
+
+<!-- 
                     <ul id="map_select">
                         <li data-type="固定路线" onclick="liClick(this)">固定路线</li>
                         <li data-type="自由路线" onclick="liClick(this)">自由路线</li>
                         <li data-type="用户自选" onclick="liClick(this)">用户自选</li>
-                    </ul>
+                    </ul> -->
                 </div>
 
                 <div id="map_desc"><span>路线描述</span><textarea></textarea></div>
@@ -57,6 +65,7 @@
                         <li class="template5"><button>模板55</button></li>                    
                     </ul>
                 </div>  
+                <div id="map_operator"> <p>巡检人</p> <div>某某某</div></div>
 
             </div>
 
@@ -67,31 +76,61 @@
 
        
         </div>
-        <div id="kuang2" class=" scroll_content"></div>
+        <div id="kuang2"></div>
          
           <div class="bgPop"></div> <!-- 框3遮掩层 -->
         <div id="kuang3">
-                <input id="spot_name" placeholder="巡检设备名称"> 
-                <input id="spot_desc" placeholder="巡检设备描述"> 
+                <label>巡检设备名称:<input id="spot_name"></label>
+                <label>巡检设备描述:<input id="spot_desc"></label>
                 
                 <div id="kuang3_items">
                     <div class="new_item">
                         <button onclick="addItem()">新建巡检条目</button>    
                     </div>
                     <div class="creat_new_item">
-                        <input placeholder="巡检条目内容">
-                        <input placeholder="单位"><br>                        
-                        <input placeholder="最小标准值">
-                        <input placeholder="最大标准值"><br>
-                        <input placeholder="最小警戒值">
-                        <input placeholder="最大标准值">
-                        <div id="kuang3_select">
-                            <select>
-                                <option value ="true">确认型</option>
-                                <option value ="false">数值型</option>
-                            </select>
+
+                        <div id="kuang3_items_from">
+
+                            <div>
+                                    <label>巡检条目内容</label>
+                                    <input >
+                            </div>
+                            <div>
+                                    <label>单位</label>
+                                    <input >
+                            </div><br>
+                            <div>
+                                    <label>最小标准值</label>
+                                    <input >
+                            </div>
+                            <div>
+                                    <label>最大标准值</label>
+                                    <input >
+                            </div><br>
+                            <div>
+                                    <label>最小警戒值</label>
+                                    <input >
+                            </div>
+                            <div>
+                                    <label>最大警戒值</label>
+                                    <input >
+                            </div>
+                           
+
                         </div>
-                        <button id="new_item_del" onclick="delItem(this)">删除</button>
+                        <div id="kuang3_items_opera">
+                            
+                            <div id="kuang3_select">
+                                <select>
+                                    <option value ="true">确认型</option>
+                                    <option value ="false">数值型</option>
+                                </select>
+                            </div>
+                            
+                            <button id="new_item_del" onclick="delItem(this)">删除</button>
+
+                        </div>
+                        
                     </div>
                 </div>
 
@@ -108,16 +147,34 @@
         </div>
         <div id="luxianku">
             <div id="luxianku_box">
-
-                    <div class="luxian_type">
-                        <div class="title"></div>
-                        <ul><li data-id="1" onclick=" lxk_click(this)"><span>线路1</span><button onclick="ku_del(this)"></button><button>启用</button></li><li data-id="2" onclick=" lxk_click(this)"><span>线路2</span><button onclick="ku_del(this)"></button><button>启用</button></li><li data-id="30" onclick=" lxk_click(this)"><span>线路1</span><button onclick="ku_del(this)"></button><button>启用</button></li><li data-id="31" onclick=" lxk_click(this)"><span>线路1</span><button onclick="ku_del(this)"></button><button>启用</button></li><li data-id="33" onclick=" lxk_click(this)"><span>线路1</span><button onclick="ku_del(this)"></button><button>启用</button></li></ul>
+                <div type-id="2" class="creat_new_type luxian_type">
+                    <div class="title"><textarea onchange="editMapType(this)">汽轮机侧</textarea></div>
+                    <div>
+                        <input class="path_search" type="search" placeholder="输入关键词">
+                        <ul>
+                            <li type-id="2" path-id="40" style="background-color: rgba(47, 159, 200, 1);" onclick="lxk_click(this)">
+                                <span>汽轮机路线</span>
+                                <button onclick="ku_del(this)"></button>
+                                <button onclick="validMapTypePath(this)">启用</button>
+                            </li>
+                            <li type-id="2" path-id="40" style="background-color: rgba(47, 159, 200, 1);" onclick="lxk_click(this)">
+                                <span>汽轮机路线</span>
+                                <button onclick="ku_del(this)"></button>
+                                <button onclick="validMapTypePath(this)">启用</button>
+                            </li>
+                            <li type-id="2" path-id="40" style="background-color: rgba(47, 159, 200, 1);" onclick="lxk_click(this)">
+                                <span>汽轮机路线</span>
+                                <button onclick="ku_del(this)"></button>
+                                <button onclick="validMapTypePath(this)">启用</button>
+                            </li>
+                        </ul>
                     </div>
-                    
-                    
-                    <div class="creat_new_type luxian_type">
-                            <div class="title" ><textarea onkeydown="addMapType(event)" ></textarea></div> 
-                    </div>
+                </div>
+                <div class="creat_new_type luxian_type">
+                    <div class="title" >
+                        <textarea onkeydown="addMapType(event)" >
+                    </textarea></div> 
+                </div>
             
         
             </div>

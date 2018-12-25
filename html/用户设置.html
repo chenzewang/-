@@ -20,13 +20,13 @@
                 <div><span>姓名 </span><input type="text"><br></div>
                 <div><span>工号 </span><input type="text"><br></div>
                 <div><span>专业 </span><input type="text"><br></div>
-                <div><span>权限 </span>
-                    <select>
-                        <option value="true">用户</option>
-                        <option value="false">管理员</option>
-                    </select><br></div>
-                <div><span>密码 </span><input type="text"><br></div>
-                
+                <div id="detail_power">
+                    <span>权限 </span>
+                    <div id="detail_power_select" class="detail_power_view">
+                        <span id="user_right" value="">用户</span>
+                    </div>
+                </div>
+                <div><span>密码 </span><input id="user_password" type="password"><br></div>
             </div>
         </div>
 
@@ -48,6 +48,7 @@
             <div id="add_photo" class="photo">
                     <img src="../img/transpan.png"><span>照片</span>
                     <button>上传</button>
+                    <input type="file" id="add_file_input" name="photo" onchange="openphoto(this)">
             </div>
             <div id="add_detail" class="detail">
                 <div><span>用户名 </span><input type="text"><br></div>                
@@ -55,26 +56,37 @@
                 <div><span>工号 </span><input type="text"><br></div>
                 <div><span>专业 </span><input type="text"><br></div>
                 <div><span>权限 </span>
-                    <select>
-                        <option value="true">用户</option>
-                        <option value="false">管理员</option>
-                    </select><br></div>
+                    <div id="add_select" >
+                        <span value="0">用户</span>
+                    </div>
+
+                    <ul id="add_option" >
+                        <li data-chose="用户" onclick="addPowerClick(this)" value="0"><span> 用户</span></li>
+                        <li data-chose="管理员" onclick="addPowerClick(this)" value="1"><span> 管理员</span></li>
+                    </ul>
+
+                </div>
                 <div><span>密码 </span><input type="text"><br></div>     
             </div>
             <button id="add_tijiao">提交</button>               
         </div>
         <div id="graph"></div>
         <div id="operate2">
-            <button >返回</button>
-            <button >导入</button>
-            <button >导出</button>
+            <button>返回</button>
+            <button>删除</button>
+            <button>导入</button>
+            <button>导出</button>
+            <button>模板</button>
             <input type="text" placeholder="请输入姓名或工号">
         </div>
         <div id="chakan_img" onclick="chakan_img()">
             <img src="">
         </div>
     </div>
-    
+    <ul id="detail_power_option" class="detail_power_view">
+        <li data-chose="用户" onclick="detailPowerClick(this)" value="0"><span> 用户</span></li>
+        <li data-chose="管理员" onclick="detailPowerClick(this)" value="1"><span> 管理员</span></li>
+    </ul>
     <script src="js/jquery-1.8.0.min.js"></script>
     <style src="css/用户设置.css"></style>
     <script src="js/用户设置.js"></script>
