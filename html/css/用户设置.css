@@ -422,12 +422,18 @@ button:active{
     position: absolute;
     right: 20px;
     top: 20px;
+    background-image: url(../../img/xx.png);
+    width: 48px;
+    height: 48px;
     color: white;
     font-size: 20px;
     cursor: pointer;
     z-index: 2;
+    zoom: 0.7;
 }
-
+.pop-close:active{
+    transform: translateY(1px)
+}
 #current{
     color:white;
     position: relative;

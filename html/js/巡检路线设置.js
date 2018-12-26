@@ -400,8 +400,26 @@ $(document).ready(function () {
         event.stopPropagation();
     });
 
+    //巡检模式 点选效果
+    $("#map_path_option li").click(function(e){
+        var value=$(this).attr("data-chose");
+        $("#map_path_select").text(value);
+    })
+    $("#map_path_select").click(function(e){
+        var height=$("#map_path_option li").length*28+2+"px"
+        $("#map_path_option").css("border","1px solid rgb(20,221,231)")
+        $("#map_path_option").css("height",height)
+    })
+    $(document).on('click',':not(#map_path_select)',function(){
+        $("#map_path_option").css("height","0px");
+        $("#map_path_option").css("border","0px")
+    })
+    $("#map_path_select").click(function(event){
+        event.stopPropagation();
+    });
 
 
+    // 命名组 点选效果
     $('#map_name_select').click(function () {
         $("#map_name_option").css("display","block");
         $("#map_name_option li").css("display","block");
@@ -411,6 +429,8 @@ $(document).ready(function () {
             $("#map_name_option li").css("display","none");
         })
 })
+
+
 
     // function luxian_type_title() {   //.titlt高度
     //     for (var i = 0; i < $(".luxian_type").length; i++) {

@@ -4,20 +4,7 @@
     outline:none
     
 }
-y
 
-
-
-select{
-    -moz-appearance:none;
-    background-image: url("../../img/sanjiao.png");
-    background-repeat: no-repeat;
-    -webkit-appearance: none;
-    padding-left: 5px;
-    padding-right: 20px;
-    background-size: 14px 14px;
-}
-select::-ms-expand { display: none; }   
 body{
     width: 100px;
     height: 630px;
@@ -138,31 +125,44 @@ body{
     font-size: 20px;
     text-align: center;
 }
-#map_select{
-    display: block;
+#map_path_select{
+    text-align: center;
     margin: 0px auto;
     position: relative;
     top: 5px;
     left: 0px;
     width:116px;
     height: 32px;
+    line-height: 32px;
     color: white;
-    list-style: none;
     border: 1px solid rgb(20, 221, 231);
     border-radius: 10px;
     background-color: rgba(26,38,45,0.8)
 }
-/* #map_select li{
-    background-repeat: no-repeat;
-    width:100%;
+#map_path_option{
+    list-style: none;
+    position: relative;
+    width: 116px;
+    top: 4px;
+    left: 16px;
+    overflow: hidden;
+    transition: height 0.3s;
+    z-index: 200;
+    background-color: rgba(26,38,45,0.8);
+    border-radius: 15px ;
+    overflow: hidden;
+    height: 0px;
+}
+#map_path_option li{
+    width:116px;
     height: 28px;
-    cursor: pointer;
+    cursor: default;
     color: white;
     font-size: 18px;
     text-align: center;
     line-height: 28px;
-} */
-#map_select li:hover{
+}
+#map_path_option li:hover{
     background-color: rgba(20, 221, 231,0.4);
 }
 
@@ -298,8 +298,8 @@ body{
 
 #imp_template{
     position: absolute;
-    top: 115px;
-    left: 630px;
+    top: 128px;
+    left: 628px;
     overflow: hidden;
     height: 0px;
     transition: height 0.2s;    
@@ -553,10 +553,14 @@ body{
 .pop-close{
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 1px;
     color: white;
     font-size: 20px;
     cursor: pointer;
+    background-image: url(../../img/xx.png);
+    width: 48px;
+    height: 48px;
+    z-index: 200;
 }
 .bgPop{   
     display: none;
@@ -847,9 +851,11 @@ button:hover{
     position: relative;
     left: 900px;
     top: -375px;
-    color:white;
     cursor: pointer;
-    font-size: 30px;
+    background-image: url(../../img/xx.png);
+    width: 48px;
+    height: 48px;
+    z-index: 200;
 }
 .no_pass {
     color: red;

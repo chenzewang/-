@@ -31,20 +31,14 @@
 
                 <div id="map_path">
                     <p>巡检模式</p>
-
-                    <select name="" id="map_select">
-                        <option value="固定路线" >固定路线</option>
-                        <option value="自由路线" >自由路线</option>
-                        <option value="用户自选" >用户自选</option>
-                    </select>
-
-
-<!-- 
-                    <ul id="map_select">
-                        <li data-type="固定路线" onclick="liClick(this)">固定路线</li>
-                        <li data-type="自由路线" onclick="liClick(this)">自由路线</li>
-                        <li data-type="用户自选" onclick="liClick(this)">用户自选</li>
-                    </ul> -->
+                    <div id="map_path_select" class="map_path_select" >
+                        固定路线
+                    </div>
+                    <ul id="map_path_option">
+                        <li data-chose="固定路线" ><span> 固定路线</span></li>
+                        <li data-chose="自由路线" ><span> 自由路线</span></li>
+                        <li data-chose="用户自选" ><span> 用户自选</span></li>
+                    </ul>
                 </div>
 
                 <div id="map_desc"><span>路线描述</span><textarea></textarea></div>
@@ -142,7 +136,7 @@
                 
                 <button id="kuang3_del" onclick="del()">清空
                 </button>   
-                <span class="pop-close">Ｘ</span>
+                <span class="pop-close"></span>
                 
         </div>
         <div id="luxianku">
