@@ -20,7 +20,7 @@ body{
 #main>div{
     width: 200px;
     height: 200px;
-    margin: 45px 20px 0 20px; 
+    margin:30px 20px 0 35px; 
     color: white;
     display: inline-table;
 }
@@ -60,34 +60,36 @@ button:active{
 
 
 .add_box{   
-    width: 120px;
+    width: 125px;
     height: 100px;
     border: 1px solid rgba(20, 221, 231,0.4);
     border-right: 0px;
-    border-radius:  15px  0  0 15px;
+    border-radius: 15px;
     background-color: rgba(26,38,45,0.3);
     margin: 0 auto;
-    overflow-y: scroll;   
+    overflow-y: hidden;   
 }
-.add_box::-webkit-scrollbar {
-    width: 0px;    
+.add_box ul::-webkit-scrollbar {
+    width: 5px;    
     height: 20px;
 }
-.add_box::-webkit-scrollbar-thumb {
+.add_box ul::-webkit-scrollbar-thumb {
     background-color: rgba(193, 193, 193,0.7);
     background-repeat: no-repeat;
     }
-.add_box::-webkit-scrollbar-track {
+.add_box ul::-webkit-scrollbar-track {
         background: rgba(20, 221, 231,0.5);
     }
 .add_box ul{
     width: 100%;
+    height: 100%;
+    overflow-y: scroll;   
 }
 .add_box li{
     width: 100%;
     height: 25%;
     line-height: 25px;
-    font-size: 15px;
+    font-size: 13px;
     overflow: hidden;
 }
 .add_box li:hover{
@@ -96,7 +98,7 @@ button:active{
 .address p{
     margin-bottom: 10px;
 }
-.address input{
+/* .address input{
     display: block;
     width:125px;
     height: 15px;
@@ -105,7 +107,29 @@ button:active{
     border-radius: 6px;
     background-color: rgba(26,38,45,0.6);
     color: white;
+} */
+
+
+.add_input{
+    display: flex;
+    flex-wrap:  wrap;
+    width:125px;
+    /* height: 15px; */
+    margin: 5px auto;
+    color: white;
 }
+.add_input input{
+    color: white;
+    width: 90px;
+    border: 1px solid rgba(20, 221, 231,0.4);
+    border-radius: 6px;
+    background-color: rgba(26,38,45,0.6);
+}
+.add_input span{
+    font-size: 8px
+}
+
+
 .address button{
     height: 22px;
     width: 40px;
@@ -155,5 +179,110 @@ button:active{
 }
 .select{
     background-color: rgba(20, 221, 231,0.5)!important;
-    
+}
+
+
+
+[name='jHsDate'] {
+    position: absolute;
+    top: 241px !important;
+    left: 60px !important;
+    color: white;
+    max-width: 336px;
+    width: auto;
+    height: 164px;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    background-color:rgba(20, 221, 231,0.1);
+    border: 1px solid rgba(20, 221, 231,0.1);
+}
+
+.yearHsDate,
+.dayHsDate,
+.hourHsDate,
+.minuteHsDate {
+    height: 164px;
+    width: 95px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 14px;
+    display: inline-block;
+}
+.hourHsDate::-webkit-scrollbar {
+    width: 8px;    
+}
+.hourHsDate::-webkit-scrollbar-thumb {
+    background-color: rgba(193, 193, 193,0.7);
+    background-repeat: no-repeat;
+    }
+.hourHsDate::-webkit-scrollbar-track {
+        background: rgba(20, 221, 231,0.5);
+    }
+.minuteHsDate::-webkit-scrollbar {
+    width: 8px;    
+}
+.minuteHsDate::-webkit-scrollbar-thumb {
+    background-color: rgba(193, 193, 193,0.7);
+    background-repeat: no-repeat;
+    }
+.minuteHsDate::-webkit-scrollbar-track {
+        background: rgba(20, 221, 231,0.5);
+    }
+.hs_year,
+.hs_day,
+.hs_hour,
+.hs_minute {
+    list-style: none;
+    width: 72px;
+    height: 32px;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+    .hs_year:hover,
+    .hs_day:hover,
+    .hs_mon:hover {
+        background-color: #eeeeee;
+        color: #000000;
+    }
+
+.hs_check,
+.hs_check :hover{
+    background-color: #3ab2d0!important;
+    color: #ffffff!important;
+}
+
+.monHsDate {
+    width: 150px;
+    display: inline-block;
+    padding: 4px 5px;
+    margin: 0;
+}
+
+.hs_mon {
+    list-style: none;
+    width: 29px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    font-size: 14px;
+    display: inline-block;
+    padding: 7px 5px;
+    border-radius: 4px;
+    float: left;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.noCheck {
+    background-color: #f4f4f4;
+    cursor: not-allowed;
+}
+
+.dayHsDate {
+    width: 77px;
+    border-left: 1px solid #dddddd;
 }

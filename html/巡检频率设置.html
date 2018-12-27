@@ -16,16 +16,23 @@
             <input id="gap_time"><span>小时</span>
             <p>交换班时间</p>
             <input id="shift_time"><span>小时</span>
+            <p>时间</p>
+            <input id="accurate_time">
         </div>
         
         <div id="address1" class="address">
             <p>一级报警通讯录</p>
             <div class="add_box scrollbox scroll_content" >
-                <ul >
-                       
-                </ul>
+                <ul>
+                    </ul>
             </div>
-            <input id="add_input1" placeholder="在此输入" ><button onclick="add1()">添加</button><button onclick="del1()">删除</button>            
+            <div id="add_input1" class="add_input">
+                <span>人员:</span>
+                <input type="text" id="add_1_man">
+                <span>电话:</span>
+                <input type="number" id="add_1_num">
+            </div>
+            <button onclick="add1()">添加</button><button onclick="del1()">删除</button>            
         </div>
         
         <div id="address2" class="address">
@@ -35,7 +42,13 @@
                     
                 </ul>
             </div>        
-            <input id="add_input2" placeholder="在此输入"><button onclick="add2()">添加</button><button onclick="del2()">删除</button>
+            <div id="add_input2" class="add_input">
+                <span>人员:</span>
+                <input type="text" id="add_2_man">
+                <span>电话:</span>
+                <input type="number" id="add_2_num">
+            </div>
+            <button onclick="add2()">添加</button><button onclick="del2()">删除</button>
         
         
         </div>
@@ -46,8 +59,8 @@
 
 
 
-    
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script src="js/jHsDate.js"></script>
     <script src="js/scroll.min.js"></script>
     <script src="js/巡检频率设置.js"></script>
     

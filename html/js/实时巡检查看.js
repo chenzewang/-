@@ -30,7 +30,7 @@ var objMap={
             tmp: false,
             created_at: "",
             updated_at: "",
-            checked:true,   //true 查过了   false 未查
+            checked:false,   //true 查过了   false 未查
             items: [{
                 id:"1",
                 content: "内容",
@@ -924,7 +924,7 @@ var objMap={
             for(var j=1;j<=lie;j++)
             {
                 tab+="<td><div onclick=\"up(this)\"  style=\" position:relative;     \" >\
-                <span class=\" spot_name\"></span> <img class=\"jiantou\"><span class=\" spot_time\">2018.11.27</span>\
+                <span class=\"spot_name\"></span> <img class=\"jiantou\"><span class=\"spot_time\">2018.11.27</span>\
                 </div></td>";
             }
             tab+="</tr>";

@@ -1,58 +1,66 @@
-var li=undefined//当前选中的li
-var index//当前选中的li在其父元素的位置
 var obj={
     gepTime:"",
     shiftTime:"", 
     address1:[],
     address2:[]
 }
-
+var contacts1arr = new Array(), contacts2arr = new Array();
+var li=undefined//当前选中的li
 function liClick(x){
-    $(li).removeClass("select");
+    $(x).parent().find(".select").removeClass("select");
+    $(x).addClass("select")
     li=x;
-    $(li).addClass("select")
-    index=$(li).index()
 }
 
 function add1() {
     //添加到一级报警通讯录
-    var content = $("#add_input1").val();
-    if (content == "") {
+    var man=$("#add_1_man").val()
+    var number=$("#add_1_num").val()
+    if (man == ""||number=="") {
         alert("不能为空！");
         return;
     }
-    var tag = "\n        <li  index=\"" + obj.address1.length + "\" class=\"normal\" onclick=\"liClick(this)\">" + content + "</li>\n    ";
+    var tag = `<li  data-index=${contacts1arr.length}   onclick="liClick(this)" class="normal"><span>${man}</span>,<span>${number}</span></li>`;
     $("#address1 ul:eq(0)").append(tag);
-    obj.address1.push(content);
-    $("#add_input1").val("");
+    $("#add_1_man").val("")
+    $("#add_1_num").val("")
     
+    var content={man:man,number:number} //人，号码
+    contacts1arr.push(content);
+    console.log(contacts1arr)
 }
 
 function add2() {
     //添加到二级报警通讯录
-    var content = $("#add_input2").val();
-    if (content == "") {
+    var man=$("#add_2_man").val()
+    var number=$("#add_2_num").val()
+    if (man == ""||number=="") {
         alert("不能为空！");
         return;
     }
-    var tag = "\n        <li index=\"" + obj.address2.length + "\" class=\"normal\" onclick=\"liClick(this)\">" + content + "</li>\n    ";
+    var tag = `<li data-index=${contacts2arr.length} onclick="liClick(this)" class="normal"><span>${man}</span>,<span>${number}</span></li>`;
     $("#address2 ul:eq(0)").append(tag);
-
-    obj.address2.push(content);
-    $("#add_input2").val("");
-    
+    $("#add_2_man").val("")
+    $("#add_2_num").val("")
+    var content={man:man,number:number} //人，号码
+    contacts2arr.push(content);
 }
 
 function del1(){  //从一级通讯录删除选中的某条
+    var index=$(li).attr("data-index");
     $(li).remove();
-    obj.address1.splice(index,1)
-    scrollsY(".scrollbox");
-    
+    contacts1arr.splice(index,1)
+    for (var i=0;i<contacts1arr.length;i++){
+        $("#address1 li").eq(i).attr("data-index",i);
+    }
 }
 function del2(){ //从二级通讯录删除选中的某条
+    var index=$(li).attr("data-index");
     $(li).remove();
-    obj.address2.splice(index,1)
-    
+    contacts2arr.splice(index,1)
+    for (var i=0;i<contacts2arr.length;i++){
+        $("#address2 li").eq(i).attr("data-index",i);
+    }
 }
 
 
@@ -75,3 +83,6 @@ function set (){
     });
 }
 
+$('#accurate_time').jHsDate({
+    format:'hh:mm'
+});
