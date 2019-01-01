@@ -142,7 +142,7 @@ button:hover{
     display: none;
 }
 .check{
-    background-color: rgba(62, 66, 68, 0.80);
+    background-color: rgba(110, 110, 110, 0.80) !important;
 }
 .spot_time{
     position: absolute !important;

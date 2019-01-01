@@ -12,41 +12,52 @@
     <div id="main">
             
         <div id="time">
-            <p>间隔时间</p>
-            <input id="gap_time"><span>小时</span>
-            <p>交换班时间</p>
-            <input id="shift_time"><span>小时</span>
-            <p>时间</p>
-            <input id="accurate_time">
+            <div>
+                <p>间隔时间</p>
+                <input id="gap_time"><span>小时</span>
+            </div>
+            <div>
+                <p>交换班时间</p>
+                <input id="shift_time"><span>小时</span>     
+            </div>
+            <div>
+                <p>交换班提前时间</p>
+                <input id="advance_time"><span>小时</span>
+            </div>
+            <div>
+                <p>交换班延后时间</p>
+                <input id="lelay_time"><span>小时</span>
+            </div>
+            <div>
+                <p>时间</p>
+                <input id="accurate_time">
+            </div>
+            
         </div>
         
         <div id="address1" class="address">
             <p>一级报警通讯录</p>
-            <div class="add_box scrollbox scroll_content" >
+            <div class="add_box" >
                 <ul>
-                    </ul>
+                </ul>
             </div>
             <div id="add_input1" class="add_input">
-                <span>人员:</span>
-                <input type="text" id="add_1_man">
-                <span>电话:</span>
-                <input type="number" id="add_1_num">
+                <input type="text" id="add_1_man" placeholder="人员">
+                <input type="text" id="add_1_num" placeholder="电话">
             </div>
             <button onclick="add1()">添加</button><button onclick="del1()">删除</button>            
         </div>
         
         <div id="address2" class="address">
             <p>二级级报警通讯录</p>
-            <div class="add_box scrollbox scroll_content">
+            <div class="add_box">
                 <ul >
                     
                 </ul>
             </div>        
             <div id="add_input2" class="add_input">
-                <span>人员:</span>
-                <input type="text" id="add_2_man">
-                <span>电话:</span>
-                <input type="number" id="add_2_num">
+                <input type="text" id="add_2_man" placeholder="人员">
+                <input type="number" id="add_2_num" placeholder="电话">
             </div>
             <button onclick="add2()">添加</button><button onclick="del2()">删除</button>
         

@@ -948,10 +948,7 @@ var objMap={
 
         for(var i=0;i<objMap.spotnum;i++){
             if(objMap.spots[i].checked==true){
-                $("#map td").eq(i).css("background-color","rgba(120, 120, 120, 0.80)")
-            }
-            else{
-                $("#map td").eq(i).css("background-color","none")
+                $("#map td").eq(i).addClass("check")
             }
         }
     }
