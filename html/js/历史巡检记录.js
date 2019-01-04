@@ -133,367 +133,894 @@ var obj = [{
     time2: "20180612"
 }];
 
-var objMap = {
-    id: 0,
-    name: "线路1", //路线名字
-    spotnum: 8, //设备点数
-    specified: true, //是否固定
-    arrangeable: false, //是否自由
-    desc: "", //路线描述
-    created_at: "", //路线创建时间
-    updated_at: "", //路线修改时间  //这条路线的各个点
-    spots: [{
-        id: 1,
-        name: "asd",
-        desc: "asd",
-        tmp: false,
-        created_at: "",
-        updated_at: "",
-        checked: true, //true 查过了   false 未查
-        items: [{
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "0",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50", //当前值
-            value: true,
-            pass: false
-        }]
-    }, {
-        id: 1,
-        name: "asd",
-        desc: "asd",
-        tmp: true,
-        created_at: "",
-        updated_at: "",
-        checked: true,
-        items: [{
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            value: false,
-            pass: true
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            value: false,
-            pass: true
-
-        }]
-    }, {
-        id: 1,
-        name: "asd",
-        desc: "asd",
-        tmp: false,
-        created_at: "",
-        updated_at: "",
-        checked: true,
-        items: [{
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            value: true,
-            pass: true
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            value: true,
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            data: "50",
-            value: false,
-            pass: false,
-            updated_at: "巡检条目修改时间"
-        }]
-    }, {
-        id: 1,
-        name: "asd",
-        desc: "asd",
-        tmp: false,
-        created_at: "",
-        updated_at: "",
-        checked: true,
-        items: [{
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            pass: false
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            value: false,
-            pass: true
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            updated_at: "巡检条目修改时间",
-            data: "50",
-            value: false,
-            pass: true
-
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            data: "50",
-            value: false,
-            pass: false,
-
-            updated_at: "巡检条目修改时间"
-        }, {
-            id: "1",
-            content: "内容",
-            unit: "位",
-            itemtype: "1",
-            st_min: "23",
-            st_max: "45",
-            al_min: "30",
-            al_max: "40",
-            created_at: "巡检条目创建时间",
-            data: "50",
-            value: false,
-            pass: true,
-
-            updated_at: "巡检条目修改时间"
-        }]
-    }]
-};
+var objMap={
+    id:0,
+    name:"线路1",          //路线名字
+    spotnum:29,       //设备点数
+    specified: true,                  //是否固定
+    arrangeable:false,               //是否自由
+    desc:"",                        //路线描述
+    created_at:"",                 //路线创建时间
+    updated_at:"",                //路线修改时间  //这条路线的各个点
+    spots:[
+        {
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:false,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,   //true 查过了   false 未查
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "0",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",   //当前值
+                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: true,
+            created_at: "",
+            updated_at: "",
+            checked:true,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50"
+                
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    updated_at: "巡检条目修改时间",
+                    data:"50"
+                    
+                    },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50"
+                
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    updated_at: "巡检条目修改时间",
+                    data:"50"
+                    
+                    },{
+                        id:"1",
+                        content: "内容",
+                        unit: "位",
+                        itemtype: "1",
+                        st_min: "23",
+                        st_max: "45",
+                        al_min: "30",
+                        al_max: "40",
+                        created_at: "巡检条目创建时间",
+                        data:"50",
+                        
+                        updated_at: "巡检条目修改时间",
+                        },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",
+                
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    updated_at: "巡检条目修改时间",
+                    data:"50",
+                    
+                    },{
+                        id:"1",
+                        content: "内容",
+                        unit: "位",
+                        itemtype: "1",
+                        st_min: "23",
+                        st_max: "45",
+                        al_min: "30",
+                        al_max: "40",
+                        created_at: "巡检条目创建时间",
+                        updated_at: "巡检条目修改时间",
+                        data:"50",
+                        
+                        },{
+                            id:"1",
+                            content: "内容",
+                            unit: "位",
+                            itemtype: "1",
+                            st_min: "23",
+                            st_max: "45",
+                            al_min: "30",
+                            al_max: "40",
+                            created_at: "巡检条目创建时间",
+                            data:"50",
+                            
+                            updated_at: "巡检条目修改时间",
+                            },{
+                                id:"1",
+                                content: "内容",
+                                unit: "位",
+                                itemtype: "1",
+                                st_min: "23",
+                                st_max: "45",
+                                al_min: "30",
+                                al_max: "40",
+                                created_at: "巡检条目创建时间",
+                                data:"50",
+                                
+                                updated_at: "巡检条目修改时间",
+                                },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: false,
+            created_at: "",
+            updated_at: "",
+            checked:true,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",
+                
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    data:"50",
+                    
+                    updated_at: "巡检条目修改时间",
+                    },{
+                        id:"1",
+                        content: "内容",
+                        unit: "位",
+                        itemtype: "1",
+                        st_min: "23",
+                        st_max: "45",
+                        al_min: "30",
+                        al_max: "40",
+                        created_at: "巡检条目创建时间",
+                        data:"50",
+                        
+                        updated_at: "巡检条目修改时间",
+                        },{
+                            id:"1",
+                            content: "内容",
+                            unit: "位",
+                            itemtype: "1",
+                            st_min: "23",
+                            st_max: "45",
+                            al_min: "30",
+                            al_max: "40",
+                            created_at: "巡检条目创建时间",
+                            data:"50",
+                            
+                            updated_at: "巡检条目修改时间",
+                            },{
+                                id:"1",
+                                content: "内容",
+                                unit: "位",
+                                itemtype: "1",
+                                st_min: "23",
+                                st_max: "45",
+                                al_min: "30",
+                                al_max: "40",
+                                created_at: "巡检条目创建时间",
+                                data:"50",
+                                
+                                updated_at: "巡检条目修改时间",
+                                },{
+                                    id:"1",
+                                    content: "内容",
+                                    unit: "位",
+                                    itemtype: "1",
+                                    st_min: "23",
+                                    st_max: "45",
+                                    al_min: "30",
+                                    al_max: "40",
+                                    created_at: "巡检条目创建时间",
+                                    data:"50",
+                                    
+                                    updated_at: "巡检条目修改时间",
+                                    },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: true,
+            created_at: "",
+            updated_at: "",
+            checked:false,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",
+                
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    data:"50",
+                    
+                    updated_at: "巡检条目修改时间",
+                    },{
+                        id:"1",
+                        content: "内容",
+                        unit: "位",
+                        itemtype: "1",
+                        st_min: "23",
+                        st_max: "45",
+                        al_min: "30",
+                        al_max: "40",
+                        created_at: "巡检条目创建时间",
+                        updated_at: "巡检条目修改时间",
+                        data:"50",
+                        
+                        },{
+                            id:"1",
+                            content: "内容",
+                            unit: "位",
+                            itemtype: "1",
+                            st_min: "23",
+                            st_max: "45",
+                            al_min: "30",
+                            al_max: "40",
+                            created_at: "巡检条目创建时间",
+                            updated_at: "巡检条目修改时间",
+                            data:"50",                            
+                            },{
+                                id:"1",
+                                content: "内容",
+                                unit: "位",
+                                itemtype: "1",
+                                st_min: "23",
+                                st_max: "45",
+                                al_min: "30",
+                                al_max: "40",
+                                created_at: "巡检条目创建时间",
+                                updated_at: "巡检条目修改时间",
+                                data:"50",                            
+                                
+                                },{
+                                    id:"1",
+                                    content: "内容",
+                                    unit: "位",
+                                    itemtype: "1",
+                                    st_min: "23",
+                                    st_max: "45",
+                                    al_min: "30",
+                                    al_max: "40",
+                                    created_at: "巡检条目创建时间",
+                                    updated_at: "巡检条目修改时间",
+                                    data:"50",                            
+                                    
+                                    },{
+                                        id:"1",
+                                        content: "内容",
+                                        unit: "位",
+                                        itemtype: "1",
+                                        st_min: "23",
+                                        st_max: "45",
+                                        al_min: "30",
+                                        al_max: "40",
+                                        created_at: "巡检条目创建时间",
+                                        updated_at: "巡检条目修改时间",
+                                        data:"50",                            
+                                        
+                                        },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: true,
+            created_at: "",
+            updated_at: "",
+            checked:false,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",                            
+                
+                },{
+                    id:"1",
+                    content: "内容",
+                    unit: "位",
+                    itemtype: "1",
+                    st_min: "23",
+                    st_max: "45",
+                    al_min: "30",
+                    al_max: "40",
+                    created_at: "巡检条目创建时间",
+                    updated_at: "巡检条目修改时间",
+                    data:"50",                            
+                    
+                    },{
+                        id:"1",
+                        content: "内容",
+                        unit: "位",
+                        itemtype: "1",
+                        st_min: "23",
+                        st_max: "45",
+                        al_min: "30",
+                        al_max: "40",
+                        created_at: "巡检条目创建时间",
+                        updated_at: "巡检条目修改时间",
+                        data:"50",                            
+                        
+                        },]
+        },{
+            id: 1,
+            name: "asd",
+            desc: "asd",
+            tmp: true,
+            created_at: "",
+            updated_at: "",
+            checked:false,
+            items: [{
+                id:"1",
+                content: "内容",
+                unit: "位",
+                itemtype: "1",
+                st_min: "23",
+                st_max: "45",
+                al_min: "30",
+                al_max: "40",
+                created_at: "巡检条目创建时间",
+                updated_at: "巡检条目修改时间",
+                data:"50",                            
+                
+                },]
+        },            
+    ]
+}
 
 function creatGraph1(ob) {
     //生成路线框图
@@ -641,5 +1168,70 @@ function chakan4() {
 
 
 
-scrollsY(".scrollbox");
+// scrollsY(".scrollbox");
 
+
+
+
+function creatMap(){  //生成路线框图
+    var num=objMap.spotnum;
+    var lie=8;
+    var hang;   hang=Math.ceil(num/8);
+    var tab="<table id=\"map2\"> "
+
+
+    for(var i=1;i<=hang;i++)   //生成框
+    {
+        tab+="<tr>";
+
+        if(i==hang&&num%8!=0){  //最后一行框数    
+            lie=num%8;
+            }
+        for(var j=1;j<=lie;j++)
+        {
+            tab+="<td><div  style=\" position:relative;     \" >\
+            <span class=\"spot_name\">xxxx</span> <img class=\"jiantou\"><span class=\"spot_time\">2018.11.27</span>\
+            </div></td>";
+        }
+        tab+="</tr>";
+    }           
+    tab+="</table>"
+    document.getElementById("record2_map").innerHTML=tab;
+
+    for(var h=0;h<num;h++){//奇数行左浮动，偶数行右浮动
+        if(Math.ceil((h+1)/8) %2 !=0 ){
+            document.getElementById("map2").getElementsByTagName("td")[h].setAttribute('style','float:left');
+        }
+        else{
+            document.getElementById("map2").getElementsByTagName("td")[h].setAttribute('style','float:right');
+        }
+    }
+    for(var h=0;h<document.getElementById("map2").getElementsByTagName("div").length;h++){
+        document.getElementById("map2").getElementsByTagName("div")[h].setAttribute("data-spot-seq",h)//为框图添加序号
+    }
+
+    jiantou(num);
+
+    for(var i=0;i<objMap.spotnum;i++){
+        if(objMap.spots[i].checked==true){
+            $("#map2 td").eq(i).addClass("check")
+        }
+    }
+}
+
+function jiantou(num){  //为路线框图添加箭头
+
+
+    for(var i=0;i<$("#map2 tr").length;i++){
+        if((i+1)%2==1){
+            $("#map2 tr:eq("+i+") .jiantou").attr("src","../img/2-2-jiantou.png");
+        }else{
+            $("#map2 tr:eq("+i+") .jiantou").attr("src","../img/2-2-jiantou2.png");
+            $("#map2 tr:eq("+i+") .jiantou").css({"left":"-76px","top":"-52px"});
+        }
+        $("#map2 tr:eq("+i+") .jiantou").eq(7).css({"width":"14%","left":"0px","top":"-18px"});
+        $("#map2 tr:eq("+i+") .jiantou").eq(7).attr("src","../img/2-2-jiantou5.png");
+    }
+    $("#map2 .jiantou").eq(-1).css("display","none");
+}
+creatMap()

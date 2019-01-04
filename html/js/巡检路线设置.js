@@ -430,6 +430,26 @@ $(document).ready(function () {
         })
 })
 
+    //巡检模式 点选效果
+    $("#spot_test_option li").click(function(e){
+        var value=$(this).attr("data-chose");
+        $("#spot_test_select").text(value);
+    })
+    $("#spot_test_select").click(function(e){
+        var height=$("#spot_test_option li").length*28+2+"px"
+        $("#spot_test_option").css("border","1px solid rgb(20,221,231)")
+        $("#spot_test_option").css("height",height)
+    })
+    $("#kuang3").on('click',':not(#spot_test_select)',function(){
+        $("#spot_test_option").css("height","0px");
+        $("#spot_test_option").css("border","0px")
+    })
+    $("#spot_test_select").click(function(event){
+        event.stopPropagation();
+    });
+
+
+
 
 
     // function luxian_type_title() {   //.titlt高度

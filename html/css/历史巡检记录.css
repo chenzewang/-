@@ -6,7 +6,7 @@
     outline:none
 }
 
-table, th, td {
+table, th,td{
     border: 2px solid rgb(11, 174, 231);
     border-collapse:collapse;    
 }
@@ -124,11 +124,11 @@ body{
 .map_ul_box{
     width: 130px;
     height:90px;
+    overflow-y: scroll !important;
     border: 2px solid rgb(20,221,231);
     border-right: 0px;
     background-color: rgba(29, 47, 60, 0.8);
     border-radius: 15px 0 0 15px;
-    overflow-y: scroll;
 }
 .scroll_content{
     -ms-scroll-chaining: chained;
@@ -219,9 +219,7 @@ body{
     margin-left:5px; 
 }
 
-#graph1 table,th,td{
-    border: 2px solid rgb(11, 174, 231);
-}
+
 #graph1 th{
     height:52px;
 }
@@ -320,17 +318,12 @@ body{
 
 
 
-
-
-
 #record2{
     display: none;
 }
 
 #record2{
-    background-image:url(../../img/6-2-waikuagn5.png);
     width:953px;
-    height: 438px;
     position: absolute;
     left: 23px;
     top:170px;
@@ -340,21 +333,95 @@ body{
     margin-left:5px; 
 }
 
-#record2>button:nth-child(3){
-    position: absolute;
-    bottom: 17px;
-    left: 438px;
+
+#record2_map{
+    border: 2px solid rgb(20, 221, 231);
+    border-radius: 15px 0px 0px 15px;
+    background-color: rgba(26,38,45,0.8);
+    /* position: absolute; */
+    /* left: 0px; */
+    /* top: 0px; */
+    font-size: 12px;
+    height: 200px;
+    overflow-y: scroll;
+    color: white;
+    text-align: center;
+    line-height: 29px;
+}
+
+
+#record2_map::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 2px;
+}
+#record2_map::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    background: rgb(58, 196, 225);
+    background-repeat: no-repeat;
+    }
+#record2_map::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        background: #EDEDED;
+    }
+#map2{
+    border: 0px;
+    position: relative;
+    left: -7px;
+    top: 7px;
+}
+
+#map2 td{
+    width: 110px;
+    height: 29px;
+    border:2px solid rgb(42, 181, 210);
+    border-radius: 10px ;
+    margin-left: 38px;
+    margin-bottom: 30px;
+    background-color: rgba(30, 45, 55 ,1);
+    zoom:0.76;
+}
+
+#map2 td>div>span{
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    /* height: 30px; */
+    overflow-x:hidden;
+}
+#map2 td>div>span::-webkit-scrollbar {
+    display: none;
+}
+.check{
+    background-color: rgba(110, 110, 110, 0.80) !important;
+}
+.spot_time{
+    position: absolute !important;
+    top: 25px;
+    left: 0px;
+}
+.jiantou{
+    position: relative;
+    left: 76px;
+    top: -52px;
+    width: 40%;
+}
+
+
+
+#record2>button:nth-child(4){
+    /* position: absolute; */
+    /* bottom: -34px; */
+    /* left: 438px; */
+    margin: 0px 438px;
     border: 1px solid rgb(20,221,231);
     border-radius: 15px;
     color: white;
     background-color: rgba(11, 37, 54,0.6);
     cursor: pointer;
-    height: 30px;
+    height: 22px;
     width: 70px;
 }
 
 #record2_title{
-    height: 50px;
+    height: 40px;
 }
 
 #record2_title div{
@@ -365,7 +432,7 @@ body{
     border-radius: 10px;
     background-color: rgba(29, 47, 60, 0.8);
     margin-left: 20%;
-    margin-top: 17px;
+    /* margin-top: 17px; */
     text-align: center;
     color: white;
 }
@@ -384,8 +451,8 @@ body{
 }
 
 
-#graph2 table,#graph2 td{
-    border-width: 1px !important;
+#graph2 table,#graph2 th,#graph2 td{
+    border: 1px solid rgb(0, 147, 237) !important;
 }
 #graph2 table{
     width: 100%;
@@ -414,12 +481,11 @@ body{
 
 #graph2{
     width: 948px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     margin-left: 5px;
-    height: 330px;
+    height: 190px;
     overflow-y: scroll;
-    border-bottom: 2px solid rgb(0, 147, 237);
-    border-top: 2px solid rgb(0, 147, 237);
+    border: 1px solid rgb(0, 147, 237);
     
 }
 #graph2::-webkit-scrollbar {/*滚动条整体样式*/
@@ -441,27 +507,21 @@ body{
 #graph2 td:nth-child(1){
     width: 374px;
     text-align: center;
-    height: 42px;
+    height: 32px;
 }
 #graph2 td:nth-child(2){
     width: 565px;
-    height: 42px;
+    height: 32px;
     text-align: center;
 }
 #graph2 th:nth-child(1){
-    width: 374px;
-    height: 52px;
+    width: 930px;
+    height: 42px;
     border-right: 0px;
 }
-#graph2 th:nth-child(1) span{
-    position: relative;
-    left: 230px;;
-}
-#graph2 th:nth-child(2){
-    width:565px;
-    height: 52px;
-    border-left: 0px;
 
+#graph2 th:nth-child(2){
+    width:0px;
 }
 
 
@@ -474,9 +534,9 @@ body{
     left: 23px;
     top:170px;
 }
-#record3>button:nth-child(2){
+#record3>button:nth-child(4){
     position: absolute;
-    bottom: 27px;
+    bottom: 16px;
     left: 260px;
     border: 1px solid rgb(20,221,231);
     border-radius: 15px;
@@ -486,9 +546,9 @@ body{
     height: 30px;
     width: 70px;
 }
-#record3>button:nth-child(3){
+#record3>button:nth-child(5){
     position: absolute;
-    bottom: 27px;
+    bottom: 16px;
     left: 640px;
     border: 1px solid rgb(20,221,231);
     border-radius: 15px;
@@ -498,7 +558,20 @@ body{
     height: 30px;
     width: 70px;
 }
-
+#record3_title_page{
+    display: inline-block;
+    position: relative; 
+    left: 740px;
+    color: white;
+    top:6px;
+}
+#record3_title_record{
+    display: inline-block;
+    position: relative;
+    left: 760px; 
+    color: white;
+    top: 6px; 
+}
 #graph3{
     width: 948px;
     color:white;
@@ -507,9 +580,7 @@ body{
     margin-left:5px; 
 }
 
-#graph3 table,th,td{
-    border: 2px solid rgb(11, 174, 231);
-}
+
 #graph3 th{
     height:52px;
 }
@@ -600,6 +671,16 @@ body{
     color: white;
     line-height: 60px
 }
+#record4_title_page{
+    position: relative;
+    left: 300px;
+    top: -40px;
+}
+#record4_title_record{
+    position: relative;
+    left: 400px;
+    top: -100px;
+}
 #record4>button:nth-child(3){
     position: absolute;
     bottom: 19px;
@@ -633,9 +714,7 @@ body{
     margin-left:5px; 
 }
 
-#graph4 table,th,td{
-    border: 2px solid rgb(11, 174, 231);
-}
+
 #graph4 th{
     height:52px;
 }
