@@ -1190,7 +1190,7 @@ function creatMap(){  //生成路线框图
         for(var j=1;j<=lie;j++)
         {
             tab+="<td><div  style=\" position:relative;     \" >\
-            <span class=\"spot_name\">xxxx</span> <img class=\"jiantou\"><span class=\"spot_time\">2018.11.27</span>\
+            <span class=\"spot_name spot_span\">xxxx</span> <span class=\"jiantou\"></span><span class=\"spot_time spot_span\">2018.11.27</span>\
             </div></td>";
         }
         tab+="</tr>";
@@ -1224,13 +1224,15 @@ function jiantou(num){  //为路线框图添加箭头
 
     for(var i=0;i<$("#map2 tr").length;i++){
         if((i+1)%2==1){
-            $("#map2 tr:eq("+i+") .jiantou").attr("src","../img/2-2-jiantou.png");
+            $("#map2 tr:eq("+i+") .jiantou").removeClass("jiantou_down jiantou_left jiantou_right");
+            $("#map2 tr:eq("+i+") .jiantou").addClass("jiantou_right");
         }else{
-            $("#map2 tr:eq("+i+") .jiantou").attr("src","../img/2-2-jiantou2.png");
-            $("#map2 tr:eq("+i+") .jiantou").css({"left":"-76px","top":"-52px"});
+            $("#map2 tr:eq("+i+") .jiantou").removeClass("jiantou_down jiantou_left jiantou_right");
+            $("#map2 tr:eq("+i+") .jiantou").addClass("jiantou_left");
         }
-        $("#map2 tr:eq("+i+") .jiantou").eq(7).css({"width":"14%","left":"0px","top":"-18px"});
-        $("#map2 tr:eq("+i+") .jiantou").eq(7).attr("src","../img/2-2-jiantou5.png");
+        $("#map2 tr:eq("+i+") .jiantou").eq(7).css({"left":"0px","top":"-23px"});
+        $("#map2 tr:eq("+i+") .jiantou").eq(7).removeClass("jiantou_down jiantou_left jiantou_right");
+        $("#map2 tr:eq("+i+") .jiantou").eq(7).addClass("jiantou_down");
     }
     $("#map2 .jiantou").eq(-1).css("display","none");
 }

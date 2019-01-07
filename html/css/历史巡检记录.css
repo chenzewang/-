@@ -324,12 +324,32 @@ body{
 
 #record2{
     width:953px;
+    height: 440px;
     position: absolute;
     left: 23px;
     top:170px;
+ 
 }
+#record2_scroll{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#record2_scroll::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 12px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+#record2_scroll::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    background-color: rgba(193, 193, 193);
+    background-repeat: no-repeat;
+    }
+#record2_scroll::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        background: rgb(43, 68, 80)
+    }
+
+
+
 #record2>div{
-    width: 947px;
+    width: 100%;
     margin-left:5px; 
 }
 
@@ -379,7 +399,7 @@ body{
     zoom:0.76;
 }
 
-#map2 td>div>span{
+.spot_span{
     position: relative;
     display: inline-block;
     width: 110px;
@@ -398,15 +418,32 @@ body{
     left: 0px;
 }
 .jiantou{
+    display:inline-block;
     position: relative;
-    left: 76px;
-    top: -52px;
-    width: 40%;
+    background-repeat: no-repeat;
+zoom:0.8
+}
+.jiantou_right{
+    left: 94px;
+    top: -67px;
+    height: 22px;
+    width: 55px;
+    background-image: url(../../img/10-2-jiantou.png);
+}
+.jiantou_left{
+    left: -94px;
+    top: -67px;
+    height: 22px;
+    width: 55px;
+    background-image: url(../../img/2-2-jiantou2.png);
+}
+.jiantou_down{
+    height: 43px;
+    width: 19px;
+    background-image: url(../../img/2-2-jiantou5.png);
 }
 
-
-
-#record2>button:nth-child(4){
+#record2_back{
     /* position: absolute; */
     /* bottom: -34px; */
     /* left: 438px; */
@@ -424,7 +461,7 @@ body{
     height: 40px;
 }
 
-#record2_title div{
+#record2_title div:nth-child(1){
     display: inline-block;
     width: 15%;
     height: 25px;
@@ -449,6 +486,15 @@ body{
     height: 34px;    
     cursor: pointer;  
 }
+#record2_title_record{
+    color: white;
+    position: relative;
+    font-size: 17px;
+    top:-21px;
+    z-index: -1;
+
+}
+
 
 
 #graph2 table,#graph2 th,#graph2 td{
@@ -464,29 +510,15 @@ body{
 #graph2 tbody{
     display:block;
     text-align: center;
-    /*ie下三角箭头的颜色*/
-    scrollbar-arrow-color: rgba(20,221,231,0.3);
-    /*滚动条滑块按钮的颜色*/
-    scrollbar-face-color: rgb(193, 193, 193);
-    /*滚动条整体颜色*/
-    scrollbar-highlight-color: #EDEDED;
-    /*滚动条阴影*/
-    /* scrollbar-shadow-color: transparent; */
-    /*滚动条轨道颜色*/
-    scrollbar-track-color: #EDEDED;
 }
 #graph2 thead tr{
     display:block;
 }
 
 #graph2{
-    width: 948px;
-    /* margin-top: 5px; */
     margin-left: 5px;
     height: 190px;
-    overflow-y: scroll;
     border: 1px solid rgb(0, 147, 237);
-    
 }
 #graph2::-webkit-scrollbar {/*滚动条整体样式*/
     width: 12px;     /*高宽分别对应横竖滚动条的尺寸*/

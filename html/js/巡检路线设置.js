@@ -387,16 +387,16 @@ $(document).ready(function () {
           }
     )
 
-    $('#imp').click(function () {
-        var hei=$("#imp_template ul li").length*30+12+"px";
-        var hei2=$("#imp_template ul li").length*30+30+"px";
-        $("#imp_template").css("height",hei2);
-        $("#imp_template ul").css("height",hei);
+    //导出模板按钮 点选效果
+    $('#import_imp').click(function () {
+        var hei=$("#imp_template ul li").length*32+"px";
+        var top=590-$("#imp_template ul li").length*32+"px";
+        $("#imp_template").css({"height":hei,"top":top,"display":"block"});
     });
-    $(document).on('click',':not(.impg)',function(){
-            $("#imp_template").css("height","0px");
+    $(document).on('click',':not(#import_imp)',function(){
+            $("#imp_template").css("display","none");
         })
-    $(".impg").click(function(event){
+    $("#import_imp").click(function(event){
         event.stopPropagation();
     });
 

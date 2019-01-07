@@ -296,46 +296,7 @@ body{
     top:19px;
 }
 
-#imp_template{
-    position: absolute;
-    top: 128px;
-    left: 628px;
-    overflow: hidden;
-    height: 0px;
-    transition: height 0.2s;    
-    z-index: 200;
-}
-#imp_template ul{
-    width: 140px;
-    background-attachment: fixed;
-    background-image: none;
-    border: 2px solid rgb(20,221,231);
-    background-color: rgb(26,38,45);
-    border-radius: 15px;
-    overflow: hidden;
-}
-#imp_template li{
-    height: 30px;
-    font-size: 16px;
-    line-height: 30px;
-    width: 100% ;
-    margin-bottom: 2px;
-    margin-top: 0px;
-}
-#imp_template li:last-child{
-    margin-bottom: 0px;
-}
-#imp_template button{
-    height: 100% ;
-    width: 100% ;
-    margin: 0;
-    background-color: rgba(26,38,45,0.8);
-    border:0px;
-    border-radius: 0px;
-}
-#imp_template li:hover{
-    background-color: rgba(20,221,231,0.6)
-}    
+
 
 
 #kuang2{
@@ -344,10 +305,10 @@ body{
     background-color: rgba(26,38,45,0.8) ;
     position: absolute;
     left: 10px;
-    top: 250px;
+    top: 195px;
     width: 795px;
     min-height:150px;
-    max-height: 325px;
+    max-height: 388px;
     overflow: auto	;
     color: white;
     text-align: center;
@@ -397,10 +358,7 @@ body{
     width: 40%;
 }
 
-#kuang3{   
-    display: block !important;
-/* 测试用 */
-}
+
 #kuang3{
     background-color: rgb(26,38,45);
     border: 2px solid rgb(20, 221, 231);
@@ -494,7 +452,7 @@ body{
     /* height: 175px; */
     position: absolute;
     left: 0px;;
-    top: 45px;
+    top: 48px;
     display: flex;
     justify-content:flex-start;
     align-items:center;
@@ -629,39 +587,41 @@ body{
     width: 1000px;
     height: 630px; 
     background: rgba(0,0,0,.3);  
-    }
+}
 
 
-#tijiao{
+.bottom_btn{
     display: inline-block;
     position: absolute;
-    bottom: 12px;
-    right: -516px;
-    border: 0px;
     background-color: transparent;
     width: 99px;
     height: 37px;
-    background-image:url(../../img/1_Neirongkuang03_02.png);
+    background-image: url(../../img/1_Neirongkuang03_02.png);
     background-repeat: no-repeat;
+    border: 0px;
 }
-#tijiao:active{
-    transform: translateY(2px);
-}
+    
 
 #xinjian{
-    display: inline-block;
-    position: absolute;
-    bottom: 12px;
-    right: -170px;
-    border: 0px;
-    background-color: transparent;
-    width: 99px;
-    height: 37px;
-    background-image:url(../../img/1_Neirongkuang03_02.png);
-    background-repeat: no-repeat;
+    bottom: 4px;
+    right: -115px;
 }
-#xinjian:active{
-    transform: translateY(2px);
+#export_imp{
+    bottom: 4px;
+    right: -245px;
+}
+#import_imp{
+    bottom: 4px;
+    right: -370px;
+}
+
+#download_imp{
+    bottom: 4px;
+    right: -495px;
+}
+#tijiao{
+    bottom: 4px;
+    right: -620px;
 }
 
 

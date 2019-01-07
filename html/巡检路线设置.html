@@ -47,25 +47,13 @@
 
                 <div id="map_time"><span>创建时间</span><div>20180901</div></div>   
 
-                <div id="imp_template" class="impg">
-                    <ul>
-                        <li class="template1"><button>模板11</button></li>
-                        <li class="template2"><button>模板22</button></li>
-                        <li class="template3"><button>模板33</button></li>
-                        <li class="template4"><button>模板44</button></li>
-                        <li class="template5"><button>模板55</button></li>                    
-                        <li class="template5"><button>模板55</button></li>                    
-                        <li class="template5"><button>模板55</button></li>                    
-                        <li class="template5"><button>模板55</button></li>                    
-                    </ul>
-                </div>  
+                
                 <div id="map_operator"> <p>巡检人</p> <div>某某某</div></div>
 
             </div>
 
             <div id="kuang1_btn">
                 <button onclick="creatMap()">生成路线框图</button>
-                <button id="imp" class="impg">导入模板</button>
             </div>
 
        
@@ -186,10 +174,21 @@
             
         </div>
 
-
-        <button id="tijiao" onclick="submit()">提交到库</button>
-        <button id="xinjian" onclick="creatNewPath()">新建路线</button>
-        
+        <button id="xinjian" class="bottom_btn" onclick="creatNewPath()">新建路线</button>
+        <button id="export_imp" class="bottom_btn">导出模板</button>
+        <button id="import_imp" class="impg bottom_btn">导入模板</button>
+        <button id="download_imp" class=" bottom_btn">下载模板</button>
+        <button id="tijiao" class="bottom_btn" onclick="submit()">提交到库</button>
+        <div id="imp_template" class="impg">
+            <ul>
+                <li class="template1"><button>模板11</button></li>
+                <li class="template2"><button>模板22</button></li>
+                <li class="template3"><button>模板33</button></li>
+                <li class="template4"><button>模板44</button></li>
+                <li class="template5"><button>模板55</button></li>                    
+                <li class="template5"><button>模板55</button></li>                    
+            </ul>
+        </div>  
             
 
         <button id="fanhui" onclick="fanhui()">返回</button>
