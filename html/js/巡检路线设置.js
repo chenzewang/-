@@ -388,17 +388,41 @@ $(document).ready(function () {
     )
 
     //导出模板按钮 点选效果
-    $('#import_imp').click(function () {
+    $('#import_imp').click(function (event) {
         var hei=$("#imp_template ul li").length*32+"px";
-        var top=590-$("#imp_template ul li").length*32+"px";
-        $("#imp_template").css({"height":hei,"top":top,"display":"block"});
-    });
-    $(document).on('click',':not(#import_imp)',function(){
-            $("#imp_template").css("display","none");
-        })
-    $("#import_imp").click(function(event){
+        $("#imp_template").css("height",hei);        
         event.stopPropagation();
     });
+    $(document).on('click',':not(#import_imp)',function(){
+        $("#imp_template").css("height","0px");
+    })
+
+
+//     $('#import_imp').click (event) ->
+//     $("#imp_template").css("height",$("#imp_template ul li").length*32+"px")        
+//     event.stopPropagation()
+//   $(document).on 'click', ':not(#import_imp)', ->
+//     $("#imp_template").css("height","0px");
+
+//   $('#export_imp').click (event) ->
+//     $("#exp_template").css("height",$("#exp_template ul li").length*32+"px")  
+//     event.stopPropagation()
+//   $(document).on 'click', ':not(#export_imp)', ->
+//     $("#exp_template").css("height","0px");
+  
+
+
+
+
+    //导入模板按钮 点选效果
+    $('#export_imp').click(function (event) {
+        var hei=$("#exp_template ul li").length*32+"px";
+        $("#exp_template").css("height",hei);        
+        event.stopPropagation();
+    });
+    $(document).on('click',':not(#export_imp)',function(){
+        $("#exp_template").css("height","0px");
+    })
 
     //巡检模式 点选效果
     $("#map_path_option li").click(function(e){
@@ -430,7 +454,7 @@ $(document).ready(function () {
         })
 })
 
-    //巡检模式 点选效果
+    //kuang3标签测点 点选效果
     $("#spot_test_option li").click(function(e){
         var value=$(this).attr("data-chose");
         $("#spot_test_select").text(value);

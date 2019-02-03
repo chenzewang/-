@@ -403,8 +403,9 @@ body{
     position: relative;
     display: inline-block;
     width: 110px;
-    /* height: 30px; */
-    overflow-x:hidden;
+    height: 30px;
+    line-height: 30px;
+    overflow:hidden;
 }
 #map2 td>div>span::-webkit-scrollbar {
     display: none;
@@ -425,14 +426,14 @@ zoom:0.8
 }
 .jiantou_right{
     left: 94px;
-    top: -67px;
+    top: -54px;
     height: 22px;
     width: 55px;
     background-image: url(../../img/10-2-jiantou.png);
 }
 .jiantou_left{
     left: -94px;
-    top: -67px;
+    top: -54px;
     height: 22px;
     width: 55px;
     background-image: url(../../img/2-2-jiantou2.png);
@@ -480,7 +481,7 @@ zoom:0.8
     background-image: url(../../img/10-2-ziti_shengchengxunjianbaogao_kuagn.png);
     background-repeat: no-repeat;
     color:white;  
-    margin-left: 30%;
+    margin-left: 40%;
     margin-top: 5px;
     width: 154px;;
     height: 34px;    
@@ -492,7 +493,16 @@ zoom:0.8
     font-size: 17px;
     top:-21px;
     z-index: -1;
-
+    /* display: inline-block; */
+}
+#record2_title_time{
+    color: white;
+    position: relative;
+    font-size: 17px;
+    top: -44px;
+    left: 340px;
+    z-index: -1;
+    /* display: inline-block; */
 }
 
 
@@ -593,14 +603,14 @@ zoom:0.8
 #record3_title_page{
     display: inline-block;
     position: relative; 
-    left: 740px;
+    left: 670px;
     color: white;
     top:6px;
 }
 #record3_title_record{
     display: inline-block;
     position: relative;
-    left: 760px; 
+    left: 690px; 
     color: white;
     top: 6px; 
 }

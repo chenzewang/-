@@ -1190,7 +1190,7 @@ function creatMap(){  //生成路线框图
         for(var j=1;j<=lie;j++)
         {
             tab+="<td><div  style=\" position:relative;     \" >\
-            <span class=\"spot_name spot_span\">xxxx</span> <span class=\"jiantou\"></span><span class=\"spot_time spot_span\">2018.11.27</span>\
+            <span class=\"spot_name spot_span\">按时打算大所大所大所大所大所大所大所大所大所多</span> <span class=\"jiantou\"></span><span class=\"spot_time spot_span\">2018.11.27</span>\
             </div></td>";
         }
         tab+="</tr>";
@@ -1213,6 +1213,7 @@ function creatMap(){  //生成路线框图
     jiantou(num);
 
     for(var i=0;i<objMap.spotnum;i++){
+        $("spot_name").eq(i).text(objMap.spots[i].name);
         if(objMap.spots[i].checked==true){
             $("#map2 td").eq(i).addClass("check")
         }
@@ -1230,7 +1231,7 @@ function jiantou(num){  //为路线框图添加箭头
             $("#map2 tr:eq("+i+") .jiantou").removeClass("jiantou_down jiantou_left jiantou_right");
             $("#map2 tr:eq("+i+") .jiantou").addClass("jiantou_left");
         }
-        $("#map2 tr:eq("+i+") .jiantou").eq(7).css({"left":"0px","top":"-23px"});
+        $("#map2 tr:eq("+i+") .jiantou").eq(7).css({"left":"0px","top":"-15px"});
         $("#map2 tr:eq("+i+") .jiantou").eq(7).removeClass("jiantou_down jiantou_left jiantou_right");
         $("#map2 tr:eq("+i+") .jiantou").eq(7).addClass("jiantou_down");
     }
