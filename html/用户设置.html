@@ -6,79 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>用户设置</title>
     <link rel="stylesheet" type="text/css" href="css/用户设置.css" />
-    
+
 </head>
 <body>
-    <div id="background">
+    <div id="background" class="panel">
         <div id="message">
             <p id="current">当前：<span>某某某</span></p>
             <div id="photo" class="photo">
                 <img src="../img/transpan.png"><span>照片</span>
-                <button>上传</button>
+                <button class="btn btn-primary">上传</button>
             </div>
             <div id="detail" class="detail">
-                <div><span>姓名 </span><input type="text"><br></div>
-                <div><span>工号 </span><input type="text"><br></div>
-                <div><span>专业 </span><input type="text"><br></div>
+                <div><span>姓名 </span><input type="text"  class="form-control"><br></div>
+                <div><span>工号 </span><input type="text"  class="form-control"><br></div>
+                <div><span>专业 </span><input type="text"  class="form-control"><br></div>
                 <div id="detail_power">
                     <span>权限 </span>
-                    <div id="detail_power_select" class="detail_power_view">
-                        <span id="user_right" value="">用户</span>
-                    </div>
+                    <select name="" id="detail_power_select" class="form-control">
+                        <option value="0">用户</option>
+                        <option value="1">管理员</option>
+                    </select>
                 </div>
-                <div><span>密码 </span><input id="user_password" type="password"><br></div>
+                <div><span>密码 </span><input  class="form-control" id="user_password" type="password"><br></div>
             </div>
         </div>
-
+        <hr>    
 
         <div id="operate">
-            <button onclick="chakan()">查看</button>
-            <button>批量引入</button>
-            <button>提交</button>
+            <button onclick="chakan()" class="btn btn-primary">查看</button>
+            <button class="btn btn-primary">批量引入</button>
+            <button class="btn btn-primary"> 提交</button>
         </div>
     </div>
 
 
-
     
     <div id="record">
-        <button id="add">添加</button>
-        <div id="add_div">
-            <span class="pop-close"></span>
+        <button id="add" class="btn btn-primary" data-toggle="modal" data-target="#add_div">添加</button>
+        <div id="add_div" class="panel modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <span class="pop-close" data-dismiss="modal" aria-hidden="true"></span>
             <div id="add_photo" class="photo">
                     <img src="../img/transpan.png"><span>照片</span>
-                    <button>上传</button>
+                    <button class="btn btn-primary">上传</button>
                     <input type="file" id="add_file_input" name="photo" onchange="openphoto(this)">
             </div>
             <div id="add_detail" class="detail">
-                <div><span>用户名 </span><input type="text"><br></div>                
-                <div><span>姓名 </span><input type="text"><br></div>
-                <div><span>工号 </span><input type="text"><br></div>
-                <div><span>专业 </span><input type="text"><br></div>
+                <div><span>用户名 </span><input type="text" class="form-control"><br></div>                
+                <div><span>姓名 </span><input type="text"  class="form-control"><br></div>
+                <div><span>工号 </span><input type="text"  class="form-control"><br></div>
+                <div><span>专业 </span><input type="text"  class="form-control"><br></div>
                 <div><span>权限 </span>
-                    <div id="add_select" >
-                        <span value="0">用户</span>
-                    </div>
-
-                    <ul id="add_option" >
-                        <li data-chose="用户" onclick="addPowerClick(this)" value="0"><span> 用户</span></li>
-                        <li data-chose="管理员" onclick="addPowerClick(this)" value="1"><span> 管理员</span></li>
-                    </ul>
+                    <select id="add_select" calss="form-control">
+                        <option value="0">用户</option>
+                        <option value="1">管理员</option>
+                    </select>
 
                 </div>
-                <div><span>密码 </span><input type="text"><br></div>     
+                <div><span>密码 </span><input type="text" class="form-control"><br></div>     
             </div>
-            <button id="add_tijiao">提交</button>               
+            <button id="add_tijiao" class="btn btn-primary">提交</button>               
         </div>
         <div id="graph"></div>
         <div id="operate2">
-            <button>返回</button>
-            <button>删除</button>
-            <button>导入</button>
-            <button>导出</button>
-            <button>模板</button>
-            <input type="text" placeholder="请输入姓名或工号">
+            <button class="btn btn-primary">返回</button>
+            <button class="btn btn-warning">删除</button>
+            <button class="btn btn-primary">导入</button>
+            <button class="btn btn-primary">导出</button>
+            <button class="btn btn-primary">模板</button>
+            <input class="form-control" type="text" placeholder="请输入姓名或工号">
         </div>
+
         <div id="chakan_img" onclick="chakan_img()">
             <img src="">
         </div>
@@ -87,8 +84,9 @@
         <li data-chose="用户" onclick="detailPowerClick(this)" value="0"><span> 用户</span></li>
         <li data-chose="管理员" onclick="detailPowerClick(this)" value="1"><span> 管理员</span></li>
     </ul>
-    <script src="js/jquery-1.8.0.min.js"></script>
-    <style src="css/用户设置.css"></style>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="js/用户设置.js"></script>
 </body>
 </html>

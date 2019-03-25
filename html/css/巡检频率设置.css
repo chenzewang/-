@@ -1,7 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: "宋体";
+    /* font-family: "宋体"; */
     outline:none
     
 }
@@ -9,26 +9,31 @@ body{
     position: relative;
     top:100px;
     left:100px;
+    background-color: rgb(240, 240, 240) !important;
 }
 #main{
-    background-image: url(../../img/5-1-kuang.png);
-    width: 806px;
-    height: 278px;
+    /* background-image: url(../../img/5-1-kuang.png); */
+    background-color: rgba(255, 255, 255,0.7);
+    width: 920px;
+    height: 320px;
     display: flex;
     justify-content:center ;
-    align-content:center
+    align-content:center;
+    box-shadow: 1px 3px 3px 1px rgba(0, 0, 0,0.1);
+
 }
 #main>div{
     width: 200px;
     /* height: 200px; */
     margin:50px 20px 0 35px; 
-    color: white;
+    /* color: white; */
 }
-p {
+#main p {
     text-align: center;
+    margin: 0 ;
 }
 button:active{
-    transform: translateY(2px)
+    transform: translateY(1px)
 }
 
 
@@ -53,10 +58,9 @@ button:active{
     width: 117px;
     height: 20px;
     margin: 0 auto;
-    border: 1px solid rgb(20, 221, 231);
-    border-radius: 15px;
-    background-color: rgba(26,38,45,0.3);
-    color: white;
+    background-color: #fff;
+    border: 1px solid #ccc; 
+    border-radius: 4px;    
     text-align: center;
 }
 
@@ -68,14 +72,13 @@ button:active{
 
 
 .add_box{   
-    width: 140px;
-    height: 100px;
-    border: 1px solid rgba(20, 221, 231,0.4);
-    border-right: 0px;
-    border-radius: 15px;
-    background-color: rgba(26,38,45,0.3);
+    width: 190px;
+    height: 140px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     margin: 0 auto;
     overflow-y: hidden;   
+    margin-bottom: 10px !important;
 }
 .add_box ul::-webkit-scrollbar {
     width: 5px;    
@@ -84,14 +87,14 @@ button:active{
 .add_box ul::-webkit-scrollbar-thumb {
     background-color: rgba(193, 193, 193,0.7);
     background-repeat: no-repeat;
-    }
+}
 .add_box ul::-webkit-scrollbar-track {
-        background: rgba(20, 221, 231,0.5);
-    }
+    background-color: rgba(240, 240, 240, 1);
+}
 .add_box ul{
     width: 100%;
     height: 100%;
-    overflow-y: scroll;   
+    overflow-y: auto;   
 }
 .add_box li{
     width: 100%;
@@ -101,7 +104,7 @@ button:active{
     overflow: hidden;
 }
 .add_box li:hover{
-    background-color: rgba(20, 221, 231,0.2)
+    background-color: rgba(61 , 117, 181, 0.2) ;
 }
 .address p{
     margin-bottom: 10px;
@@ -121,21 +124,21 @@ button:active{
 .add_input{
     display: flex;
     flex-wrap:  wrap;
-    width:140px;
-    margin: 5px auto;
-    color: white;
+    width:90%;
+    margin: 10px auto;
 }
 .add_input input{
-    color: white;
-    border: 1px solid rgba(20, 221, 231,0.4);
-    border-radius: 6px;
-    background-color: rgba(26,38,45,0.6);
+    height: 25px;
+    background-color: #fff;
+    border: 1px solid #ccc; 
+    border-radius: 4px;    
 }
 .add_input input:nth-child(1){
     width: 35%;
 }
 .add_input input:nth-child(2){
     width: 60%;
+    transform: translateX(7px)
 }
 .add_input span{
     font-size: 8px
@@ -143,26 +146,22 @@ button:active{
 
 
 .address button{
-    height: 22px;
-    width: 40px;
-    border: 1px solid rgb(20, 221, 231);
-    border-radius: 5px;
-    background-color: rgba(26,38,45,0.5);
-    cursor: pointer;
-    color: white;
-    margin-left: 40px;
+    height: 26px;
+    width: 50px;
+    margin-left: 31px;
+    padding: 0px !important;
 }
 
 #set{
-    height: 30px;
+    /* height: 30px;
     width: 100px;
     border: 2px solid rgb(20, 221, 231);
     border-radius: 15px;
     background-color: rgba(26,38,45,0.8);
     cursor: pointer;
-    color: white;
+    color: white; */
     position: absolute;
-    left: 350px;
+    left: 383px;
     top:350px;
 }
 
@@ -170,10 +169,13 @@ button:active{
 
 .normal{
     background-color: transparent;
+    padding: 0px !important;
 }
 .select{
-    background-color: rgba(20, 221, 231,0.5)!important;
+    background-color: rgba(61 , 117, 181, 0.5) !important;
+    color: white;
 }
+
 
 
 
@@ -187,8 +189,8 @@ button:active{
     height: 164px;
     border: 1px solid #dddddd;
     border-radius: 2px;
-    background-color:rgba(20, 221, 231,0.1);
-    border: 1px solid rgba(20, 221, 231,0.1);
+    background-color:rgba(0, 0, 0,0.4);
+    border: 1px solid rgba(20, 221, 231,0.4);
 }
 
 .yearHsDate,
@@ -213,7 +215,7 @@ button:active{
     background-repeat: no-repeat;
     }
 .hourHsDate::-webkit-scrollbar-track {
-        background: rgba(20, 221, 231,0.5);
+        background: rgba(240, 240, 240,1);
     }
 .minuteHsDate::-webkit-scrollbar {
     width: 8px;    
@@ -223,8 +225,8 @@ button:active{
     background-repeat: no-repeat;
     }
 .minuteHsDate::-webkit-scrollbar-track {
-        background: rgba(20, 221, 231,0.5);
-    }
+    background: rgba(240, 240, 240,1);
+}
 .hs_year,
 .hs_day,
 .hs_hour,
@@ -245,7 +247,7 @@ button:active{
 
 .hs_check,
 .hs_check :hover{
-    background-color: #3ab2d0!important;
+    background-color: rgba(193, 193, 193,0.7)!important;
     color: #ffffff!important;
 }
 

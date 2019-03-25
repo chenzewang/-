@@ -7,10 +7,11 @@ function addEvent() {
 addEvent();
 function liClick(x) {
     //按巡检路线查找的点选效果
-    for (var i = 0; i < $("#map li").length; i++) {
-        document.getElementById("map").getElementsByTagName("li")[i].setAttribute("style", "color:white");
-    }
-    x.setAttribute("style", "color:orange");
+    // for (var i = 0; i < $("#map li").length; i++) {
+        // document.getElementById("map").getElementsByTagName("li")[i].setAttribute("style", "color:white");
+        $("#map li").removeClass("select")
+    // }
+    $(x).addClass("select");
 }
 function breakMessage() {
     document.getElementById("breakMessage").setAttribute("style", "display:block");
@@ -1027,10 +1028,10 @@ function creatGraph1(ob) {
 
     var lie = 5;
     var hang = ob.length;
-    var tab = "<table >\n<thead><tr><th>\u5E8F\u53F7</th> <th>\u65F6\u95F4</th> <th>\u5DE1\u68C0\u4EBA</th> <th>\u5F02\u5E38\u6458\u8981</th> <th>\u64CD\u4F5C</th></tr></thead>\n ";
+    var tab = "<table class=\"table \" >\n<thead><tr><th>\u5E8F\u53F7</th> <th>\u65F6\u95F4</th> <th>\u5DE1\u68C0\u4EBA</th> <th>\u5F02\u5E38\u6458\u8981</th> <th>\u64CD\u4F5C</th></tr></thead>\n ";
     tab += "</table>";
     
-    tab += "<div id='graph1_table2_box'><table >\n";
+    tab += "<div id='graph1_table2_box'><table class=\"table table-hover table-striped\">\n";
 
     for (var i = 0; i < hang; i++) {
         tab += "<tr>";
@@ -1038,7 +1039,7 @@ function creatGraph1(ob) {
         tab += "<td>" + ob[i].time + "</td>";
         tab += "<td>" + ob[i].man + "</td>";
         tab += "<td>" + ob[i].digest + "</td>";
-        tab += "<td><button onclick=\"chakan2()\">\u67E5\u770B\u8BE6\u60C5</button></td>";
+        tab += "<td><button class=\" btn\" onclick=\"chakan2()\">\u67E5\u770B\u8BE6\u60C5</button></td>";
         tab += "</tr>";
     }
     
@@ -1056,7 +1057,7 @@ function creatGraph2(spots) {
     var text = "";
     for (var j = 0; j < spots.length; j++) {
         
-        var tab = "<table >\n<thead><tr><th> <span>" + spots[j].name + "</span></th><th></th></tr></thead>"; //标题(spot名)
+        var tab = "<table  class=\" table table-bordered table-hover table-striped\" >\n<thead><tr><th> <span>" + spots[j].name + "</span></th><th></th></tr></thead>"; //标题(spot名)
 
         for (var i = 0; i < spots[j].items.length; i++) {
             tab += "<tr>";
@@ -1095,7 +1096,7 @@ function creatGraph3(ob) {
 
     var lie = 5;
     var hang = ob.length;
-    var tab = "<table > \n                <thead> <th>\u5DE1\u68C0\u65F6\u95F4</th> <th>\u5DE1\u68C0\u8DEF\u7EBF</th> <th>\u5DE1\u68C0\u4EBA</th> <th>\u8BE6\u60C5</th></tr></thead>\n                ";
+    var tab = "<table class=\" table  table-hover table-striped\"> \n<thead> <th>\u5DE1\u68C0\u65F6\u95F4</th> <th>\u5DE1\u68C0\u8DEF\u7EBF</th> <th>\u5DE1\u68C0\u4EBA</th> <th>\u8BE6\u60C5</th></tr></thead>\n                ";
     for (var i = 0; i < hang; i++) {
         tab += "<tr>";
         tab += "<td>" + ob[i].des + "</td>";
@@ -1116,13 +1117,13 @@ function creatGraph4(ob) {
 
     var lie = 7;
     var hang = ob.length-1;
-    var tab = "<table > \n <thead><tr><th>\u65F6\u95F4</th> <th>\u8BBE\u5907</th> <th>\u8BE6\u60C5</th> <th>\u67E5\u770B\u8BE6\u60C5</th> </tr></thead>\n            ";
+    var tab = "<table class=\" table table-hover table-striped \"> \n <thead><tr><th>\u65F6\u95F4</th> <th>\u8BBE\u5907</th> <th>\u8BE6\u60C5</th> <th>\u67E5\u770B\u8BE6\u60C5</th> </tr></thead>\n            ";
     for (var i = 0; i < hang-1; i++) {
         tab += "<tr>";
         tab += "<td>" + ob[i].time2 + "</td>";
         tab += "<td>" + ob[i].project + "</td>";
         tab += "<td>" + ob[i].describe + "</td>";
-        tab += "<td><button onclick=\"chakan4()\">" + ob[i].breakMessage + "</button></td>";
+        tab += "<td><button class=\" btn\" onclick=\"chakan4()\">" + ob[i].breakMessage + "</button></td>";
         tab += "</tr>";
     }
     tab += "</table>";
@@ -1133,8 +1134,13 @@ creatGraph4(obj);
 function creatGraph5(ob) {
 
     var hang = ob.length;
-    var tab = "<table > \n   <thead><tr><th>\u5DE1\u68C0\u5185\u5BB9</th> <th>\u5DE1\u68C0\u503C</th></tr></thead>\n  ";
-    tab+="</table> <div id='graph5_table2_box'><table>"
+    var tab = `<table class="table">
+                <thead><tr>
+                <th>\u5DE1\u68C0\u5185\u5BB9</th> 
+                <th>\u5DE1\u68C0\u503C</th></tr>
+                </thead> </table> `
+    
+    tab+=`<div id='graph5_table2_box'><table class=" table  table-bordered table-hover table-striped">`
     for (var i = 0; i < hang; i++) {
         tab += "<tr>";
         tab += "<td>" + ob[i].content + "</td>";
@@ -1144,21 +1150,21 @@ function creatGraph5(ob) {
             if (ob[i].value == false) {
                 tab += "<td >\u901A\u8FC7</td>";
             } else {
-                tab += "\n                                <td>\n                                    <div class=\"value value_left \">\u5DE1\u68C0\u503C\uFF1A " + ob[i].data + "</div>\n                                    <div class=\"value value_right\">\u6807\u51C6\u503C\uFF1A" + ob[i].st_max + " \u8B66\u6212\u503C\uFF1A" + ob[i].al_max + "</div>\n                                </td>\n                            ";
+                tab += "\n<td>\n<div class=\"value value_left \">\u5DE1\u68C0\u503C\uFF1A " + ob[i].data + "</div>\n                                    <div class=\"value value_right\">\u6807\u51C6\u503C\uFF1A" + ob[i].st_max + " \u8B66\u6212\u503C\uFF1A" + ob[i].al_max + "</div>\n                                </td>\n                            ";
             }
         } else {
 
             if (ob[i].value == false) {
-                tab += "<td class=\"no_pass\">\u672A\u901A\u8FC7</td>";
+                tab += "<td class=\"no_pass warning\">\u672A\u901A\u8FC7</td>";
             } else {
-                tab += "\n                                <td>\n                                    <div class=\"value value_left no_pass\">\u5DE1\u68C0\u503C\uFF1A " + ob[i].data + "</div>\n                                    <div class=\"value value_right\">\u6807\u51C6\u503C\uFF1A" + ob[i].st_max + " \u8B66\u6212\u503C\uFF1A" + ob[i].al_max + "</div>\n                                </td>\n                            ";
+                tab += "\n                                <td>\n                                    <div class=\"value value_left no_pass\">\u5DE1\u68C0\u503C\uFF1A " + ob[i].data + "</div>\n<div class=\"value value_right\">\u6807\u51C6\u503C\uFF1A" + ob[i].st_max + " \u8B66\u6212\u503C\uFF1A" + ob[i].al_max + "</div>\n                                </td>\n                            ";
             }
         }
     }
     tab += "</div></table>";
     document.getElementById("graph5").innerHTML = tab;
 }
-creatGraph5(objMap.spots[3].items);
+creatGraph5(objMap.spots[1].items);
 
 function chakan4() {
     document.getElementById("record1").setAttribute("style", "display:none");
@@ -1166,9 +1172,6 @@ function chakan4() {
     document.getElementById("record5").setAttribute("style", "display:block");
 }
 
-
-
-// scrollsY(".scrollbox");
 
 
 
@@ -1231,7 +1234,7 @@ function jiantou(num){  //为路线框图添加箭头
             $("#map2 tr:eq("+i+") .jiantou").removeClass("jiantou_down jiantou_left jiantou_right");
             $("#map2 tr:eq("+i+") .jiantou").addClass("jiantou_left");
         }
-        $("#map2 tr:eq("+i+") .jiantou").eq(7).css({"left":"0px","top":"-15px"});
+        $("#map2 tr:eq("+i+") .jiantou").eq(7).css({"left":"0px","top":"-20px"});
         $("#map2 tr:eq("+i+") .jiantou").eq(7).removeClass("jiantou_down jiantou_left jiantou_right");
         $("#map2 tr:eq("+i+") .jiantou").eq(7).addClass("jiantou_down");
     }

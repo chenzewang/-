@@ -95,8 +95,16 @@ function creatMap(ob) {
 
     var lie = 6;
     var hang = ob.length;
-    var tab = "<table id=\"map\"> \n <thead><tr> <th>\u5DE1\u68C0\u533A\u57DF\u540D\u79F0</th> <th>mac</th> <th>\u5220\u9664</th> <th>\u6FC0\u6D3B</th> </tr></thead>\n            ";
-        tab+="</table><div id='graph1_tab2_box'><table>";
+    var tab = `<table id=\"map\" class=\"table\"> \n 
+                    <thead>
+                        <tr> 
+                            <th>\u5DE1\u68C0\u533A\u57DF\u540D\u79F0</th> 
+                            <th>mac</th> 
+                            <th>\u5220\u9664</th> 
+                            <th>\u6FC0\u6D3B</th> 
+                        </tr>
+                    </thead> `;
+        tab+="</table><div id='graph1_tab2_box'><table class=\"table table-hover table-striped	\">";
         
     
     for (var i = 0; i < hang; i++) {

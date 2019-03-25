@@ -2,69 +2,112 @@
     margin: 0px;
     padding: 0px;
     list-style:none;
-    font-family: "宋体";
     outline: none;
 }
+html {
+    height: 100%;
+    width: 60%;
+    min-width:1300px ;
+    margin: 0 auto;
+    /* transform: scale(1.2); */
+    transform-origin: center top;
+}
 button:active{
-    transform: translateY(2px)
+    transform: translateY(1px)
 }
 #main{
-    background-image: url(../img/Beijing.png);
-    width: 1200px;
-    height: 768px;
+    min-width: 1300px;
+    height: 100%;
     position: relative;
-    margin:  0 auto;
 }
-#menu{
-    position: relative;
-    left: 16px;
-    top:63px;
-    background-image: url(../img/Zuoce.png);
-    background-repeat:no-repeat;
-    width: 140px;
-    height: 700px;
+body{
+    height: 100%;
+}
+#title{
+    width: 103%;
+    height: 65px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 6px 10px 2px rgba(0,0,0,.1)
+
+}   
+#logo{
+    float: left;
+    height: 100%;
+    line-height: 100%;
+    font-size: 25px;
+    font-family: "宋体";
+
+}
+#user  {
+    float: right;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+#current{
+    color:rgb(119,119,119);
+    display:inline-block;
+    font-size: 20px;
+}
+#zhuxiao{
     display: inline-block;
+    border: 0px;
+    background-color: transparent;
+    cursor: pointer;
 }
+#zhuxiao img{
+    width: 40px;
+}
+
+
+
+#menu{
+    float: left;
+    margin-left: 21px;
+    background-color: rgba(39, 39, 39,0.95);
+    color: rgb(157,157,157);
+    width: 10%;
+    min-width: 140px;
+    height: 700px;
+    border-radius: 4px 4px 10px 10px;
+}
+
 #menu a {
-    color: white;
-    text-align: center;
     text-decoration:none; 
-    font-size: 18px;    
-    line-height: 37px;
+    font-size: 14px;    
+    display: block;
+    width: 100%;
+    height: 35px;
+}
+#menu li{
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    transition: left 0.5s;
+    position: relative;
 }
 #menu li:hover{
     cursor:pointer; 
-    margin-left:-4px;
-    background-image: url(../img/ZuoCe_Dianji_kuang2.png);
-    opacity: 0.9; 
-}
-#menu li:active{
-    background-color: rgba(47, 89, 117, 0.10);
-    box-shadow: 0 5px rgba(47, 89, 117, 0.10);
-    transform: translateY(4px);
-  }
+    left: 5px;
+    color: rgba(255, 255, 255,0.7)
 
+}
 .looking{
-    background-image: url(../img/ZuoCe_Dianji_kuang2.png);
-    background-repeat: no-repeat;
-    margin-left:-4px; 
+    left:6px; 
+    color: rgb(255, 255, 255) !important;
+}
+.menu_li_logo{
+    width: 18px;
+    transform: translateY(4px)
 }
 #function{
-    position: absolute;
-    top:39px;
+    /* position: absolute;
+    top:39px; */
+    margin-top: 40px;
 }
 #fucntion ul{
     max-height: 300px;
-}
-#function li{
-    width: 145px;
-    height: 37px;
-}
-
-#function a{
-    display: block;
-    width: 145px;
-    height: 37px;
 }
 
 #check{
@@ -74,101 +117,72 @@ button:active{
 #check ul {
     max-height: 420px;
 }
-#check li{
-    width: 145px;
-    height: 37px;
-}
-#check a{
-    display: block;
-    width: 145px;
-    height: 37px;
-}
-
-
 
 #taskbar{
-    width: 974px;
+    padding-left: 7px;
+    width: 87%;
+    transform: translateX(10px)!important;
     height: 40px;
-    position: relative;
-    left: 57px;
-    top: -591px;
+    background-color:rgba(39, 39, 39,0.1);
+    /* background-color: rgb(240, 240, 240); */
+    box-shadow: 0px 4px 4px 1px rgba(0,0,0,.1);
     display: inline-block;
 }
-#zhuxiao{
-    display: inline-block;
-    border: 2px solid rgb(20,221,231);
-    background-color: rgba(29, 47, 60, 0.8);
-    border-radius: 15px;
-    color: white;
-    text-align: center;
-    height: 30px;
-    width: 50px;
-    cursor: pointer;
-    font-size: 15px;
-    line-height: 20px;
-    position: absolute;
-    right: 4px;
-    top:5px;
-}
+
 #page{
-    display: inline-block;
-    position: absolute;
-    top: 109px;
-    left: 179px;
-    width: 1000px;
-    height: 630px;
+    width: 87%;
+    float: left;
+    margin-top: -4px;
+    transform: translateX(10px)!important;
+    background-color: rgb(240, 240, 240) ;
+    box-shadow: 0px 4px 4px 1px rgba(0,0,0,.1);
+    height: 658px;
 }
 #page >div{
-    height: 630px !important;
-}
-#current{
-    color:white;
-    display:inline-block;
-    font-size: 20px;
-    line-height: 40px;
-    position: absolute;
-    right: 27px;
-    top: -40px;
+    height: 658px ;
 }
 
 
 #myTab{
     display: inline-block;
     height: 40px;
-    width: 910px;
+    width: 100%;
 }
 #myTab li{
     float: left;
-    color: white;
+    background-color:rgba(39, 39, 39,0.1);
+    
     height: 40px;
     line-height: 36px;
-    border: 1px solid gray;
+    border: 0px;
     border-radius: 5px;
+    cursor: default;
 }
-#myTab li:hover{
-    background-color: rgba(20,221,231,0.1)
-}
+/* #myTab li:hover{
+    background-color: rgba(119,119,119,0,7);
+} */
 #myTab a{
     max-width: 115px;
 }
-#myTab li:active{
+/* #myTab li:active{
     transform: translateY(1px)
-}
-
+} */
 
 #myTab .active{
-    border: 1px solid rgb(20,221,231) !important;
-    background-color: rgb(29, 47, 60)
+    background-color: rgba(240,240,240,1)   ;
+    border-radius: 5px 5px 0px 0px;
+    border: 0px;
+    transform: translateY(1px)
 }
 
 .tab-content > div{
     display: none;
-  }
-  .tab-content > div.active{
+}
+.tab-content > div.active{
     display: block;
-  }
+}
 
-  #myTab > li > a {
+#myTab > li > a {
     text-decoration:none; 
     position: relative;
     display: inline-block;
@@ -177,9 +191,8 @@ button:active{
     background: transparent;
     line-height: 40px;
     border: 0;
-    color: white;
-  }
-  #myTab i{
+}
+#myTab i{
     float: right;
     cursor: pointer;
     margin-right: 4px;
@@ -190,4 +203,4 @@ button:active{
     cursor: pointer;
     z-index: 2;
     zoom: 0.5;
-  }
+}

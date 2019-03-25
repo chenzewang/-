@@ -2,21 +2,23 @@
     outline: none;
     font-family: '宋体'
 }
+body{
+    background-color: rgb(240, 240, 240) !important;
+
+}
 input{
     text-indent:5px;
 }
 button:active{
-    transform: translateY(2px);
+    transform: translateY(1px);
 }
 #register{
     margin: 60px auto;
-    height: 200px;
-    width: 300px;
+    height: 400px;
+    width: 320px;
     position: relative;
-    padding: 100px;
-    border: 2px solid rgb(11, 174, 231);
-    background-color: rgb(29, 61, 82);
-    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.3)
 }
 p{
     color: white;
@@ -24,32 +26,17 @@ p{
     text-align: center;
     color: black;
 }
-input{
-    background-color: rgba(29, 47, 60, 0.8);
-    color: white;
+#register p{
+    margin-bottom: 60px;
+}
+#register input{
     height: 35px;
     width: 200px;
-    font-size: 20px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(20, 221, 231);
-    border-image: initial;
-    border-radius: 20px;
-    display: block;
-    margin:15px;
-    margin-left: 50px;
+    margin: 15px auto;
 }
-button{
-    display: block;
-    border: 2px solid rgb(20,221,231);
-    background-color: rgba(29, 47, 60, 0.8);
-    border-radius: 15px;
-    color: white;
-    text-align: center;
+#register button{
+    display: block ;
     height: 30px;
     width: 100px;
-    cursor: pointer;
-    margin-left: 95px;
-    font-size: 15px;
-    line-height: 20px;
+    margin: 80px auto ;
 }

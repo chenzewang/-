@@ -6,15 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>巡检频率设置</title>
     <link rel="stylesheet" type="text/css" href="css/巡检频率设置.css" />
-    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
-    <div id="main">
+    <div id="main" class="panel">
             
-        <div id="time">
+        <div id="time" > 
             <div>
                 <p>间隔时间</p>
-                <input id="gap_time"><span>小时</span>
+                <input id="gap_time" ><span>小时</span>
             </div>
             <div>
                 <p>交换班时间</p>
@@ -35,45 +36,49 @@
             
         </div>
         
-        <div id="address1" class="address">
+        <div id="address1" class="address ">
             <p>一级报警通讯录</p>
-            <div class="add_box" >
+            <div class="add_box list-group " >
                 <ul>
                 </ul>
             </div>
             <div id="add_input1" class="add_input">
-                <input type="text" id="add_1_man" placeholder="人员">
-                <input type="text" id="add_1_num" placeholder="电话">
+                <input type="text" id="add_1_man" placeholder="人员:">
+                <input type="text" id="add_1_num" placeholder="电话:">
             </div>
-            <button onclick="add1()">添加</button><button onclick="del1()">删除</button>            
+            <button class="btn btn-primary" onclick="add1()">添加</button>
+            <button class="btn btn-warning" onclick="del1()">删除</button>            
         </div>
         
         <div id="address2" class="address">
             <p>二级级报警通讯录</p>
-            <div class="add_box">
+            <div class="add_box list-group ">
                 <ul >
                     
                 </ul>
             </div>        
             <div id="add_input2" class="add_input">
-                <input type="text" id="add_2_man" placeholder="人员">
-                <input type="number" id="add_2_num" placeholder="电话">
+                <input type="text" id="add_2_man" placeholder="人员:">
+                <input type="text" id="add_2_num" placeholder="电话:">
             </div>
-            <button onclick="add2()">添加</button><button onclick="del2()">删除</button>
+            <button class="btn btn-primary" onclick="add2()">添加</button>
+            <button class="btn btn-warning" onclick="del2()">删除</button>  
         
         
         </div>
 
-        <button id="set" onclick="set()">设置</button>
-        
+        <button id="set"  class="btn btn-primary" onclick="set()">设置</button>
+                
     </div>
 
 
 
-    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/jHsDate.js"></script>
-    <script src="js/scroll.min.js"></script>
+    <!-- <script src="js/scroll.min.js"></script> -->
     <script src="js/巡检频率设置.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     
 </body>
 </html>

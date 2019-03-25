@@ -361,24 +361,25 @@ var objMap = {
 };
 
 $(document).ready(function () {
-    $('.pop-close').click(function () {
-        $('#kuang3').hide();
-        $('.bgPop').hide();
-    });
+    // $('.pop-close').click(function () {
+    //     $('#kuang3').hide();
+    //     $('.bgPop').hide();
+    // });
     $('.pop-close2').click(function () {
         $('#record2').hide();
  
     });
     
-    $('#kuang2 td').click(function () {
-        document.getElementsByClassName("bgPop")[0].setAttribute("style","display:block")
-        $('#kuang3').show();
-    });
+    // $('#kuang2 td').click(function () {
+    //     document.getElementsByClassName("bgPop")[0].setAttribute("style","display:block")
+    //     $('#kuang3').show();
+    // });
     
+    //路线库展开
     $("#luxianku").on("click",".title",function(){
             var height;
             var li=$(this).next().find("li");
-            height = li.length * 30 +25+ "px";
+            height = li.length * 30 +25+12+ "px";
             if ($(this).next().css("height") === "0px") {
                 $(this).next().css("height", height);
             } else {
@@ -425,56 +426,62 @@ $(document).ready(function () {
     })
 
     //巡检模式 点选效果
-    $("#map_path_option li").click(function(e){
-        var value=$(this).attr("data-chose");
-        $("#map_path_select").text(value);
-    })
-    $("#map_path_select").click(function(e){
-        var height=$("#map_path_option li").length*28+2+"px"
-        $("#map_path_option").css("border","1px solid rgb(20,221,231)")
-        $("#map_path_option").css("height",height)
-    })
-    $(document).on('click',':not(#map_path_select)',function(){
-        $("#map_path_option").css("height","0px");
-        $("#map_path_option").css("border","0px")
-    })
-    $("#map_path_select").click(function(event){
-        event.stopPropagation();
-    });
+    // $("#map_path_option li").click(function(e){
+    //     var value=$(this).attr("data-chose");
+    //     $("#map_path_select").text(value);
+    // })
+    // $("#map_path_select").click(function(e){
+    //     var height=$("#map_path_option li").length*28+2+"px"
+    //     $("#map_path_option").css("border","1px solid rgb(20,221,231)")
+    //     $("#map_path_option").css("height",height)
+    // })
+    // $(document).on('click',':not(#map_path_select)',function(){
+    //     $("#map_path_option").css("height","0px");
+    //     $("#map_path_option").css("border","0px")
+    // })
+    // $("#map_path_select").click(function(event){
+    //     event.stopPropagation();
+    // });
 
 
     // 命名组 点选效果
-    $('#map_name_select').click(function () {
-        $("#map_name_option").css("display","block");
-        $("#map_name_option li").css("display","block");
-    });
-    $(document).on('click',':not(.map_name_view)',function(){
-            $("#map_name_option").css("display","none");
-            $("#map_name_option li").css("display","none");
-        })
-})
-
-    //kuang3标签测点 点选效果
-    $("#spot_test_option li").click(function(e){
-        var value=$(this).attr("data-chose");
-        $("#spot_test_select").text(value);
-    })
-    $("#spot_test_select").click(function(e){
-        var height=$("#spot_test_option li").length*28+2+"px"
-        $("#spot_test_option").css("border","1px solid rgb(20,221,231)")
-        $("#spot_test_option").css("height",height)
-    })
-    $("#kuang3").on('click',':not(#spot_test_select)',function(){
-        $("#spot_test_option").css("height","0px");
-        $("#spot_test_option").css("border","0px")
-    })
-    $("#spot_test_select").click(function(event){
-        event.stopPropagation();
-    });
+    // $('#map_name_select').click(function () {
+    //     $("#map_name_option").css("display","block");
+    //     $("#map_name_option li").css("display","block");
+    // });
+    // $(document).on('click',':not(.map_name_view)',function(){
+    //         $("#map_name_option").css("display","none");
+    //         $("#map_name_option li").css("display","none");
+    //     })
 
 
+})//end ready
 
+    // //kuang3标签测点 点选效果
+    // $("#spot_test_option li").click(function(e){
+    //     var value=$(this).attr("data-chose");
+    //     $("#spot_test_select").text(value);
+    // })
+    // $("#spot_test_select").click(function(e){
+    //     var height=$("#spot_test_option li").length*28+2+"px"
+    //     $("#spot_test_option").css("border","1px solid rgb(20,221,231)")
+    //     $("#spot_test_option").css("height",height)
+    // })
+    // $("#kuang3").on('click',':not(#spot_test_select)',function(){
+    //     $("#spot_test_option").css("height","0px");
+    //     $("#spot_test_option").css("border","0px")
+    // })
+    // $("#spot_test_select").click(function(event){
+    //     event.stopPropagation();
+    // });
 
+    function test(){
+        for(var i=0;i<5;i++){
+            $("#kuang2 td").eq(i).addClass("checked");
+        }
+    }
+
+    
 
     // function luxian_type_title() {   //.titlt高度
     //     for (var i = 0; i < $(".luxian_type").length; i++) {
@@ -486,27 +493,32 @@ $(document).ready(function () {
 
 
     //路线模式的点选效果及所选的type
-    var nowMapType=null;
-    function liClick(x){
-        for(var i=0;i<3;i++){
-            $("#map_select li").removeClass("looking");   
-            }
-        $(x).addClass("looking");
-        nowMapType=x;
+    // var nowMapType=null;
+    // function liClick(x){
+    //     for(var i=0;i<3;i++){
+    //         $("#map_select li").removeClass("looking");   
+    //         }
+    //     $(x).addClass("looking");
+    //     nowMapType=x;
+    // }
+    
+    // function mapNameclick(x){
+    //     for(var i=0;i<3;i++){
+    //         $("#map_name_option li").removeClass("looking");   
+    //         }
+    //     $(x).addClass("looking");
+    //     $("#map_name_select>span").eq(0).text( $(x).attr("data-chose") );
+    // }
+    
+    var nowPath// 从路线库中选的那条路线
+    function lxk_click(x){ //路线的点选效果+切换objMap
+        var lxku=document.getElementById("luxianku").getElementsByTagName("li");
+        for(var i=0;i<lxku.length;i++){
+            lxku[i].setAttribute('style',"background-color:transparent ;")
+        }
+        x.setAttribute('style',"background-color: rgba(61, 117, 181, 0.7);")
+        objMap=pathLibrary[x.getAttribute("data-id")]
     }
-    
-    function mapNameclick(x){
-        for(var i=0;i<3;i++){
-            $("#map_name_option li").removeClass("looking");   
-            }
-        $(x).addClass("looking");
-        $("#map_name_select>span").eq(0).text( $(x).attr("data-chose") );
-    }
-    
-    
-     
-
-       
     
     
     //按照巡检点数量生成不同路线框图
@@ -521,9 +533,7 @@ $(document).ready(function () {
         var lie;    if(num>=5) lie=5;else lie=num;
         var hang;   hang=Math.ceil(num/5);
         var tab="<table id=\"map\"> "
-        
     
-       
         for (i = 0; i < objMap.num; i++) {
             //为objMap添加spot
             var objSpot = {
@@ -538,7 +548,6 @@ $(document).ready(function () {
             objMap.spots.push(objSpot);
         }
 
-
         for(var i=1;i<=hang;i++)   //生成框
         {
             tab+="<tr>";
@@ -548,7 +557,7 @@ $(document).ready(function () {
                 }
             for(var j=1;j<=lie;j++)
             {
-                tab+="<td><div onclick=\"up(this)\" ><span></span><img class=\"jiantou\"></div></td>";
+                tab+="<td><div onclick=\"up(this)\" data-toggle=\"modal\" data-target=\"#kuang3\"><span></span><img class=\"jiantou\"></div></td>";
             }
             tab+="</tr>";
         }           
@@ -567,6 +576,9 @@ $(document).ready(function () {
             document.getElementById("map").getElementsByTagName("div")[h].setAttribute("data-spot-seq",h)//为框图添加序号
         }
 
+        //测试用
+        test();
+
         jiantou(num);
     }
     
@@ -577,11 +589,11 @@ $(document).ready(function () {
             }
             else if(Math.ceil((i+1)/5)%2==0 && i%10!=4 && i%10!=9 ){//偶数行
                 document.getElementsByClassName("jiantou")[i].setAttribute("src","../img/2-2-jiantou2.png")
-                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:-76px;top:-35px")
+                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:-74px;top:-41px")
             }  
             else if(i%10==4 || i%10==9){//指向下一行的交接箭头
                 document.getElementsByClassName("jiantou")[i].setAttribute("src","../img/2-2-jiantou5.png")
-                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:0px;top:-9px;width:14%")
+                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:0px;top:-15px;width:14%")
             }   
         }
         document.getElementsByClassName("jiantou")[num-1].setAttribute("src","");
@@ -597,9 +609,9 @@ $(document).ready(function () {
             input[j].value="";
         }
         //书写框出现，遮掩层出现
-        document.getElementById("kuang3").setAttribute("style","display:block");
-        document.getElementsByClassName("bgPop")[0].setAttribute("style","display:block");
-        
+        // document.getElementById("kuang3").setAttribute("style","display:block");
+        // document.getElementsByClassName("bgPop")[0].setAttribute("style","display:block");
+
         kuangx=x;
         
         //把objMap的数据输入到书写框里
@@ -679,7 +691,13 @@ $(document).ready(function () {
         
         if(e.keyCode == 13){ 
             var name=$(".creat_new_type:eq(0) textarea:eq(0)").val();
-            var model = " \n<div class=\"luxian_type\">\n<div class=\"title\">" + name + "</div>\n<ul ></ul>\n</div>\n";
+            var model = `   <div class="luxian_type creat_new_type">
+                                <div class="title">        
+                                    <textarea onchange="editMapType(this)" class="form-control " >${name}</textarea>s  
+                                </div>
+                                <ul >
+                                </ul>
+                            </div>`;
             $(".luxian_type:last").before(model)
             $(".creat_new_type:eq(0) textarea:eq(0)").val("")          
         }

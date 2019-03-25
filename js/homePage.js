@@ -1,21 +1,20 @@
 function liClick(x){
     for(var i=0;i<11;i++){
       $("#menu li").removeClass("looking")
-        // document.getElementById('menu').getElementsByTagName("li")[i].classList.remove("looking");           
         }
     $(x).addClass("looking");
 }
+$("#menu li").attr("onclick","liClick(this)")
+// function addEvent(){
+//     for(var i=0;i<9;i++){
+//         document.getElementById('menu').getElementsByTagName("li")[i].setAttribute('onclick','liClick(this)')
 
-function addEvent(){
-    for(var i=0;i<10;i++){
-        document.getElementById('menu').getElementsByTagName("li")[i].setAttribute('onclick','liClick(this)')
+//     }
+// }
+// addEvent();
 
-    }
-}
-addEvent();
-
-
-
+// $("html").attr("transform",window.innerWidth)
+console.log(window.innerWidth/1080)
 
 
 

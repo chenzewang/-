@@ -6,23 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>异常事件统计</title>
     <link rel="stylesheet" type="text/css" href="css/异常事件统计.css" />
-    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    <div id="search">
+    <div id="search" class="panel">
         <div id="time">
             <span>按时间</span>
             <div> 
-                <input type="text" onclick="JTC.setday({startDay: '2010-01-01'})">
-                <span>-</span>
-                <input type="text" onclick="JTC.setday({startDay: '2018-10-08'})">  
+                <input type="date" >
+                <span>_</span>
+                <input type="date" >  
             </div>        
         </div>
         
         <div id="map">
             <span>路线</span>
             <div>
-                <select>
+                <select class="form-control">
                     <option value="锅炉路线">锅炉路线</option>
                     <option value="电气路线">电气路线</option>
                     <option value="汽机路线">汽机路线</option>
@@ -32,20 +32,19 @@
        
         <div id="man">
             <span>巡检人</span>
-            <input>
+            <input class="form-control">
         </div>
         <div id="project">
             <span>查询</span>
             <div>
-                <select>
+                <select class="form-control">
                     <option value="巡检次数">巡检次数</option>
                     <option value="异常次数">异常次数</option>
                 </select>
             </div>
         </div>       
-        <div id="button">
-            <button>查询</button>
-
+        <div id="button" >
+            <button class="btn btn-primary">查询</button>
         </div>
     
     
@@ -53,21 +52,38 @@
     
     <div id="background">
         <div id="graph1">
-          
-
+    
         </div>
     </div>
-    <div id="record2">
-        <div id="graph2">
-          
-
+    
+    <div id="record2"  class="record panel">
+        <div id="record2_scroll">
+            <div id="record2_map">
+        
+            </div>
+            <div id="record2_title"> 
+                <div>巡检记录表</div>
+                <button class="btn btn-primary">生成巡检报告</button>
+                <div id="record2_title_record">
+                    巡检 <span>12</span>点
+                    共   <span>14</span>点
+                </div>
+                <div id="record2_title_time">
+                    巡检时间 <span>xxxx</span>-<span>xx</span>-<span>xx</span> <span>xx</span>:<span>xx</span>:<span>xx</span>-<span>xx</span>:<span>xx</span>:<span>xx</span>
+                </div>
+            </div>
+            <div id="graph2">
+                
+            </div>
         </div>
-        <button >返回</button> 
+        
+        <button id="record2_back" class="btn btn-primary">返回</button> 
         
     </div>
 
-
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/异常事件统计.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script language="javascript" src="js/JTimer.js"></script>  
     <script>  
            JTC.setToday('2018/10/12');   //设置今天的日期

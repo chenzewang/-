@@ -6,28 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>历史巡检记录</title>
     <link rel="stylesheet" type="text/css" href="css/历史巡检记录.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
     <!-- 检索栏 -->
     <div id="search">
 
-        <div class="search_box search_box1" onclick="searchByEqu()">
+        <div class="search_box search_box1 panel" onclick="searchByEqu()">
             <div id="time">
                 <span>按时间查询</span>
-                <div><input type="text" onclick="JTC.setday({startDay: '2010-01-01'})"><span>-</span><input type="text" onclick="JTC.setday({startDay: '2018-10-08'})"></div>
+                <div><input type="date" ><span>-</span><input type="date"></div>
             </div>
             <div id="equ">
                 <span>按设备查询</span>
-                <input >
+                <input id="device">
             </div>
-            <button >查询</button>
+            <button class="btn btn-primary">查询</button>
         </div>
 
-        <div class="search_box search_box2" onclick="searchByOther()">  
+        <div class="search_box search_box2 panel" onclick="searchByOther()">  
             <div id="map">
                 <span>按巡检路线查询</span>
-                <div class="map_ul_box scrollbox scroll_content">
+                <div class="map_ul_box ">
                     <ul>
                         <li><a >锅炉路线</a></li>
                         <li><a >电气路线</a></li>
@@ -40,7 +42,7 @@
             </div>
             <div id="time">
                 <span>按时间查询</span>
-                <div> <input ><span>-</span><input>  
+                <div> <input type="date"><span>-</span><input type="date">  
                 </div>
             </div>
             <div id="man">
@@ -51,7 +53,7 @@
                 <span>按工号查询</span>
                 <input>
             </div>
-            <button >查询</button>
+            <button class="btn btn-primary">查询</button>
             
         </div>
     
@@ -62,7 +64,7 @@
     
 
     <!-- 按序号排列 -->
-    <div id="record1" class="record">
+    <div id="record1" class="record panel" >
         
         <div id="graph1">
            
@@ -70,14 +72,14 @@
     </div>
     
     <!-- 查看详情-->
-    <div id="record2"  class="record">
+    <div id="record2"  class="record panel">
         <div id="record2_scroll">
             <div id="record2_map">
         
             </div>
             <div id="record2_title"> 
                 <div>巡检记录表</div>
-                <button>生成巡检报告</button>
+                <button >生成巡检报告</button>
                 <div id="record2_title_record">
                     巡检 <span>12</span>点
                     共   <span>14</span>点
@@ -91,12 +93,12 @@
             </div>
         </div>
         
-        <button id="record2_back">返回</button> 
+        <button id="record2_back" class="record2_back btn btn-primary">返回</button> 
         
     </div>
     
     <!-- 按时间 人 工号 路线等查询 -->
-    <div id="record3" class="record">
+    <div id="record3" class="record panel">
         <div id="record3_title_page">
             页<span>xxx</span>/ <span>xxx</span>
         </div>
@@ -107,11 +109,11 @@
             
         </div>
         
-        <button >上页</button> <button>下页</button>
+        <button class="btn btn-primary">上页</button> <button class="btn btn-primary">下页</button>
     </div>
         
     <!-- 按设备查询 -->
-    <div id="record4" class="record">
+    <div id="record4" class="record panel">
         <div id="record4_title">
             <p>设备名称</p>
             <div id="record4_title_page">
@@ -124,29 +126,21 @@
         <div id="graph4">
            
         </div>
-        <button >上页</button> <button>下页</button>
+        <button class="btn btn-primary">上页</button> <button class="btn btn-primary">下页</button>
     </div>
 
     <!-- 故障信息 -->
-    <div id="record5" class="record">
+    <div id="record5" class="record panel">
         <div id="graph5">
                    
-            
-
-
-
         </div>
-        <button>返回</button>
+        <button class="btn btn-primary">返回</button>
     </div>
         
-<script src="js/jquery-1.8.0.min.js"></script>    
-<script src="js/scroll.min.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/历史巡检记录.js"></script>
-<script language="javascript" src="js/JTimer.js"></script>  
-   <script>  
-          JTC.setToday('2018/10/08');   //设置今天的日期
-          JTC.setDateFormat('yyyy/MM/dd');   //设置返回格式  
-          JTC.setDateRange('2010-01-01', '2019-01-01', true);  //设置可选日期范围  
-   </script>  
+<!-- <script language="javascript" src="js/JTimer.js"></script>   -->
+
 </body>
 </html>

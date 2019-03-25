@@ -6,229 +6,242 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>巡检路线设置</title>
     <link rel="stylesheet" type="text/css" href="css/巡检路线设置.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
 <body>
-        <div id="kuang1">
-            <div id="kuang1_input">
+    <div id="kuang1" class="panel">
+        <div id="kuang1_input">
 
-                <div id="map_name">
-                    <span>命名组</span>
-                    <div id="map_name_select" class="map_name_view">
-                        <span>选择1</span>
-                    </div>
-                </div>
-                <ul id="map_name_option" class="map_name_view">
-                        <li data-chose="选择1" onclick="mapNameclick(this)"><span> 选择1</span></li>
-                        <li data-chose="选择2" onclick="mapNameclick(this)"><span> 选择2</span></li>
-                        <li data-chose="选择3" onclick="mapNameclick(this)"><span> 选择3</span></li>
-                </ul>
-                <div id="map_num">  
-                    <span>巡检点数量</span>          
-                    <input type="number">
-                </div>
-
-                <div id="map_path">
-                    <p>巡检模式</p>
-                    <div id="map_path_select" class="map_path_select" >
-                        固定路线
-                    </div>
-                    <ul id="map_path_option">
-                        <li data-chose="固定路线" ><span> 固定路线</span></li>
-                        <li data-chose="自由路线" ><span> 自由路线</span></li>
-                        <li data-chose="用户自选" ><span> 用户自选</span></li>
-                    </ul>
-                </div>
-
-                <div id="map_desc"><span>路线描述</span><textarea></textarea></div>
-
-                <div id="map_name2"><span>路线名</span><input type="text" name="" id=""></div>
-
-                <div id="map_time"><span>创建时间</span><div>20180901</div></div>   
-
-                
-                <div id="map_operator"> <p>巡检人</p> <div>某某某</div></div>
-
+            <div id="map_name">
+                <span>命名组</span>
+                <select id="map_name_option" class="form-control">
+                        <option value="111">11111</option>
+                        <option value="222">22222</option>
+                        <option value="333">33333</option>
+                    </select>
+            </div>
+            <!-- <ul id="map_name_option" class="map_name_view">
+                    <li data-chose="选择1" onclick="mapNameclick(this)"><span> 选择1</span></li>
+                    <li data-chose="选择2" onclick="mapNameclick(this)"><span> 选择2</span></li>
+                    <li data-chose="选择3" onclick="mapNameclick(this)"><span> 选择3</span></li>
+            </ul> -->
+            <div id="map_num">  
+                <span>巡检点数量</span>          
+                <input type="number" class="form-control">
             </div>
 
-            <div id="kuang1_btn">
-                <button onclick="creatMap()">生成路线框图</button>
+            <div id="map_path">
+                <p>巡检模式</p>
+                <select id="map_path_select" class="form-control" >
+                    <option value="">11123</option>
+                    <option value="">123123</option>
+                    <option value="">123123</option>
+                </select>
+                <!-- <ul id="map_path_option">
+                    <li data-chose="固定路线" ><span> 固定路线</span></li>
+                    <li data-chose="自由路线" ><span> 自由路线</span></li>
+                    <li data-chose="用户自选" ><span> 用户自选</span></li>
+                </ul> -->
             </div>
 
-       
+            <div id="map_desc"><span>路线描述</span><textarea class="form-control"></textarea></div>
+
+            <div id="path_name"><span>路线名</span><input type="text" name="" id="" class="form-control"></div>
+
+            <div id="map_time"><span>创建时间</span><input value="20180909"  class="form-control" disabled="1"></div>   
+
+            <div id="map_drawup"> <p>巡检人</p> <input value="某某某" class="form-control" disabled="1"> </div>
+
         </div>
-        <div id="kuang2"></div>
-         
-          <div class="bgPop"></div> <!-- 框3遮掩层 -->
-        <div id="kuang3">
-                <label>巡检设备名称:<input id="spot_name"></label>
-                <label>巡检设备描述:<input id="spot_desc"></label>
-                <div id="spot_test">
-                    <span>标签测点:</span>
-                    <div id="spot_test_select" class="spot_test_select" >
-                        固定路线
-                    </div>
-                    <ul id="spot_test_option">
-                        <li data-chose="111111" ><span> 111111</span></li>
-                        <li data-chose="222222" ><span> 222222</span></li>
-                        <li data-chose="333333" ><span> 333333</span></li>
-                    </ul>
-                </div>
-                <div id="kuang3_items">
-                    <div class="new_item">
-                        <button onclick="addItem()">新建巡检条目</button>    
-                    </div>
-                    <div class="creat_new_item">
 
-                        <div id="kuang3_items_from">
+        <div id="kuang1_btn">
+            <button class="btn btn-primary" onclick="creatMap()">生成路线框图</button>
+        </div>
 
-                            <div>
-                                    <label>巡检条目内容</label>
-                                    <input >
-                            </div>
-                            <div>
-                                    <label>单位</label>
-                                    <input >
-                            </div><br>
-                            <div>
-                                    <label>最小标准值</label>
-                                    <input >
-                            </div>
-                            <div>
-                                    <label>最大标准值</label>
-                                    <input >
-                            </div><br>
-                            <div>
-                                    <label>最小警戒值</label>
-                                    <input >
-                            </div>
-                            <div>
-                                    <label>最大警戒值</label>
-                                    <input >
-                            </div>
-                           
+    
+    </div>
+    <div id="kuang2" class="panel"></div>
+        
+    <div id="kuang3" class="panel modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <label>巡检设备名称:<input id="spot_name" class="form-control"></label>
+            <label>巡检设备描述:<input id="spot_desc" class="form-control"></label>
+            <div id="spot_test">
+                <span>标签测点:</span>
+                <select name="" id="spot_test_select" class="form-control">
+                    <option value="111111">111111</option>
+                    <option value="222222">222222</option>
+                    <option value="333333">333333</option>
+                </select>
+            </div>
+            <div class="new_item">
+                <button onclick="addItem()" class="btn btn-primary">新建巡检条目</button>    
+            </div>
+            <div id="kuang3_items">
+                
+                <div class="creat_new_item">
 
+                    <div id="kuang3_items_from">
+
+                        <div>
+                                <label>巡检条目内容</label>
+                                <input class="form-control">
                         </div>
-                        <div id="kuang3_items_opera">
-                            
-                            <div id="kuang3_select">
-                                <select>
-                                    <option value ="true">确认型</option>
-                                    <option value ="false">数值型</option>
-                                </select>
-                            </div>
-                            
-                            <button id="new_item_del" onclick="delItem(this)">删除</button>
-
+                        <div>
+                                <label>单位</label>
+                                <input class="form-control">
+                        </div><br>
+                        <div>
+                                <label>最小标准值</label>
+                                <input class="form-control">
+                        </div>
+                        <div>
+                                <label>最大标准值</label>
+                                <input class="form-control">
+                        </div><br>
+                        <div>
+                                <label>最小警戒值</label>
+                                <input class="form-control">
+                        </div>
+                        <div>
+                                <label>最大警戒值</label>
+                                <input class="form-control">
                         </div>
                         
+
                     </div>
-                </div>
+                    <div id="kuang3_items_opera">
+                        
+                        <div id="kuang3_select">
+                            <select class="form-control">
+                                <option value ="true">确认型</option>
+                                <option value ="false">数值型</option>
+                            </select>
+                        </div>
+                        
+                        <button id="new_item_del" class="btn btn-primary" onclick="delItem(this)">删除</button>
 
-
-
-
-
-                <button id="kuang3_add" onclick="saveItem()">完成</button>
-                
-                <button id="kuang3_del" onclick="del()">清空
-                </button>   
-                <span class="pop-close"></span>
-                
-        </div>
-        <div id="luxianku">
-            <div id="luxianku_box">
-                <div type-id="2" class="creat_new_type luxian_type">
-                    <div class="title"><textarea onchange="editMapType(this)">汽轮机侧</textarea></div>
-                    <div>
-                        <input class="path_search" type="search" placeholder="输入关键词">
-                        <ul>
-                            <li type-id="2" path-id="40" style="background-color: rgba(47, 159, 200, 1);" onclick="lxk_click(this)">
-                                <span>汽轮机路线</span>
-                                <button onclick="ku_del(this)"></button>
-                                <button onclick="validMapTypePath(this)">启用</button>
-                            </li>
-                            <li type-id="2" path-id="40" style="background-color: rgba(47, 159, 200, 1);" onclick="lxk_click(this)">
-                                <span>汽轮机路线</span>
-                                <button onclick="ku_del(this)"></button>
-                                <button onclick="validMapTypePath(this)">启用</button>
-                            </li>
-                            <li type-id="2" path-id="40" style="background-color: rgba(47, 159, 200, 1);" onclick="lxk_click(this)">
-                                <span>汽轮机路线</span>
-                                <button onclick="ku_del(this)"></button>
-                                <button onclick="validMapTypePath(this)">启用</button>
-                            </li>
-                        </ul>
                     </div>
+                    
                 </div>
-                <div class="creat_new_type luxian_type">
-                    <div class="title" >
-                        <textarea onkeydown="addMapType(event)" >
-                    </textarea></div> 
+            </div>
+
+            <button id="kuang3_add" onclick="saveItem()" class="btn btn-primary">完成</button>
+            
+            <button id="kuang3_del" onclick="del()" class="btn btn-primary">清空
+            </button>   
+            <span class="pop-close" data-dismiss="modal" aria-hidden="true"></span>
+            
+    </div>
+        <!-- end kuang3 -->
+
+
+
+    <div id="luxianku" class="panel panel-primary">
+            <div class="panel-heading luxianku_title" >
+                <h3 class="panel-title">路线库</h3>
+            </div>
+        <div id="luxianku_box">
+            <div type-id="2" class="creat_new_type luxian_type ">
+                <div class="title"><textarea onchange="editMapType(this)" class="form-control">汽轮机侧</textarea></div>
+                <div>
+                    <input class="path_search form-control" type="search"  placeholder="输入关键词">
+                    <ul>
+                        <li type-id="2" path-id="40"  onclick="lxk_click(this)">
+                            <span>汽轮机路线</span>
+                            <button onclick="ku_del(this)" class="btn btn-primary ">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                            <button onclick="validMapTypePath(this)" class="btn btn-primary">启用</button>
+                        </li>
+                        <li type-id="2" path-id="40"  onclick="lxk_click(this)">
+                            <span>汽轮机路线</span>
+                            <button onclick="ku_del(this)" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                            <button onclick="validMapTypePath(this)" class="btn btn-primary">启用</button>
+                        </li>
+                        <li type-id="2" path-id="40" onclick="lxk_click(this)">
+                            <span>汽轮机路线</span>
+                            <button onclick="ku_del(this)" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                            <button onclick="validMapTypePath(this)" class="btn btn-primary">启用</button>
+                        </li>
+                    </ul>
                 </div>
-            
-        
             </div>
-            
-            
+            <div class="creat_new_type luxian_type">
+                <div class="title" >
+                    <textarea onkeydown="addMapType(event)" >
+                </textarea></div> 
+            </div>
         </div>
-        <button id="tijiao" class="bottom_btn" onclick="creatNewPath()">新建路线</button>
-        <button id="qingkong" class="bottom_btn">清空属性</button>
-        <button id="export_imp" class="bottom_btn">导出模板</button>
-        <button id="import_imp" class="bottom_btn">导入模板</button>
-        <button id="download_imp" class=" bottom_btn">下载模板</button>
 
-        <div id="imp_template" class="template_drop">
-            <ul>
-                <li class="template1"><button>模板11</button></li>
-                <li class="template2"><button>模板22</button></li>
-                <li class="template3"><button>模板33</button></li>
-                <li class="template4"><button>模板44</button></li>
-                <li class="template5"><button>模板55</button></li>                    
-                <li class="template5"><button>模板55</button></li>                    
-            </ul>
-        </div>  
-        <div id="exp_template" class="template_drop">
-            <ul>
-                <li class="template1"><button>模板11</button></li>
-                <li class="template2"><button>模板22</button></li>
-                <li class="template3"><button>模板33</button></li>
-                <li class="template4"><button>模板44</button></li>
-                <li class="template5"><button>模板55</button></li>                    
-                <li class="template5"><button>模板55</button></li>                    
-            </ul>
-        </div>   
+            
+    </div>
+        <!-- end luxianku -->
 
-        <button id="fanhui" onclick="fanhui()">返回</button>
-        <div id="kuang4"></div>
-        
-        <div id="kuang5">
-            <span>修改时间</span><div></div>
-            <span>当日修改次数</span><div></div>
-            <span>制定人</span><div></div>
-            <button>保存入库</button>
-            <button>启用</button>
+
+    
+    <button id="tijiao" class="bottom_btn btn btn-primary" onclick="creatNewPath()">新建路线</button>
+    <button id="qingkong" class="bottom_btn btn btn-primary">清空属性</button>
+    <button id="import_imp" class="bottom_btn btn btn-primary">导入模板</button>
+    <button id="export_imp" class="bottom_btn btn btn-primary" >导出模板</button>
+    <button id="download_imp" class=" bottom_btn btn btn-primary">下载模板</button>
+
+    <div id="imp_template" class="template_drop">
+        <ul>
+            <li class="template1"><button>模板11</button></li>
+            <li class="template2"><button>模板22</button></li>
+            <li class="template3"><button>模板33</button></li>
+            <li class="template4"><button>模板44</button></li>
+            <li class="template5"><button>模板55</button></li>                    
+            <li class="template5"><button>模板55</button></li>                    
+        </ul>
+    </div>  
+    <div id="exp_template" class="template_drop">
+        <ul>
+            <li class="template1"><button>模板11</button></li>
+            <li class="template2"><button>模板22</button></li>
+            <li class="template3"><button>模板33</button></li>
+            <li class="template4"><button>模板44</button></li>
+            <li class="template5"><button>模板55</button></li>                    
+            <li class="template5"><button>模板55</button></li>                    
+        </ul>
+    </div>   
+
+    <button id="fanhui" onclick="fanhui()">返回</button>
+    <div id="kuang4"></div>
+    
+    <div id="kuang5">
+        <span>修改时间</span><div></div>
+        <span>当日修改次数</span><div></div>
+        <span>制定人</span><div></div>
+        <button>保存入库</button>
+        <button>启用</button>
+    </div>
+    
+    <div id="record2"  class="record">
+        <div id="record2_title"> 
+            <div>巡检记录表</div>
+            <button>生成巡检报告</button>
         </div>
-        
-        <div id="record2"  class="record">
-            <div id="record2_title"> 
-                <div>巡检记录表</div>
-                <button>生成巡检报告</button>
-            </div>
-            <div id="graph2">
-               
-            </div>
-            <button >确定</button> 
-            <span class="pop-close2">Ｘ</span>
+        <div id="graph2">
+            
         </div>
+        <button >确定</button> 
+        <span class="pop-close2">Ｘ</span>
+    </div>
 
 
 
 
         <script src="js/scroll.min.js"></script>
         <script src="js/巡检路线设置chakan.js"></script>
-        <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="../js/pla.js"></script>
         <script src="js/巡检路线设置.js"></script>
         <script src="js/巡检路线设置_data.js"></script>

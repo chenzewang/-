@@ -8,24 +8,29 @@
     <link rel="stylesheet" type="text/css" href="css/css.css" />
     <body>
     <div id="main">
+        <div id="title">
+            <div id="logo">华能伊春热力巡检系统</div>
+            <div id="user">
+                <p id="current">当前用户: <span>某某某</span></p>
+                <button id="zhuxiao"><img src="img/注销.png" alt=""></button>
+            </div>
+        </div>
         <div id="menu">
             <div id="function">
                 <ul>
-                    <li><a onclick="addTab('用户设置','html/用户设置.html')">用户设置</a></li>
+                    <li><a onclick="addTab('用户设置','html/用户设置.html')"><img src="./img/设置.png" class="menu_li_logo" alt=""> 用户设置</a></li>
                     <li><a href="html/用户登录.html" target="myframe">用户登录</a></li>
-                    <li><a href="1.html" target="myframe">系统设置</a></li>
-                    <li><a href="1.html" target="myframe">设备运行分析</a></li>
                 </ul>
             </div>
             <div id="check">
                 <ul>
-                    <li>  <a onclick="addTab('巡检路线设置','html/巡检路线设置.html')">巡检路线设置</a>  </li>
-                    <li>  <a onclick="addTab('巡检频率设置','html/巡检频率设置.html')">巡检频率设置</a>  </li>
-                    <li>  <a onclick="addTab('实时巡检查看','html/实时巡检查看.html')">实时巡检查看</a>  </li>
-                    <li>  <a onclick="addTab('历史巡检记录','html/历史巡检记录.html')">历史巡检记录</a>  </li>
-                    <li>  <a onclick="addTab('区域范围设置','html/区域范围设置.html')">区域范围设置</a>  </li>
-                    <li>  <a onclick="addTab('巡检报告生成','html/巡检报告生成.html')">巡检报告生成</a>  </li>
-                    <li>  <a onclick="addTab('异常事件统计','html/异常事件统计.html')">异常事件统计</a>   </li>
+                    <li>  <a onclick="addTab('巡检路线设置','html/巡检路线设置.html')"><img src="./img/路线2.png" class="menu_li_logo" alt=""> 巡检路线设置</a>  </li>
+                    <li>  <a onclick="addTab('巡检频率设置','html/巡检频率设置.html')"><img src="./img/频率.png" class="menu_li_logo" alt=""> 巡检频率设置</a>  </li>
+                    <li>  <a onclick="addTab('实时巡检查看','html/实时巡检查看.html')"><img src="./img/实时.png" class="menu_li_logo" alt=""> 实时巡检查看</a>  </li>
+                    <li>  <a onclick="addTab('历史巡检记录','html/历史巡检记录.html')"><img src="./img/历史.png" class="menu_li_logo" alt=""> 历史巡检记录</a>  </li>
+                    <li>  <a onclick="addTab('区域范围设置','html/区域范围设置.html')"><img src="./img/范围.png" class="menu_li_logo" alt=""> 区域范围设置</a>  </li>
+                    <!-- <li>  <a onclick="addTab('巡检报告生成','html/巡检报告生成.html')">巡检报告生成</a>  </li> -->
+                    <li>  <a onclick="addTab('异常事件统计','html/异常事件统计.html')"><img src="./img/异常.png" class="menu_li_logo" alt=""> 异常事件统计</a>   </li>
                 </ul>
             </div>
         </div>
@@ -33,11 +38,7 @@
         
         <div id="taskbar">
             <ul id="myTab">
-            
-
             </ul>
-            <p id="current">当前用户: <span>某某某</span></p>
-            <button id="zhuxiao">注销</button>
         </div>
         
             

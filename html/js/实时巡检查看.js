@@ -1,14 +1,4 @@
 $(document).ready(function () {
-    $('.pop-close').click(function () {
-        $('#kuang3').hide();
-        $('.bgPop').hide();
-
-    });
-    $('#kuang2 td').click(function () {
-        document.getElementsByClassName("bgPop")[0].setAttribute("style","display:block")
-        $('#kuang3').show();
-    });
-
 })
 
 
@@ -923,7 +913,7 @@ var objMap={
                 }
             for(var j=1;j<=lie;j++)
             {
-                tab+="<td><div onclick=\"up(this)\"  style=\" position:relative;     \" >\
+                tab+="<td><div onclick=\"up(this)\" data-toggle=\"modal\" data-target=\"#kuang3\" style=\" position:relative;     \" >\
                 <span class=\"spot_name\"></span> <img class=\"jiantou\"><span class=\"spot_time\">2018.11.27</span>\
                 </div></td>";
             }
@@ -960,11 +950,11 @@ var objMap={
             }
             else if(Math.ceil((i+1)/5)%2==0 && i%10!=4 && i%10!=9 ){//偶数行
                 document.getElementsByClassName("jiantou")[i].setAttribute("src","../img/2-2-jiantou2.png")
-                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:-76px;top:-35px")
+                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:-73px;top:-41px")
             }  
             else if(i%10==4 || i%10==9){//指向下一行的交接箭头
                 document.getElementsByClassName("jiantou")[i].setAttribute("src","../img/2-2-jiantou5.png")
-                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:0px;top:-9px;width:14%")
+                document.getElementsByClassName("jiantou")[i].setAttribute("style","left:0px;top:-14px;width:14%")
             }   
         }
         document.getElementsByClassName("jiantou")[num-1].setAttribute("src","");
@@ -981,8 +971,8 @@ var objMap={
             input[j].value="";
         }
         //书写框出现，遮掩层出现
-        document.getElementById("kuang3").setAttribute("style","display:block");
-        document.getElementsByClassName("bgPop")[0].setAttribute("style","display:block");
+        // document.getElementById("kuang3").setAttribute("style","display:block");
+        // document.getElementsByClassName("bgPop")[0].setAttribute("style","display:block");
         
         kuangx=x;
 
@@ -1011,7 +1001,21 @@ var objMap={
     
     
     function addItem() {
-        var model = "<div class=\"creat_new_item\">\n <input placeholder=\"\u5DE1\u68C0\u6761\u76EE\u5185\u5BB9\"  readonly=\"readonly\">\n  <input placeholder=\"\u5355\u4F4D\"  readonly=\"readonly\">\n <div>\n   <select disabled=\"true\">\n  <option value=\"true\">\u786E\u8BA4\u578B</option>\n  <option value=\"false\">\u6570\u503C\u578B</option>\n   </select>\n   </div>\n  <div></div>\n   \n  <br>                        \n                    <input placeholder=\"\u6700\u5C0F\u6807\u51C6\u503C\" readonly=\"readonly\">\n                    <input placeholder=\"\u6700\u5927\u6807\u51C6\u503C\" readonly=\"readonly\"><br>\n                    <input placeholder=\"\u6700\u5C0F\u8B66\u6212\u503C\" readonly=\"readonly\">\n                    <input placeholder=\"\u6700\u5927\u6807\u51C6\u503C\" readonly=\"readonly\"> \n                    </div>\n                ";
+        var model = `<div class="creat_new_item">
+                        <input placeholder="巡检条目内容"  readonly="readonly">
+                        <input placeholder="单位"  readonly="readonly">
+                        <div>
+                            <select disabled="true">
+                                <option value="true">确认型</option> 
+                                <option value="false">数值型</option>   
+                            </select>   
+                        </div>
+                        <div></div><br>
+                        <input placeholder="最小标准值" readonly="readonly">          
+                        <input placeholder="最大标准值" readonly="readonly"><br>                 
+                        <input placeholder="最小警戒值" readonly="readonly">                
+                        <input placeholder="最大标准值" readonly="readonly">                   
+                    </div>`;
         $("#kuang3_items").append(model);
     }
 
@@ -1220,18 +1224,18 @@ var objMap={
     
         var lie = 5;
         var hang = ob.length;
-        var tab = "<table >\n<thead><tr><th>巡检路线</th> <th>巡检时间</th> <th>巡检人</th> <th>查看</th> <th>完成</th></tr></thead>\n ";
+        var tab = "<table class=\"table\" >\n<thead><tr><th>巡检路线</th> <th>巡检时间</th> <th>巡检人</th> <th>查看</th> <th>完成</th></tr></thead>\n ";
         tab += "</table>";
         
-        tab += "<div id='graph1_table2_box'><table >\n";
+        tab += "<div id='graph1_table2_box'><table class=\" table table-hover table-striped\">\n";
     
         for (var i = 0; i < hang; i++) {
             tab += "<tr>";
             tab += "<td>" + ob[i].num + "</td>";
             tab += "<td>" + ob[i].time + "</td>";
             tab += "<td>" + ob[i].man + "</td>";
-            tab += "<td><button onclick=\"chakan2()\">查看</button></td>";
-            tab += "<td><button onclick=\"chakan2()\">完成</button></td>";
+            tab += "<td><button onclick=\"chakan2()\" class=\" btn\">查看</button></td>";
+            tab += "<td><button onclick=\"chakan2()\" class=\" btn\">完成</button></td>";
             tab += "</tr>";
         }
         

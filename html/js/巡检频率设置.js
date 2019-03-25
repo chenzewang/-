@@ -20,7 +20,7 @@ function add1() {
         alert("不能为空！");
         return;
     }
-    var tag = `<li  data-index=${contacts1arr.length}   onclick="liClick(this)" class="normal"><span>${man}</span>,<span>${number}</span></li>`;
+    var tag = `<li  data-index=${contacts1arr.length}   onclick="liClick(this)" class="normal list-group-item"><span>${man}</span>,<span>${number}</span></li>`;
     $("#address1 ul:eq(0)").append(tag);
     $("#add_1_man").val("")
     $("#add_1_num").val("")
@@ -38,7 +38,7 @@ function add2() {
         alert("不能为空！");
         return;
     }
-    var tag = `<li data-index=${contacts2arr.length} onclick="liClick(this)" class="normal"><span>${man}</span>,<span>${number}</span></li>`;
+    var tag = `<li data-index=${contacts2arr.length} onclick="liClick(this)" class="normal list-group-item"><span>${man}</span>,<span>${number}</span></li>`;
     $("#address2 ul:eq(0)").append(tag);
     $("#add_2_man").val("")
     $("#add_2_num").val("")
